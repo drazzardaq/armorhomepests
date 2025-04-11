@@ -1,7 +1,7 @@
 <template>
   <div>
     <!-- Service Hero -->
-    <section class="relative pt-24 bg-cover bg-center" :style="{ backgroundImage: `url('${service.heroImage}')` }">
+    <section class="relative pt-24 bg-cover bg-center" :style="{ backgroundImage: `url('/images/services/general-pest.jpg')` }">
       <div class="absolute inset-0 bg-gradient-to-r from-dark-gray/80 to-dark-gray/60"></div>
       <div class="container-custom relative z-10 py-16 text-center">
         <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 animate-fade-in">{{ service.title }}</h1>
@@ -141,7 +141,7 @@ const toggleFaq = (index) => {
 const service = {
   title: 'General Pest Control',
   description: 'Comprehensive pest control solutions for your home or business',
-  heroImage: '@/assets/images/services/general-pest.jpg',
+  heroImage: '/images/services/general-pest.jpg',
   overview: 'Our general pest control service provides comprehensive protection against common household pests. We use proven methods and eco-friendly treatments to ensure your home stays pest-free.',
   features: [
     'Treatment for ants, roaches, spiders, and more',
@@ -150,7 +150,7 @@ const service = {
     'Satisfaction guaranteed',
     'Licensed and insured technicians'
   ],
-  overviewImage: '@/assets/images/services/general-pest.jpg',
+  overviewImage: '/images/services/general-pest.jpg',
   process: [
     {
       icon: 'fas fa-search',
@@ -175,12 +175,12 @@ const service = {
   ],
   gallery: [
     {
-      image: '@/assets/images/services/general-pest.jpg',
+      image: '/src/assets/images/services/general-pest.jpg',
       title: 'General Pest Control',
       description: "Comprehensive solutions for all common household pests"
     },
     {
-      image: '@/assets/images/services/scorpion.jpg',
+      image: '@/assets/images/scorpion.jpg',
       title: 'Scorpion Control',
       description: "Specialized treatments for Arizona's most dangerous pests"
     },
@@ -253,4 +253,4 @@ onMounted(() => {
   transform: translateY(-5px);
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
 }
-</style> 
+</style>

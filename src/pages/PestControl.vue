@@ -11,31 +11,11 @@
     <!-- Pest Types Section -->
     <section class="py-20 bg-white">
       <div class="container mx-auto px-4">
-        <h2 class="text-4xl font-bold text-center mb-12 text-dark-gray">Common Pests We Control</h2>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div class="card card-hover">
-            <img src="/images/ants zoomed.jpg" alt="Ants" class="card-img">
-            <div class="card-body">
-              <h3 class="card-title">Ant Control</h3>
-              <p class="card-text">Effective solutions to eliminate ant infestations and prevent future invasions.</p>
-              <router-link to="/contact" class="btn btn-gradient-green">Learn More</router-link>
-            </div>
-          </div>
-          <div class="card card-hover">
-            <img src="/images/cockroaclhes.jpg" alt="Cockroaches" class="card-img">
-            <div class="card-body">
-              <h3 class="card-title">Cockroach Control</h3>
-              <p class="card-text">Comprehensive treatments to eradicate cockroaches and keep them from returning.</p>
-              <router-link to="/contact" class="btn btn-gradient-green">Learn More</router-link>
-            </div>
-          </div>
-          <div class="card card-hover">
-            <img src="/images/house mice mouse.jpg" alt="Rodents" class="card-img">
-            <div class="card-body">
-              <h3 class="card-title">Rodent Control</h3>
-              <p class="card-text">Humane solutions to remove rodents and prevent them from entering your home.</p>
-              <router-link to="/contact" class="btn btn-gradient-green">Learn More</router-link>
-            </div>
+        <h2 class="text-4xl h-auto font-bold text-center w-full block text-dark-gray">Common Pests We Control</h2>
+        <div class="grid grid-cols-2 gap-4">
+          <div v-for="(pest, index) in pests" :key="index" class="pest-item">
+            <img :src="pest.image" :alt="pest.name" class="pest-image" />
+            <h3>{{ pest.name }}</h3>
           </div>
         </div>
       </div>
@@ -70,6 +50,24 @@
       </div>
     </section>
 
+    <!-- Testimonials Section -->
+    <section class="py-20 bg-gradient-to-br from-dark-gray to-gray-800">
+      <div class="container mx-auto px-4">
+        <h2 class="text-4xl font-bold text-center mb-12 text-white">What Our Customers Say</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div v-for="(avatar, index) in randomUserAvatars" :key="index" class="testimonial flex ">
+            <img :src="avatar" alt="Random User Avatar" class="w-16 h-16 rounded-full" />
+            <div class="ml-4 flex flex-col justify-center">
+              <h3 class="text-xl font-semibold text-white">Customer {{ index + 1 }}</h3>
+              <p class="text-gray-300">"The service was quick and effective. Highly recommend!"</p>
+            </div>
+            <!-- <h3 class="text-xl font-semibold text-white">Customer {{ index + 1 }}</h3> -->
+            <!-- <p class="text-gray-300">"Great service! The team was professional and effective."</p> -->
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- Call to Action -->
     <section class="py-20 bg-gradient-to-br from-green-600 to-green-800">
       <div class="container mx-auto px-4 text-center">
@@ -78,120 +76,246 @@
         <router-link to="/contact" class="btn bg-white text-green-600 hover:bg-gray-100">Contact Us Today</router-link>
       </div>
     </section>
+
+    <!-- Pest Control Boxes -->
+    <!-- <div class="pest-control-container">
+      <div class="box" v-for="(item, index) in items" :key="index">
+        <h3>{{ item.title }}</h3>
+        <p>{{ item.description }}</p>
+      </div>
+    </div> -->
   </div>
 </template>
 
 <script setup>
-import { onMounted } from 'vue'
-import gsap from 'gsap'
+import { onMounted } from 'vue';
+import gsap from 'gsap';
+import { ref } from 'vue';
+
+const randomUserAvatars = ref([]);
+
+const fetchRandomUserAvatars = async () => {
+  try {
+    const response = await fetch('https://randomuser.me/api/?results=4');
+    const data = await response.json();
+    randomUserAvatars.value = data.results.map(user => user.picture.large);
+  } catch (error) {
+    console.error('Error fetching random user avatars:', error);
+  }
+};
+
+const items = ref([
+  { title: 'Box 1', description: 'Description for box 1' },
+  { title: 'Box 2', description: 'Description for box 2' },
+  { title: 'Box 3', description: 'Description for box 3' },
+]);
+
+const pests = ref([
+  { name: 'Ants', image: '@/assets/images/services/general-pest.jpg' },
+  { name: 'Cockroaches', image: '@/assets/images/scorpion.jpg' },
+  { name: 'Mice', image: '@/assets/images/services/rodents.jpg' },
+  { name: 'Termites', image: '@/assets/images/mosquito.jpg' },
+]);
 
 onMounted(() => {
+  fetchRandomUserAvatars();
+
   // Animate elements when the page loads
-  const tl = gsap.timeline({ defaults: { ease: 'power3.out' } })
-  
+  const tl = gsap.timeline({ defaults: { ease: 'power3.out' } });
+
   // Animate the hero content
-  const heroContent = document.querySelector('.hero-section-content')
+  const heroContent = document.querySelector('.hero-section-content');
   if (heroContent) {
-    tl.from(heroContent.children, { 
-      y: 30, 
-      opacity: 0, 
+    tl.from(heroContent.children, {
+      y: 30,
+      opacity: 0,
       duration: 0.8,
-      stagger: 0.2
-    })
+      stagger: 0.2,
+    });
   }
-  
+
   // Animate the cards
-  const cards = document.querySelectorAll('.card')
+  const cards = document.querySelectorAll('.card');
   if (cards.length) {
-    gsap.from(cards, { 
-      y: 50, 
-      opacity: 0, 
+    gsap.from(cards, {
+      y: 50,
+      opacity: 0,
       duration: 0.8,
       stagger: 0.2,
       scrollTrigger: {
         trigger: '.card',
         start: 'top bottom-=100',
-        toggleActions: 'play none none reverse'
-      }
-    })
+        toggleActions: 'play none none reverse',
+      },
+    });
   }
-  
+
   // Animate the process steps
-  const steps = document.querySelectorAll('.process-step')
+  const steps = document.querySelectorAll('.process-step');
   if (steps.length) {
-    gsap.from(steps, { 
-      y: 30, 
-      opacity: 0, 
+    gsap.from(steps, {
+      y: 30,
+      opacity: 0,
       duration: 0.8,
       stagger: 0.2,
       scrollTrigger: {
         trigger: '.process-step',
         start: 'top bottom-=100',
-        toggleActions: 'play none none reverse'
-      }
-    })
+        toggleActions: 'play none none reverse',
+      },
+    });
   }
-})
+});
 </script>
 
 <style scoped>
 .hero-section {
-  @apply relative h-screen flex items-center justify-center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  height: 100vh;
 }
 
 .hero-section-bg {
-  @apply absolute inset-0 bg-cover bg-center;
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
 }
 
 .hero-section-overlay {
-  @apply absolute inset-0 bg-black bg-opacity-60;
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.6);
 }
 
 .hero-section-content {
-  @apply relative z-10 text-center max-w-3xl mx-auto px-4;
+  position: relative;
+  z-index: 10;
+  text-align: center;
+  max-width: 768px;
+  margin: 0 auto;
+  padding: 16px;
 }
 
 .hero-section-content h1 {
-  @apply text-5xl md:text-6xl font-bold mb-6;
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
 }
 
 .hero-section-content p {
-  @apply text-xl mb-8;
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
 }
 
 .card {
-  @apply bg-white rounded-lg shadow-lg overflow-hidden transition-transform duration-300;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  @apply ah-[380px] self-center items-center justify-center flex flex-col;
 }
 
-.card-hover:hover {
-  @apply transform -translate-y-2;
+.card:hover {
+  transform: translateY(-0.5rem);
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
 }
 
 .card-img {
-  @apply w-full h-48 object-cover;
+  width: 100%;
+  height: 12rem;
+  object-fit: cover;
+  @apply max-h-[250px];
 }
 
 .card-body {
-  @apply p-6;
+  padding: 1.5rem;
 }
 
 .card-title {
-  @apply text-xl font-bold mb-2;
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
 }
 
 .card-text {
-  @apply text-gray-600 mb-4;
+  color: #4a5568;
+  margin-bottom: 1rem;
 }
 
 .btn-gradient-green {
-  @apply bg-gradient-to-r from-green-600 to-green-800 text-white hover:from-green-800 hover:to-green-600;
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background: linear-gradient(to right, #38a169, #2f855a);
+  color: white;
+  text-align: center;
+  border-radius: 0.375rem;
+  transition: background 0.3s ease;
+}
+
+.btn-gradient-green:hover {
+  background: linear-gradient(to right, #2f855a, #38a169);
 }
 
 .process-step {
-  @apply text-center p-6 bg-white rounded-lg shadow-md;
+  text-align: center;
+  padding: 1.5rem;
+  background-color: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .step-number {
-  @apply w-12 h-12 rounded-full bg-green-600 text-white flex items-center justify-center text-xl font-bold mx-auto mb-4;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  background-color: #38a169;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin: 0 auto 1rem;
 }
-</style> 
+
+.pest-control-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  justify-content: center;
+}
+
+.box {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 16px;
+  width: 300px;
+  text-align: center;
+  background-color: #f9f9f9;
+}
+
+.pest-item {
+  text-align: center;
+}
+
+.pest-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+</style>

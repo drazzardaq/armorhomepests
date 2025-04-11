@@ -1,22 +1,17 @@
 <template>
   <div>
-    <!-- Services Hero -->
-    <section class="relative pt-24 bg-cover bg-center" style="background-image: url('@/assets/images/services-hero.jpg');">
-      <div class="absolute inset-0 bg-gradient-to-r from-dark-gray/80 to-dark-gray/60"></div>
-      <div class="container-custom relative z-10 py-16 text-center">
-        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 animate-fade-in">Our Pest Control Services</h1>
-        <p class="mt-4 text-xl md:text-2xl text-gray-200 max-w-3xl mx-auto animate-slide-up">
-          Tailored solutions to keep your home and business pest-free. Licensed, insured, and guaranteed to protect what matters most.
-        </p>
-        <div class="mt-8 flex flex-col sm:flex-row gap-4 justify-center animate-slide-up" style="animation-delay: 0.2s">
-          <a href="tel:480-839-3333" class="btn-primary flex items-center justify-center gap-2">
-            <i class="fas fa-phone-alt"></i>
-            Call Now: 480-839-3333
-          </a>
-          <a href="https://employee.myarmorhome.com/" target="_blank" class="btn-secondary flex items-center justify-center gap-2">
-            <i class="fas fa-briefcase"></i>
-            Join Our Team
-          </a>
+    <!-- Hero Section -->
+    <section class="relative h-[650px] flex items-center justify-center overflow-hidden">
+      <div class="absolute inset-0 bg-black/50 z-10"></div>
+      <div class="relative z-20 w-full h-full">
+        <div class="slider-container">
+          <div
+            v-for="(slide, index) in slides"
+            :key="index"
+            class="slider-slide"
+          >
+            <img :src="slide.image" :alt="slide.alt" />
+          </div>
         </div>
       </div>
     </section>
@@ -50,11 +45,20 @@
       </div>
     </section>
 
-    <!-- Featured Services Slider -->
+    <!-- Featured Services Section -->
     <section class="py-16 bg-white">
-      <div class="container-custom">
-        <h2 class="text-3xl font-bold text-center mb-12">Featured Services</h2>
-        <ImageSlider :slides="featuredSlides" />
+      <div class="container mx-auto px-4">
+        <h2 class="text-4xl font-bold text-center mb-12">Featured Services</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div v-for="(service, index) in featuredServices" :key="index" class="card card-hover">
+            <img :src="service.image" :alt="service.title" class="card-img">
+            <div class="card-body">
+              <h3 class="card-title">{{ service.title }}</h3>
+              <p class="card-text">{{ service.description }}</p>
+              <router-link :to="service.link" class="btn btn-gradient-green">Learn More</router-link>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -64,8 +68,8 @@
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         <!-- Service Block: General Pest Control -->
         <div id="general" class="card-hover rounded-xl overflow-hidden shadow-lg bg-white group">
-          <div class="relative">
-            <img src="@/assets/images/services/general-pest.jpg" alt="Ants" class="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-110">
+          <div class="relative overflow-hidden">
+            <img src="@/assets/images/services/general-pest.jpg" alt="Ants" class="w-full ah-[200px] object-cover transition-transform duration-300 group-hover:scale-110">
             <div class="absolute inset-0 bg-gradient-to-t from-dark-gray/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
           </div>
           <div class="p-6">
@@ -77,8 +81,8 @@
         
         <!-- Service Block: Scorpion Control -->
         <div id="scorpion" class="card-hover rounded-xl overflow-hidden shadow-lg bg-white group">
-          <div class="relative">
-            <img src="@/assets/images/services/scorpion.jpg" alt="Scorpions" class="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-110">
+          <div class="relative overflow-hidden">
+            <img src="@/assets/images/scorpion.jpg" alt="Scorpions" class="w-full ah-[200px] object-cover transition-transform duration-300 group-hover:scale-110">
             <div class="absolute inset-0 bg-gradient-to-t from-dark-gray/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
           </div>
           <div class="p-6">
@@ -90,8 +94,8 @@
         
         <!-- Service Block: Rodent Control -->
         <div id="rodents" class="card-hover rounded-xl overflow-hidden shadow-lg bg-white group">
-          <div class="relative">
-            <img src="@/assets/images/services/rodents.jpg" alt="Mice" class="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-110">
+          <div class="relative overflow-hidden">
+            <img src="@/assets/images/services/rodents.jpg" alt="Mice" class="w-full ah-[200px] object-cover transition-transform duration-300 group-hover:scale-110">
             <div class="absolute inset-0 bg-gradient-to-t from-dark-gray/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
           </div>
           <div class="p-6">
@@ -103,8 +107,8 @@
         
         <!-- Service Block: Mosquito Reduction -->
         <div id="mosquito" class="card-hover rounded-xl overflow-hidden shadow-lg bg-white group">
-          <div class="relative">
-            <img src="@/assets/images/services/mosquito.jpg" alt="Mosquitoes" class="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-110">
+          <div class="relative overflow-hidden">
+            <img src="@/assets/images/mosquito.jpg" alt="Mosquitoes" class="w-full ah-[200px] object-cover transition-transform duration-300 group-hover:scale-110">
             <div class="absolute inset-0 bg-gradient-to-t from-dark-gray/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
           </div>
           <div class="p-6">
@@ -116,8 +120,8 @@
         
         <!-- Service Block: Commercial Pest Control -->
         <div id="commercial" class="card-hover rounded-xl overflow-hidden shadow-lg bg-white group">
-          <div class="relative">
-            <img src="@/assets/images/services/commercial.jpg" alt="Commercial" class="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-110">
+          <div class="relative overflow-hidden">
+            <img src="@/assets/images//services/commercial.jpg" alt="Commercial" class="w-full ah-[200px] object-cover transition-transform duration-300 group-hover:scale-110">
             <div class="absolute inset-0 bg-gradient-to-t from-dark-gray/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
           </div>
           <div class="p-6">
@@ -129,8 +133,8 @@
         
         <!-- Service Block: Bed Bug Control -->
         <div id="bedbugs" class="card-hover rounded-xl overflow-hidden shadow-lg bg-white group">
-          <div class="relative">
-            <img src="@/assets/images/services/mosquito.jpg" alt="Bed Bugs" class="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-110">
+          <div class="relative overflow-hidden">
+            <img src="@/assets/images//mosquito.jpg" alt="Bed Bugs" class="w-full ah-[200px] object-cover transition-transform duration-300 group-hover:scale-110">
             <div class="absolute inset-0 bg-gradient-to-t from-dark-gray/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
           </div>
           <div class="p-6">
@@ -184,6 +188,10 @@
       <div class="container-custom">
         <h2 class="text-3xl font-bold text-center mb-12">What Our Customers Say</h2>
         <TestimonialsSlider :testimonials="testimonials" />
+        <!-- <div v-for="(avatar, index) in randomUserAvatars" :key="index" class="testimonial"> -->
+          <!-- <img :src="avatar" alt="Random User Avatar" class="w-16 h-16 rounded-full" /> -->
+          <!-- ...existing testimonial content... -->
+        <!-- </div> -->
       </div>
     </section>
 
@@ -206,21 +214,25 @@
       </div>
     </section>
     
-    <!-- CTA Section -->
-    <section class="bg-gray-100 py-16">
-      <div class="container-custom text-center">
-        <h2 class="text-3xl font-bold mb-6">Ready to Protect Your Home?</h2>
-        <p class="text-gray-600 mb-8 max-w-2xl mx-auto">
-          Contact us today for a free consultation and quote. Our team is ready to help you keep your home pest-free.
-        </p>
-        <div class="flex flex-col sm:flex-row gap-4 justify-center">
-          <a href="tel:480-839-3333" class="btn-primary flex items-center justify-center gap-2">
-            <i class="fas fa-phone-alt"></i>
-            Call Now: 480-839-3333
-          </a>
-          <router-link to="/contact" class="btn-secondary">
-            Contact Us
-          </router-link>
+    <!-- Call to Action -->
+    <section class="py-20 bg-gradient-to-br from-green-600 to-green-800">
+      <div class="container mx-auto px-4 text-center">
+        <h2 class="text-4xl font-bold mb-6 text-white">Ready to Protect Your Home?</h2>
+        <p class="text-xl mb-8 text-white">Contact us today for a free consultation and quote.</p>
+        <router-link to="/contact" class="btn bg-white text-green-600 hover:bg-gray-100">Contact Us Today</router-link>
+      </div>
+    </section>
+
+    <!-- Team Showcase Section -->
+    <section class="py-16 bg-gray-50">
+      <div class="container mx-auto px-4">
+        <h2 class="text-4xl font-bold text-center mb-12">Meet Our Team</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div v-for="(user, index) in team" :key="index" class="text-center">
+            <img :src="user.picture" :alt="user.name" class="w-32 h-32 rounded-full mx-auto mb-4" />
+            <h3 class="text-xl font-bold">{{ user.name }}</h3>
+            <p class="text-gray-600">{{ user.email }}</p>
+          </div>
         </div>
       </div>
     </section>
@@ -228,7 +240,7 @@
 </template>
 
 <script setup>
-import { ref } from 'vue';
+import { ref, onMounted } from 'vue';
 import ImageSlider from '@/components/ImageSlider.vue';
 import TestimonialsSlider from '@/components/TestimonialsSlider.vue';
 
@@ -245,7 +257,7 @@ const featuredSlides = [
     description: 'Comprehensive solutions for all common household pests'
   },
   {
-    image: '@/assets/images/services/scorpion.jpg',
+    image: '@/assets/images/scorpion.jpg',
     title: 'Scorpion Control',
     description: 'Specialized treatments for Arizonas most dangerous pests'
   },
@@ -303,6 +315,77 @@ const faqs = [
     answer: "Yes, we offer a satisfaction guarantee on all our services. If you're not completely satisfied, we'll return to address the issue at no additional cost."
   }
 ];
+
+const slides = ref([
+  { image: '/images/slider/slide1.jpg', alt: 'Slide 1' },
+  { image: '/images/slider/slide2.jpg', alt: 'Slide 2' },
+  { image: '/images/slider/slide3.jpg', alt: 'Slide 3' },
+]);
+
+const featuredServices = [
+  {
+    image: '/src/assets/images/services/commercial.jpg',
+    title: 'Commercial Pest Control',
+    description: 'Comprehensive solutions for businesses.',
+    link: '/services/commercial',
+  },
+  {
+    image: '/src/assets/images/mosquito.jpg',
+    title: 'Mosquito Reduction',
+    description: 'Keep your outdoor spaces mosquito-free.',
+    link: '/services/mosquito',
+  },
+  {
+    image: '/src/assets/images/scorpion.jpg',
+    title: 'Scorpion Control',
+    description: 'Specialized treatments for scorpion infestations.',
+    link: '/services/scorpion',
+  },
+];
+
+const currentSlide = ref(0);
+
+const goToSlide = (index) => {
+  currentSlide.value = index;
+};
+
+onMounted(() => {
+  setInterval(() => {
+    currentSlide.value = (currentSlide.value + 1) % slides.value.length;
+  }, 5000);
+});
+
+const team = ref([]);
+
+const fetchTeam = async () => {
+  try {
+    const response = await fetch('https://randomuser.me/api/?results=6');
+    const data = await response.json();
+    team.value = data.results.map(user => ({
+      name: `${user.name.first} ${user.name.last}`,
+      email: user.email,
+      picture: user.picture.large
+    }));
+  } catch (error) {
+    console.error('Error fetching team data:', error);
+  }
+};
+
+onMounted(fetchTeam);
+
+const randomUserAvatars = ref([]);
+
+const fetchRandomUserAvatars = async () => {
+  try {
+    const response = await fetch('https://randomuser.me/api/?results=3');
+    const data = await response.json();
+    randomUserAvatars.value = data.results.map(user => user.picture.large);
+  } catch (error) {
+    console.error('Error fetching random user avatars:', error);
+  }
+};
+
+onMounted(fetchRandomUserAvatars);
 </script>
 
 <style scoped>
@@ -323,4 +406,71 @@ const faqs = [
   transform: translateY(-5px);
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
 }
-</style> 
+
+.slider-container {
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 300px;
+}
+
+.slider-slide {
+  flex: 0 0 100%;
+  transition: transform 0.5s ease-in-out;
+}
+
+slider-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card {
+  background-color: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-0.5rem);
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+}
+
+.card-img {
+  width: 100%;
+  height: 12rem;
+  object-fit: cover;
+}
+
+.card-body {
+  padding: 1.5rem;
+}
+
+.card-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.card-text {
+  color: #4a5568;
+  margin-bottom: 1rem;
+}
+
+.btn-gradient-green {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background: linear-gradient(to right, #38a169, #2f855a);
+  color: white;
+  text-align: center;
+  border-radius: 0.375rem;
+  transition: background 0.3s ease;
+}
+
+.btn-gradient-green:hover {
+  background: linear-gradient(to right, #2f855a, #38a169);
+}
+</style>

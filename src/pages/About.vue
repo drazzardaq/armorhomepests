@@ -69,28 +69,54 @@
     </section>
 
     <!-- Team -->
-    <section class="py-16 bg-white">
-      <div class="container-custom">
-        <h2 class="text-3xl font-bold text-center mb-12">Our Team</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <div v-for="member in team" :key="member.name" class="bg-white rounded-xl overflow-hidden shadow-lg hover-lift">
-            <img :src="member.image" :alt="member.name" class="w-full h-64 object-cover">
-            <div class="p-6">
-              <h3 class="text-xl font-bold mb-1">{{ member.name }}</h3>
-              <p class="text-primary-blue mb-4">{{ member.position }}</p>
-              <p class="text-gray-600 mb-4">{{ member.bio }}</p>
-              <div class="flex gap-4">
-                <a v-if="member.linkedin" :href="member.linkedin" class="text-gray-400 hover:text-primary-blue">
-                  <i class="fab fa-linkedin"></i>
-                </a>
-                <a v-if="member.twitter" :href="member.twitter" class="text-gray-400 hover:text-primary-blue">
-                  <i class="fab fa-twitter"></i>
-                </a>
-              </div>
-            </div>
+    <section class="py-20 bg-gray-100">
+      <div class="container mx-auto px-4">
+        <h2 class="text-4xl font-bold text-center mb-12">Meet Our Clients</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div v-for="(testimonial, index) in testimonials" :key="index" class="text-center card p-10 hover-lift">
+            <img :src="testimonial.image" alt="Team Member" class="w-32 h-32 rounded-full mx-auto mb-4" />
+            <h3 class="text-xl font-semibold">{{ testimonial.name }}</h3>
+            <p class="text-gray-600 italic">{{ testimonial.text }}</p>
+            <div class="flex text-yellow-400 w-full justify-center mx-auto mt-4">
+              
+          <i v-for="n in 5" :key="n" class="fas fa-star"></i>
+        </div>
           </div>
         </div>
       </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="py-20 bg-gray-100">
+      <div class="container mx-auto px-4">
+        <h2 class="text-4xl font-bold text-center mb-12">Meet Our Team</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="text-center card p-10">
+            <img src="https://randomuser.me/api/portraits/men/1.jpg" alt="John Smith" class="w-32 h-32 rounded-full mx-auto mb-4" />
+            <h3 class="text-xl font-semibold">John Smith</h3>
+            <p class="text-primary-blue">Founder & CEO</p>
+            <p class="text-gray-600">Veteran with 20+ years of experience in pest control and business management.</p>
+          </div>
+          <div class="text-center card p-10">
+            <img src="https://randomuser.me/api/portraits/women/2.jpg" alt="Sarah Johnson" class="w-32 h-32 rounded-full mx-auto mb-4" />
+            <h3 class="text-xl font-semibold">Sarah Johnson</h3>
+            <p class="text-primary-blue">Operations Manager</p>
+            <p class="text-gray-600">Expert in streamlining operations and ensuring customer satisfaction.</p>
+          </div>
+          <div class="text-center card p-10">
+            <img src="https://randomuser.me/api/portraits/men/3.jpg" alt="Mike Rodriguez" class="w-32 h-32 rounded-full mx-auto mb-4" />
+            <h3 class="text-xl font-semibold">Mike Rodriguez</h3>
+            <p class="text-primary-blue">Lead Technician</p>
+            <p class="text-gray-600">Certified pest control specialist with 15 years of field experience.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Our Certifications -->
+    <section class="py-12 bg-gray-50">
+      <h2 class="text-3xl font-bold text-center mb-6">Our Certifications</h2>
+      <Badges />
     </section>
 
     <!-- CTA Section -->
@@ -109,28 +135,29 @@
 </template>
 
 <script setup>
-const team = [
+import Badges from '@/components/Badges.vue';
+
+const testimonials = [
   {
-    name: 'John Smith',
-    position: 'Founder & CEO',
-    image: '@/assets/images/team/john.jpg',
-    bio: 'Veteran with 20+ years of experience in pest control and business management.',
-    linkedin: 'https://linkedin.com/in/johnsmith'
+    name: 'Mike Banks',
+    image: 'https://randomuser.me/api/portraits/men/4.jpg',
+    text: 'Hands-free install! It makes me feel more comfortable having a system that has a great reputation',
   },
   {
-    name: 'Sarah Johnson',
-    position: 'Operations Manager',
-    image: '@/assets/images/team/sarah.jpg',
-    bio: 'Expert in streamlining operations and ensuring customer satisfaction.',
-    linkedin: 'https://linkedin.com/in/sarahjohnson'
+    name: 'Amanda Collins',
+    image: 'https://randomuser.me/api/portraits/women/5.jpg',
+    text: 'Best customer service!',
   },
   {
-    name: 'Mike Rodriguez',
-    position: 'Lead Technician',
-    image: '@/assets/images/team/mike.jpg',
-    bio: 'Certified pest control specialist with 15 years of field experience.',
-    linkedin: 'https://linkedin.com/in/mikerodriguez'
-  }
+    name: 'Ethan Jones',
+    image: 'https://randomuser.me/api/portraits/men/6.jpg',
+    text: 'Nate was amazing! He got my family and I protected',
+  },
+  {
+    name: 'Cynthia Wolf',
+    image: 'https://randomuser.me/api/portraits/women/7.jpg',
+    text: 'Being able to have cameras on my front door is a game changer',
+  },
 ];
 </script>
 
@@ -143,4 +170,12 @@ const team = [
   transform: translateY(-5px);
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
 }
-</style> 
+
+.text-center img {
+  transition: transform 0.3s ease;
+}
+
+.text-center img:hover {
+  transform: scale(1.1);
+}
+</style>

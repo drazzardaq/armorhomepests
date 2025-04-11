@@ -2,46 +2,31 @@
   <div>
     <!-- Hero Section -->
     <HeroSection
-      title="Security Services"
-      description="Protecting your home with advanced security solutions"
-      buttonText="Get a Free Quote"
+      title="Advanced Security Solutions"
+      description="Protect your home and business with our state-of-the-art security systems."
+      buttonText="Get a Free Security Assessment"
       buttonLink="/contact"
     />
 
     <!-- Security Features Section -->
-    <section class="py-20 bg-white">
+    <section class="py-20 bg-gray-100">
       <div class="container mx-auto px-4">
-        <h2 class="text-4xl font-bold text-center mb-12 text-dark-gray">Our Security Solutions</h2>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div class="card card-hover">
-            <div class="card-body">
-              <div class="feature-icon">
-                <i class="fas fa-shield-alt"></i>
-              </div>
-              <h3 class="card-title">Smart Alarm Systems</h3>
-              <p class="card-text">AI-powered security systems that learn your habits and provide personalized protection.</p>
-              <router-link to="/contact" class="btn btn-gradient">Learn More</router-link>
-            </div>
+        <h2 class="text-4xl font-bold text-center mb-12 text-dark-gray">Why Choose Our Security Services?</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+          <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+            <i class="fas fa-shield-alt text-4xl text-primary-blue mb-4"></i>
+            <h3 class="text-xl font-bold mb-2">24/7 Monitoring</h3>
+            <p class="text-gray-600">Our systems provide round-the-clock monitoring to ensure your safety at all times.</p>
           </div>
-          <div class="card card-hover">
-            <div class="card-body">
-              <div class="feature-icon">
-                <i class="fas fa-video"></i>
-              </div>
-              <h3 class="card-title">Advanced Surveillance</h3>
-              <p class="card-text">HD cameras with facial recognition and real-time alerts to your mobile device.</p>
-              <router-link to="/contact" class="btn btn-gradient">Learn More</router-link>
-            </div>
+          <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+            <i class="fas fa-lock text-4xl text-primary-blue mb-4"></i>
+            <h3 class="text-xl font-bold mb-2">Advanced Technology</h3>
+            <p class="text-gray-600">We use cutting-edge technology to deliver reliable and efficient security solutions.</p>
           </div>
-          <div class="card card-hover">
-            <div class="card-body">
-              <div class="feature-icon">
-                <i class="fas fa-mobile-alt"></i>
-              </div>
-              <h3 class="card-title">Mobile Control</h3>
-              <p class="card-text">Control your entire home security ecosystem from anywhere with our intuitive app.</p>
-              <router-link to="/contact" class="btn btn-gradient">Learn More</router-link>
-            </div>
+          <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+            <i class="fas fa-user-shield text-4xl text-primary-blue mb-4"></i>
+            <h3 class="text-xl font-bold mb-2">Expert Support</h3>
+            <p class="text-gray-600">Our team of experts is always ready to assist you with any security concerns.</p>
           </div>
         </div>
       </div>
@@ -50,19 +35,33 @@
     <!-- Call to Action -->
     <section class="py-20 bg-gradient-to-br from-primary-blue to-secondary-blue">
       <div class="container mx-auto px-4 text-center">
-        <h2 class="text-4xl font-bold mb-6 text-white">Ready to Secure Your Home?</h2>
-        <p class="text-xl mb-8 text-white">Get a free consultation and quote for your home security needs.</p>
-        <router-link to="/contact" class="btn bg-white text-primary-blue hover:bg-gray-100">Contact Us Today</router-link>
+        <h2 class="text-4xl font-bold mb-6 text-white">Secure Your Property Today</h2>
+        <p class="text-xl mb-8 text-white">Contact us now for a free consultation and personalized security plan.</p>
+        <router-link to="/contact" class="btn bg-white text-primary-blue hover:bg-gray-100">Get Started</router-link>
       </div>
     </section>
   </div>
 </template>
 
 <script setup>
-import { onMounted } from 'vue'
+import { ref, onMounted } from 'vue'
 import gsap from 'gsap'
 
+const randomUserImages = ref([]);
+
+const fetchRandomUserImages = async () => {
+  try {
+    const response = await fetch('https://randomuser.me/api/?results=3');
+    const data = await response.json();
+    randomUserImages.value = data.results.map(user => user.picture.large);
+  } catch (error) {
+    console.error('Error fetching random user images:', error);
+  }
+};
+
 onMounted(() => {
+  fetchRandomUserImages();
+
   // Animate elements when the page loads
   const tl = gsap.timeline({ defaults: { ease: 'power3.out' } })
   
@@ -121,26 +120,18 @@ onMounted(() => {
 }
 
 .card {
-  @apply bg-white rounded-lg shadow-lg overflow-hidden transition-transform duration-300;
+  @apply bg-white rounded-lg shadow-lg p-6 text-center;
 }
 
-.card-hover:hover {
-  @apply transform -translate-y-2;
-}
-
-.card-body {
-  @apply p-6;
-}
-
-.feature-icon {
+.card i {
   @apply text-4xl text-primary-blue mb-4;
 }
 
-.card-title {
+.card h3 {
   @apply text-xl font-bold mb-2;
 }
 
-.card-text {
-  @apply text-gray-600 mb-4;
+.card p {
+  @apply text-gray-600;
 }
-</style> 
+</style>

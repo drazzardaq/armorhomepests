@@ -15,7 +15,9 @@
     "@tresjs/core": "^4.3.3",
     "@vueuse/core": "^10.7.0",
     "gsap": "^3.12.2",
+    "swiper": "^11.2.6",
     "three": "^0.175.0",
+    "vite-plugin-pwa": "^1.0.0",
     "vue": "^3.3.0",
     "vue-router": "^4.2.0"
   },

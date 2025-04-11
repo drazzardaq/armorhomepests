@@ -30,9 +30,10 @@ defineProps({
     type: String,
     required: true
   },
+  // Ensure the `image` property points to the correct directory
   image: {
     type: String,
-    default: ''
+    default: '/src/assets/images/default-service.jpg' // Updated default image path
   },
   icon: {
     type: String,
@@ -91,4 +92,4 @@ defineEmits(['click']);
 .btn-gradient-green {
   @apply bg-gradient-to-r from-primary-green to-secondary-green hover:from-secondary-green hover:to-primary-green;
 }
-</style> 
+</style>

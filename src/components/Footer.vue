@@ -5,7 +5,7 @@
         <!-- Company Info -->
         <div class="space-y-4">
           <div class="flex items-center gap-2">
-            <img src="/icons/android-chrome-192x192.png" alt="Logo" class="w-12 h-12 rounded-lg">
+            <img src="/icons/roidlogo.png" alt="Logo" class="w-auto h-10 rounded-lg">
             <span class="text-xl font-bold text-white">HomeGuard</span>
           </div>
           <p class="text-gray-300">

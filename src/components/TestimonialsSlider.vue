@@ -13,7 +13,7 @@
         <div class="bg-white rounded-xl shadow-lg p-6 md:p-8 hover-lift">
           <div class="flex items-center gap-4 mb-6">
             <img 
-              :src="testimonial.avatar" 
+              :src="randomUserAvatars[index]" 
               :alt="testimonial.name"
               class="w-16 h-16 rounded-full object-cover"
             >
@@ -91,6 +91,18 @@ const props = defineProps({
 const currentIndex = ref(0);
 let autoplayInterval;
 
+const randomUserAvatars = ref([]);
+
+const fetchRandomUserAvatars = async () => {
+  try {
+    const response = await fetch('https://randomuser.me/api/?results=5');
+    const data = await response.json();
+    randomUserAvatars.value = data.results.map(user => user.picture.large);
+  } catch (error) {
+    console.error('Error fetching random user avatars:', error);
+  }
+};
+
 const next = () => {
   if (currentIndex.value < props.testimonials.length - 1) {
     currentIndex.value++;
@@ -125,6 +137,7 @@ const stopAutoplay = () => {
 
 onMounted(() => {
   startAutoplay();
+  fetchRandomUserAvatars();
 });
 
 onUnmounted(() => {
@@ -143,4 +156,4 @@ onUnmounted(() => {
   opacity: 0;
   transform: translateX(100%);
 }
-</style> 
+</style>

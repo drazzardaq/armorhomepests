@@ -17,7 +17,7 @@
               <i class="fas fa-phone-alt"></i>
               480-839-3333
             </a>
-            <span class="text-white/80">|</span>
+            <!-- <span class="text-white/80">|</span> -->
             <span class="text-white font-medium">Free Quote Available</span>
           </div>
         </div>
@@ -26,7 +26,7 @@
           <div class="bg-white/10 backdrop-blur-sm rounded-lg p-6 text-center">
             <div class="text-white mb-4">
               <i class="fas fa-shield-alt text-4xl mb-3"></i>
-              <h3 class="text-xl font-semibold">24/7 Protection</h3>
+              <h3 class="text-xl text-white font-bold">24/7 Protection</h3>
             </div>
             <ul class="text-white/90 space-y-2 text-left">
               <li class="flex items-center gap-2">

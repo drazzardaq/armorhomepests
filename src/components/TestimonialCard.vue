@@ -21,6 +21,7 @@ defineProps({
   },
   image: {
     type: String,
+    default: 'https://randomuser.me/api/portraits/men/4.jpg',
     required: true
   },
   text: {
@@ -42,4 +43,4 @@ defineProps({
 .testimonial-text {
   @apply text-gray-800 italic;
 }
-</style> 
+</style>

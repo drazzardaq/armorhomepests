@@ -17,7 +17,7 @@ const props = defineProps({
   },
   image: {
     type: String,
-    default: '/images/og-image.jpg'
+    default: '/public/images/og-image.jpg' // Updated default image path
   },
   url: {
     type: String,
@@ -82,4 +82,4 @@ watch(() => route.path, () => {
 onMounted(() => {
   updateMetaTags()
 })
-</script> 
+</script>

@@ -55,7 +55,7 @@
 
 @layer components {
   .btn {
-    @apply inline-flex items-center justify-center px-6 py-3 rounded-medium font-medium transition-all duration-300;
+    @apply inline-flex items-center justify-center px-6 py-3 rounded-md font-medium transition-all duration-300;
   }
 
   .btn-gradient-blue {
@@ -83,7 +83,11 @@
   }
 
   .card {
-    @apply bg-white rounded-medium shadow-soft hover-shadow transition-all duration-300;
+    @apply bg-white rounded-lg shadow-md overflow-hidden transition-transform duration-300;
+  }
+
+  .card:hover {
+    @apply transform -translate-y-2 shadow-lg;
   }
 
   .input {
@@ -113,7 +117,11 @@
   }
 
   .hover-lift {
-    @apply hover:-translate-y-1;
+    @apply transition-transform duration-300;
+  }
+
+  .hover-lift:hover {
+    @apply transform -translate-y-2 shadow-lg;
   }
 
   .hover-shadow {
@@ -143,7 +151,7 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  @apply bg-primary-blue/50 rounded-full hover:bg-primary-blue/70 transition-colors duration-200;
+  @apply bg-primary-blue/50 rounded-none hover:bg-primary-blue/70 transition-colors duration-200;
 }
 
 /* Focus styles */
@@ -160,9 +168,11 @@
 @keyframes fadeIn {
   from {
     opacity: 0;
+    transform: translateY(20px);
   }
   to {
     opacity: 1;
+    transform: translateY(0);
   }
 }
 
@@ -226,7 +236,7 @@ html {
 
 /* Button styles */
 .btn {
-  @apply inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm transition-all duration-300;
+  @apply inline-flex items-center justify-center px-6 py-3 rounded-md font-medium transition-all duration-300;
 }
 
 .btn-gradient-blue {
@@ -411,4 +421,4 @@ html {
 
 .transition-smooth {
   @apply transition-all duration-300;
-} 
+}

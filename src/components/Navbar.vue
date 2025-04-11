@@ -4,7 +4,7 @@
       <div class="flex items-center justify-between min-h-20">
         <!-- Logo -->
         <router-link to="/" class="flex items-center gap-2">
-          <img src="/images/logo.png" alt="Logo" class="h-16 w-auto">
+          <img src="@/assets/images//logo.png" alt="Logo" class="h-16 w-auto">
           <span class="text-xl font-bold text-primary-blue">HomeGuard</span>
         </router-link>
 

@@ -7,7 +7,7 @@ export default {
   theme: {
     extend: {
       colors: {
-        'primary-blue': '#1E40AF',
+        'primary-blue': '#2172b9',
         'secondary-blue': '#3B82F6',
         'accent-blue': '#60A5FA',
         'dark-gray': '#1F2937',
@@ -19,8 +19,8 @@ export default {
         'black': '#000000',
       },
       boxShadow: {
-        'card': '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)',
-        'card-hover': '0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)',
+        'card': '0 4px 6px rgba(0, 0, 0, 0.1)',
+        'card-hover': '0 10px 15px rgba(0, 0, 0, 0.2)',
         'soft': '0 2px 4px rgba(0, 0, 0, 0.05)',
         'medium': '0 4px 6px rgba(0, 0, 0, 0.1)',
         'hard': '0 10px 15px rgba(0, 0, 0, 0.1)',
@@ -57,7 +57,37 @@ export default {
           '100%': { transform: 'translateY(0)' },
         },
       },
+      spacing: {
+        '380px': '380px',
+        '250px': '250px',
+      },
     },
   },
-  plugins: [],
-} 
+  plugins: [
+    function ({ matchUtilities, theme }) {
+      matchUtilities(
+        {
+          aw: (value) => ({
+            width: value,
+            maxWidth: value,
+            minWidth: value,
+          }),
+          ah: (value) => ({
+            height: value,
+            maxHeight: value,
+            minHeight: value,
+          }),
+          as: (value) => ({
+            width: value,
+            maxWidth: value,
+            minWidth: value,
+            height: value,
+            maxHeight: value,
+            minHeight: value,
+          }),
+        },
+        { values: theme("spacing") },
+      );
+    },
+  ],
+}
