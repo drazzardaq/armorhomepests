@@ -1,0 +1,324 @@
+<template>
+  <div class="min-h-screen bg-gradient-to-b from-gray-900 to-gray-800">
+    <!-- Hero Section -->
+    <section class="relative h-screen flex items-center justify-center overflow-hidden">
+      <div class="absolute inset-0 bg-black/50 z-10"></div>
+      <div class="relative z-20 text-center px-4">
+        <h1 class="text-5xl md:text-7xl font-bold text-white mb-6">
+          Professional Pest Control Services
+        </h1>
+        <p class="text-xl md:text-2xl text-white/80 mb-8 max-w-3xl mx-auto">
+          Protecting your home and business from unwanted pests with expert solutions and guaranteed results.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <button class="btn-gradient-blue px-8 py-3 rounded-lg text-lg font-semibold">
+            Get a Free Quote
+          </button>
+          <button class="border-2 border-white !text-white hover:bg-primary-blue hover:text-white px-8 py-3 rounded-lg text-lg font-semibold">
+            Learn More
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Security Services Section -->
+    <section class="py-20 bg-gradient-to-br from-primary-blue to-secondary-blue text-white">
+      <div class="container mx-auto px-4">
+        <h2 class="text-4xl font-bold text-center mb-12">Intelligent Security Solutions</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <ServiceCard
+            title="Smart Alarm Systems"
+            description="AI-powered security systems that learn your habits and provide personalized protection."
+            icon="fas fa-shield-alt"
+            link="/security"
+            @click="openServiceModal('smart-alarm')"
+          />
+          <ServiceCard
+            title="Advanced Surveillance"
+            description="HD cameras with facial recognition and real-time alerts to your mobile device."
+            icon="fas fa-video"
+            link="/security"
+            @click="openServiceModal('surveillance')"
+          />
+          <ServiceCard
+            title="Seamless Integration"
+            description="Control your entire home security ecosystem from anywhere with our intuitive app."
+            icon="fas fa-mobile-alt"
+            link="/security"
+            @click="openServiceModal('integration')"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- Pest Control Section -->
+    <section class="py-20 bg-dark-gray">
+      <div class="container mx-auto px-4">
+        <h2 class="text-4xl font-bold text-center mb-12 text-white">Comprehensive Pest Control</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <ServiceCard
+            title="Targeted Insect Control"
+            description="Precision treatments that eliminate pests while being safe for your family and pets."
+            image="/images/ants zoomed.jpg"
+            link="/pest-control"
+            buttonClass="btn-gradient-green"
+            @click="openServiceModal('insect-control')"
+          />
+          <ServiceCard
+            title="Advanced Rodent Management"
+            description="Humane solutions that prevent rodents from entering your home in the first place."
+            image="/images/cockroaclhes.jpg"
+            link="/pest-control"
+            buttonClass="btn-gradient-green"
+            @click="openServiceModal('rodent-control')"
+          />
+          <ServiceCard
+            title="Preventive Protection"
+            description="Regular inspections and treatments to keep your home pest-free year-round."
+            image="/images/house mice mouse.jpg"
+            link="/pest-control"
+            buttonClass="btn-gradient-green"
+            @click="openServiceModal('preventive-protection')"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-20 bg-gradient-to-br from-dark-gray to-accent-blue">
+      <div class="container mx-auto px-4">
+        <h2 class="text-4xl font-bold text-center mb-12 text-white">What Our Neighbors Say</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <TestimonialCard
+            name="Mike Banks"
+            image="https://randomuser.me/api/portraits/men/4.jpg"
+            text="Hands-free install! It makes me feel more comfortable having a system that has a great reputation"
+          />
+          <TestimonialCard
+            name="Amanda Collins"
+            image="https://randomuser.me/api/portraits/women/5.jpg"
+            text="Best customer service!"
+          />
+          <TestimonialCard
+            name="Ethan Jones"
+            image="https://randomuser.me/api/portraits/men/6.jpg"
+            text="Nate was amazing! He got my family and I protected"
+          />
+          <TestimonialCard
+            name="Cynthia Wolf"
+            image="https://randomuser.me/api/portraits/women/7.jpg"
+            text="Being able to have cameras on my front door is a game changer"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- Call to Action -->
+    <CallToAction
+      title="Smart Home Security Package"
+      description="Get 20% off your first service when you mention this promotion! Experience the future of home security today."
+      buttonText="Get Your Free Quote"
+      buttonLink="/contact"
+      legalInfo="*Offer valid for new customers only. Cannot be combined with other promotions."
+    />
+
+    <!-- Service Detail Modals -->
+    <ServiceDetailModal
+      v-if="activeModal === 'smart-alarm'"
+      :is-open="activeModal === 'smart-alarm'"
+      title="Smart Alarm Systems"
+      image="/images/bug.jpg"
+      description="Our AI-powered smart alarm systems learn your daily routines and adapt to provide personalized protection. With advanced sensors and machine learning algorithms, our systems can distinguish between normal household activity and potential security threats."
+      :features="[
+        'Motion sensors with pet immunity',
+        'Smart door and window sensors',
+        'Mobile app control and monitoring',
+        'Voice command integration',
+        'Automated lighting control',
+        'Emergency response integration'
+      ]"
+      @close="closeServiceModal"
+    />
+
+    <ServiceDetailModal
+      v-if="activeModal === 'surveillance'"
+      :is-open="activeModal === 'surveillance'"
+      title="Advanced Surveillance"
+      image="/images/bug.jpg"
+      description="Our HD surveillance cameras with facial recognition technology provide real-time alerts to your mobile device. Monitor your home from anywhere with our secure, encrypted video feed."
+      :features="[
+        '1080p HD video quality',
+        'Night vision capabilities',
+        'Motion detection with alerts',
+        'Facial recognition technology',
+        'Cloud storage options',
+        'Two-way audio communication'
+      ]"
+      @close="closeServiceModal"
+    />
+
+    <ServiceDetailModal
+      v-if="activeModal === 'integration'"
+      :is-open="activeModal === 'integration'"
+      title="Seamless Integration"
+      image="/images/bug.jpg"
+      description="Control your entire home security ecosystem from anywhere with our intuitive mobile app. Our systems integrate with popular smart home platforms, allowing you to create a fully connected home environment."
+      :features="[
+        'Mobile app for iOS and Android',
+        'Real-time notifications',
+        'Remote arming and disarming',
+        'Integration with smart home platforms',
+        'Custom automation rules',
+        'Energy-saving features'
+      ]"
+      @close="closeServiceModal"
+    />
+
+    <ServiceDetailModal
+      v-if="activeModal === 'insect-control'"
+      :is-open="activeModal === 'insect-control'"
+      title="Targeted Insect Control"
+      image="/images/ants zoomed.jpg"
+      description="Our precision treatments target common household pests like ants, cockroaches, and spiders, using methods that are safe for your family and pets. We focus on eliminating the source of the problem, not just the symptoms."
+      :features="[
+        'Eco-friendly treatment options',
+        'Targeted application methods',
+        'Safe for children and pets',
+        'Long-lasting protection',
+        'Identification of entry points',
+        'Prevention recommendations'
+      ]"
+      @close="closeServiceModal"
+    />
+
+    <ServiceDetailModal
+      v-if="activeModal === 'rodent-control'"
+      :is-open="activeModal === 'rodent-control'"
+      title="Advanced Rodent Management"
+      image="/images/cockroaclhes.jpg"
+      description="We use humane methods to remove rodents from your home, focusing on prevention to keep them from returning. Our comprehensive approach includes sealing entry points and implementing deterrent strategies."
+      :features="[
+        'Humane trapping methods',
+        'Entry point identification and sealing',
+        'Exclusion techniques',
+        'Sanitation recommendations',
+        'Follow-up inspections',
+        'Prevention strategies'
+      ]"
+      @close="closeServiceModal"
+    />
+
+    <ServiceDetailModal
+      v-if="activeModal === 'preventive-protection'"
+      :is-open="activeModal === 'preventive-protection'"
+      title="Preventive Protection"
+      image="/images/house mice mouse.jpg"
+      description="Our preventive protection services include regular inspections and treatments to keep your home pest-free year-round. We develop customized plans based on your specific needs and local pest pressures."
+      :features="[
+        'Quarterly inspections',
+        'Seasonal treatments',
+        'Customized protection plans',
+        'Priority service for existing customers',
+        'Documentation of treatments',
+        'Guaranteed satisfaction'
+      ]"
+      @close="closeServiceModal"
+    />
+
+    <SecurityCTA />
+  </div>
+</template>
+
+<script setup>
+import { ref } from 'vue';
+import TestimonialCard from '@/components/TestimonialCard.vue';
+import ServiceCard from '@/components/ServiceCard.vue';
+import HeroSection from '@/components/HeroSection.vue';
+import CallToAction from '@/components/CallToAction.vue';
+import ServiceDetailModal from '@/components/ServiceDetailModal.vue';
+import SecurityCTA from '@/components/SecurityCTA.vue';
+
+const activeModal = ref(null);
+
+const openServiceModal = (serviceId) => {
+  activeModal.value = serviceId;
+};
+
+const closeServiceModal = () => {
+  activeModal.value = null;
+};
+</script>
+
+<style scoped>
+.hero-section {
+  @apply relative h-screen flex items-center justify-center text-white;
+}
+
+.hero-section-bg {
+  @apply absolute inset-0 bg-cover bg-center;
+}
+
+.hero-section-overlay {
+  @apply absolute inset-0 bg-black bg-opacity-50;
+}
+
+.hero-section-content {
+  @apply relative z-10 text-center max-w-3xl mx-auto px-4;
+}
+
+.hero-section-content h1 {
+  @apply text-5xl md:text-6xl font-bold mb-6;
+}
+
+.hero-section-content p {
+  @apply text-xl mb-8;
+}
+
+.card {
+  @apply bg-white rounded-lg shadow-lg overflow-hidden transition-transform duration-300;
+}
+
+.card-hover:hover {
+  @apply transform -translate-y-2;
+}
+
+.card-body {
+  @apply p-6;
+}
+
+.card-img {
+  @apply w-full h-48 object-cover;
+}
+
+.card-title {
+  @apply text-xl font-bold mb-2;
+}
+
+.card-text {
+  @apply text-gray-600 mb-4;
+}
+
+.feature-icon {
+  @apply text-4xl text-primary-blue mb-4;
+}
+
+.testimonial-card {
+  @apply bg-white rounded-lg shadow-lg p-6;
+}
+
+.testimonial-author {
+  @apply text-lg;
+}
+
+.testimonial-text {
+  @apply text-gray-800 italic;
+}
+
+.special-offer {
+  @apply bg-white rounded-lg shadow-lg;
+}
+
+.legal-info {
+  @apply text-sm text-gray-400 mt-4;
+}
+</style>
