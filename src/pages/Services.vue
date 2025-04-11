@@ -121,7 +121,7 @@
         <!-- Service Block: Commercial Pest Control -->
         <div id="commercial" class="card-hover rounded-xl overflow-hidden shadow-lg bg-white group">
           <div class="relative overflow-hidden">
-            <img src="@/assets/images//services/commercial.jpg" alt="Commercial" class="w-full ah-[200px] object-cover transition-transform duration-300 group-hover:scale-110">
+            <img src="@/assets/images/services/commercial.jpg" alt="Commercial" class="w-full ah-[200px] object-cover transition-transform duration-300 group-hover:scale-110">
             <div class="absolute inset-0 bg-gradient-to-t from-dark-gray/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
           </div>
           <div class="p-6">
@@ -134,7 +134,7 @@
         <!-- Service Block: Bed Bug Control -->
         <div id="bedbugs" class="card-hover rounded-xl overflow-hidden shadow-lg bg-white group">
           <div class="relative overflow-hidden">
-            <img src="@/assets/images//mosquito.jpg" alt="Bed Bugs" class="w-full ah-[200px] object-cover transition-transform duration-300 group-hover:scale-110">
+            <img src="@/assets/images/services/bedbugs.jpg" alt="Bed Bugs" class="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-110">
             <div class="absolute inset-0 bg-gradient-to-t from-dark-gray/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
           </div>
           <div class="p-6">
