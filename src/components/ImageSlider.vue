@@ -12,7 +12,7 @@
       >
         <div class="relative aspect-[16/9]">
           <img 
-            :src="slide.image" 
+            :src="require(`@/assets/${slide.image}`)" 
             :alt="slide.title"
             class="w-full h-full object-cover"
           >
@@ -127,4 +127,4 @@ onUnmounted(() => {
   opacity: 0;
   transform: translateX(100%);
 }
-</style> 
+</style>

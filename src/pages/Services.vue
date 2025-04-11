@@ -69,7 +69,7 @@
         <!-- Service Block: General Pest Control -->
         <div id="general" class="card-hover rounded-xl overflow-hidden shadow-lg bg-white group">
           <div class="relative overflow-hidden">
-            <img src="@/assets/images/services/general-pest.jpg" alt="Ants" class="w-full ah-[200px] object-cover transition-transform duration-300 group-hover:scale-110">
+            <img src="@/assets/images/services/general-pest.jpg" alt="Ants" class="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-110">
             <div class="absolute inset-0 bg-gradient-to-t from-dark-gray/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
           </div>
           <div class="p-6">
@@ -82,7 +82,7 @@
         <!-- Service Block: Scorpion Control -->
         <div id="scorpion" class="card-hover rounded-xl overflow-hidden shadow-lg bg-white group">
           <div class="relative overflow-hidden">
-            <img src="@/assets/images/scorpion.jpg" alt="Scorpions" class="w-full ah-[200px] object-cover transition-transform duration-300 group-hover:scale-110">
+            <img src="@/assets/images/services/scorpion.jpg" alt="Scorpions" class="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-110">
             <div class="absolute inset-0 bg-gradient-to-t from-dark-gray/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
           </div>
           <div class="p-6">
@@ -95,7 +95,7 @@
         <!-- Service Block: Rodent Control -->
         <div id="rodents" class="card-hover rounded-xl overflow-hidden shadow-lg bg-white group">
           <div class="relative overflow-hidden">
-            <img src="@/assets/images/services/rodents.jpg" alt="Mice" class="w-full ah-[200px] object-cover transition-transform duration-300 group-hover:scale-110">
+            <img src="@/assets/images/services/rodents.jpg" alt="Mice" class="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-110">
             <div class="absolute inset-0 bg-gradient-to-t from-dark-gray/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
           </div>
           <div class="p-6">
@@ -108,7 +108,7 @@
         <!-- Service Block: Mosquito Reduction -->
         <div id="mosquito" class="card-hover rounded-xl overflow-hidden shadow-lg bg-white group">
           <div class="relative overflow-hidden">
-            <img src="@/assets/images/mosquito.jpg" alt="Mosquitoes" class="w-full ah-[200px] object-cover transition-transform duration-300 group-hover:scale-110">
+            <img src="@/assets/images/services/mosquito.jpg" alt="Mosquitoes" class="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-110">
             <div class="absolute inset-0 bg-gradient-to-t from-dark-gray/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
           </div>
           <div class="p-6">

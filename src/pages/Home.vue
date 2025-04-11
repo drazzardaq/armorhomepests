@@ -300,13 +300,13 @@ const slides = [
     description: 'Your trusted partner in pest management solutions.',
   },
   {
-    image: '/src/assets/feat.png',
+    image: '/images/slider/feat.png',
     alt: 'Slide 2',
     title: 'Eco-Friendly Solutions',
     description: 'We prioritize environmentally safe methods to protect your family and pets.',
   },
   {
-    image: '/src/assets/images/slider/3.jpg',
+    image: '/images/slider/3.jpg',
     alt: 'Slide 3',
     title: 'Year-Round Protection',
     description: 'Comprehensive pest control for every season.',

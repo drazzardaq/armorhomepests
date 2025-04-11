@@ -3,7 +3,7 @@
     <!-- Background Image -->
     <div 
       class="absolute inset-0 bg-cover bg-center bg-no-repeat"
-      style="background-image: url('/images/hero2.png');"
+      style="background-image: url('@/assets/images/hero2.png');"
     ></div>
     
     <!-- Overlay -->
@@ -85,4 +85,4 @@ defineProps({
   animation: slide-up 0.8s ease-out forwards;
   opacity: 0;
 }
-</style> 
+</style>
