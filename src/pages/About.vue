@@ -98,13 +98,13 @@
             <p class="text-gray-600">Veteran with 20+ years of experience in pest control and business management.</p>
           </div>
           <div class="text-center card p-10">
-            <img src="@/assets/images/team/sarah.jpg" alt="Sarah Johnson" class="w-full h-full object-cover">
+            <img src="https://randomuser.me/api/portraits/men/6.jpg" alt="Sarah Johnson" class="w-32 h-32 rounded-full mx-auto mb-4" />
             <h3 class="text-xl font-semibold">Sarah Johnson</h3>
             <p class="text-primary-blue">Operations Manager</p>
             <p class="text-gray-600">Expert in streamlining operations and ensuring customer satisfaction.</p>
           </div>
           <div class="text-center card p-10">
-            <img src="@/assets/images/team/mike.jpg" alt="Mike Rodriguez" class="w-full h-full object-cover">
+            <img src="https://randomuser.me/api/portraits/women/7.jpg" alt="Mike Rodriguez" class="w-32 h-32 rounded-full mx-auto mb-4" />
             <h3 class="text-xl font-semibold">Mike Rodriguez</h3>
             <p class="text-primary-blue">Lead Technician</p>
             <p class="text-gray-600">Certified pest control specialist with 15 years of field experience.</p>
