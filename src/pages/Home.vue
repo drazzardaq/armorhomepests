@@ -300,7 +300,7 @@ const slides = [
     description: 'Your trusted partner in pest management solutions.',
   },
   {
-    image: '/images/slider/feat.png',
+    image: '/images/s22.png',
     alt: 'Slide 2',
     title: 'Eco-Friendly Solutions',
     description: 'We prioritize environmentally safe methods to protect your family and pets.',

@@ -6,7 +6,7 @@
       <div class="container-custom relative z-10 py-16 text-center">
         <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 animate-fade-in">Join Our Team</h1>
         <p class="mt-4 text-xl md:text-2xl text-gray-200 max-w-3xl mx-auto animate-slide-up">
-          Build your career with HomeGuard Pest Control
+          Build your career with MyArmorHome Pest Control
         </p>
       </div>
     </section>
@@ -14,7 +14,7 @@
     <!-- Why Join Us -->
     <section class="py-16 bg-white">
       <div class="container-custom">
-        <h2 class="text-3xl font-bold text-center mb-12">Why Join HomeGuard?</h2>
+        <h2 class="text-3xl font-bold text-center mb-12">Why Join MyArmorHome?</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <div v-for="benefit in benefits" :key="benefit.title" class="bg-gray-50 p-6 rounded-xl shadow-md hover-lift">
             <div class="text-primary-blue text-3xl mb-4">
@@ -255,7 +255,7 @@ const employeeTestimonials = [
     name: 'John Smith',
     position: 'Senior Technician',
     image: '@/assets/images/team/john.jpg',
-    quote: 'Working at HomeGuard has been incredibly rewarding. The training and support are outstanding.',
+    quote: 'Working at MyArmorHome has been incredibly rewarding. The training and support are outstanding.',
   },
   {
     name: 'Sarah Johnson',
@@ -267,7 +267,7 @@ const employeeTestimonials = [
     name: 'Mike Davis',
     position: 'Service Manager',
     image: '@/assets/images/team/mike.jpg',
-    quote: 'Ive grown both professionally and personally since joining HomeGuard. The benefits are excellent.',
+    quote: 'Ive grown both professionally and personally since joining MyArmorHome. The benefits are excellent.',
   },
 ];
 

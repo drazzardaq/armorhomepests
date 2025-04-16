@@ -6,7 +6,7 @@
         <div class="space-y-4">
           <div class="flex items-center gap-2">
             <img src="/icons/roidlogo.png" alt="Logo" class="w-auto h-10 rounded-lg">
-            <span class="text-xl font-bold text-white">HomeGuard</span>
+            <span class="text-xl font-bold text-white">MyArmorHome</span>
           </div>
           <p class="text-gray-300">
             Professional pest control and security solutions for your home. Protecting what matters most.
@@ -86,8 +86,8 @@
               <i class="fas fa-envelope mt-1 text-primary-blue"></i>
               <div>
                 <p class="text-gray-300">Email us at</p>
-                <a href="mailto:info@homeguard.com" class="text-white hover:text-primary-blue transition-colors duration-200">
-                  info@homeguard.com
+                <a href="mailto:info@myarmorhome.com" class="text-white hover:text-primary-blue transition-colors duration-200">
+                  info@myarmorhome.com
                 </a>
               </div>
             </li>
@@ -111,7 +111,7 @@
       <div class="container-custom py-4">
         <div class="flex flex-col md:flex-row justify-between items-center gap-4">
           <p class="text-gray-400 text-sm">
-            © {{ new Date().getFullYear() }} HomeGuard. All rights reserved.
+            © {{ new Date().getFullYear() }} MyArmorHome. All rights reserved.
           </p>
           <div class="flex gap-6 text-sm">
             <a href="#" class="text-gray-400 hover:text-white transition-colors duration-200">

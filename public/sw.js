@@ -1,4 +1,4 @@
-const CACHE_NAME = 'homeguard-v1';
+const CACHE_NAME = 'myarmorhome-v1';
 const ASSETS_TO_CACHE = [
     '/',
     '/index.html',

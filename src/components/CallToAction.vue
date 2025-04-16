@@ -1,5 +1,6 @@
 <template>
-  <section class="py-20 bg-dark-gray">
+  <section class="py-20 relative z-10">
+    <img :src="'./images/banner.png'" alt="" class="absolute inset-0 h-full w-full object-cover z-[-1] brightness-75" />
     <div class="container mx-auto px-4 text-center">
       <div class="special-offer max-w-2xl mx-auto px-8 py-6">
         <div class="flex items-center justify-center">
@@ -49,6 +50,6 @@ defineProps({
 }
 
 .legal-info {
-  @apply text-sm text-gray-400 mt-4;
+  @apply text-sm text-white px-5 bg-black/40 rounded-xl w-fit mx-auto py-2 mt-4;
 }
 </style> 

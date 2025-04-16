@@ -98,7 +98,7 @@
                 </div>
                 <div>
                   <h3 class="text-xl font-bold mb-1">Email</h3>
-                  <a href="mailto:info@homeguard.com" class="text-gray-600 hover:text-primary-blue">info@homeguard.com</a>
+                  <a href="mailto:info@myarmorhome.com" class="text-gray-600 hover:text-primary-blue">info@myarmorhome.com</a>
                 </div>
               </div>
               <div class="flex items-start gap-4">

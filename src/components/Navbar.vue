@@ -5,7 +5,7 @@
         <!-- Logo -->
         <router-link to="/" class="flex items-center gap-2">
           <img src="@/assets/images//logo.png" alt="Logo" class="h-16 w-auto">
-          <span class="text-xl font-bold text-primary-blue">HomeGuard</span>
+          <span class="text-xl font-bold text-primary-blue">MyArmorHome</span>
         </router-link>
 
         <!-- Desktop Navigation -->

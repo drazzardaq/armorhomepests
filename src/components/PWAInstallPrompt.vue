@@ -7,7 +7,7 @@
             <img src="/icons/android-chrome-192x192.png" alt="App Icon" class="w-16 h-16 rounded-xl shadow-md">
           </div>
           <div class="flex-grow text-center md:text-left">
-            <h3 class="text-lg font-bold text-gray-900 mb-1">Install HomeGuard</h3>
+            <h3 class="text-lg font-bold text-gray-900 mb-1">Install MyArmorHome</h3>
             <p class="text-gray-600 mb-2">Get quick access to our services and receive instant notifications</p>
             <div class="flex flex-col sm:flex-row gap-2 justify-center md:justify-start">
               <button 

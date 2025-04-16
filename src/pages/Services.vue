@@ -149,7 +149,7 @@
     <!-- Unique Selling Points -->
     <section class="bg-gradient-to-r from-primary-blue to-secondary-blue py-16 text-white">
       <div class="container-custom text-center">
-        <h2 class="text-3xl font-bold mb-8">Why Choose HomeGuard?</h2>
+        <h2 class="text-3xl font-bold mb-8">Why Choose MyArmorHome?</h2>
         <p class="mb-12 max-w-3xl mx-auto text-white/90">
           We offer reliable, veteran-led pest control services with no long-term contracts. 
           Our team is dedicated to providing exceptional service and ensuring your home is pest-free.
@@ -226,12 +226,12 @@
     <!-- Team Showcase Section -->
     <section class="py-16 bg-gray-50">
       <div class="container mx-auto px-4">
-        <h2 class="text-4xl font-bold text-center mb-12">Meet Our Team</h2>
+        <h2 class="text-4xl font-bold text-center mb-12">Meet Our Clients</h2>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div v-for="(user, index) in team" :key="index" class="text-center">
             <img :src="user.picture" :alt="user.name" class="w-32 h-32 rounded-full mx-auto mb-4" />
             <h3 class="text-xl font-bold">{{ user.name }}</h3>
-            <p class="text-gray-600">{{ user.email }}</p>
+            <!-- <p class="text-gray-600">{{ user.email }}</p> -->
           </div>
         </div>
       </div>
@@ -273,7 +273,7 @@ const testimonials = [
     name: 'Sarah Johnson',
     location: 'Phoenix, AZ',
     avatar: '@/assets/images/testimonials/avatar1.jpg',
-    text: "HomeGuard has been amazing! They're professional, thorough, and have completely eliminated our pest problems. Highly recommend!"
+    text: "MyArmorHome has been amazing! They're professional, thorough, and have completely eliminated our pest problems. Highly recommend!"
   },
   {
     name: 'Michael Rodriguez',
@@ -285,7 +285,7 @@ const testimonials = [
     name: 'Emily Thompson',
     location: 'Scottsdale, AZ',
     avatar: '@/assets/images/testimonials/avatar3.jpg',
-    text: "We've tried other pest control companies, but HomeGuard is by far the best. They're reliable and effective."
+    text: "We've tried other pest control companies, but MyArmorHome is by far the best. They're reliable and effective."
   }
 ];
 
