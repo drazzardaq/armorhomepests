@@ -111,10 +111,12 @@ const items = ref([
 ]);
 
 const pests = ref([
-  { name: 'Ants', image: 'images/service.png' },
-  { name: 'Cockroaches', image: '@/assets/images/scorpion.jpg' },
-  { name: 'Mice', image: '@/assets/images/services/rodents.jpg' },
-  { name: 'Termites', image: '@/assets/images/mosquito.jpg' },
+  { name: 'Ants', image: '/images/termite.jpeg' },
+  { name: 'Cockroaches', image: '/images/scorpion.jpg' },
+  { name: 'Mice', image: '/images/rat.jpeg' },
+  { name: 'Termites', image: '/images/termite.jpeg' },
+  { name: 'Scorpions', image: '/images/scorpiona.jpg' },
+  { name: 'Birds', image: '/images/pigeon-capture-phoenix-az_orig.jpeg' }
 ]);
 
 onMounted(() => {

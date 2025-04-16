@@ -12,7 +12,7 @@
             :class="{ 'opacity-100': currentSlide === index, 'opacity-0': currentSlide !== index }"
           >
             <img :src="slide.image" :alt="slide.alt" class="w-full h-full object-cover brightness-50" />
-            <div class="absolute inset-0 bg-black/40 flex items-center justify-center">
+            <div class="absolute inset-0 bg-black/10 flex items-center justify-center">
               <div class="text-center text-white px-4">
                 <h1 class="text-5xl md:text-7xl font-bold mb-6 text-white">{{ slide.title }}</h1>
                 <p class="text-xl md:text-3xl font-bold text-white/90 mb-8 max-w-3xl mx-auto">{{ slide.description }}</p>
@@ -96,7 +96,7 @@
           <ServiceCard
             title="Targeted Insect Control"
             description="Precision treatments that eliminate pests while being safe for your family and pets."
-            image="images/service.png"
+            image="/images/termite.jpeg"
             link="/pest-control"
             buttonClass="btn-gradient-green"
             @click="openServiceModal('insect-control')"
@@ -104,18 +104,18 @@
           <ServiceCard
             title="Advanced Rodent Management"
             description="Humane solutions that prevent rodents from entering your home in the first place."
-            image="images/service.png"
+            image="/images/rat.jpeg"
             link="/pest-control"
             buttonClass="btn-gradient-green"
             @click="openServiceModal('rodent-control')"
           />
           <ServiceCard
-            title="Preventive Protection"
-            description="Regular inspections and treatments to keep your home pest-free year-round."
-            image="images/service.png"
+            title="Bird Control"
+            description="Professional solutions to protect your property from bird-related damage and health hazards."
+            image="/images/pigeon-capture-phoenix-az_orig.jpeg"
             link="/pest-control"
             buttonClass="btn-gradient-green"
-            @click="openServiceModal('preventive-protection')"
+            @click="openServiceModal('bird-control')"
           />
         </div>
       </div>
@@ -252,16 +252,16 @@
     />
 
     <ServiceDetailModal
-      v-if="activeModal === 'preventive-protection'"
-      :is-open="activeModal === 'preventive-protection'"
-      title="Preventive Protection"
-      image="images/service.png"
-      description="Our preventive protection services include regular inspections and treatments to keep your home pest-free year-round. We develop customized plans based on your specific needs and local pest pressures."
+      v-if="activeModal === 'bird-control'"
+      :is-open="activeModal === 'bird-control'"
+      title="Bird Control"
+      image="/images/pigeon-capture-phoenix-az_orig.jpeg"
+      description="Birds, bird droppings, and nesting materials carry transmittable diseases and ectoparasites. Bird nests can host bird mites. Bird droppings can contaminate standing bodies of water, such as pools, and spas, etc.. Bird droppings are acidic and can strip paint from your car, and home. Reducing, and or eliminating conducive conditions is the first step of any bird management program. Call today to schedule your free Bird inspection and assessment."
       :features="[
-        'Quarterly inspections',
-        'Seasonal treatments',
+        'Professional bird control solutions',
+        'Safe and effective deterrent methods',
+        'Regular inspections and maintenance',
         'Customized protection plans',
-        'Priority service for existing customers',
         'Documentation of treatments',
         'Guaranteed satisfaction'
       ]"
@@ -294,10 +294,10 @@ const closeServiceModal = () => {
 
 const slides = [
   {
-    image: '/images/slider/v.png',
+    image: '/images/service.png',
     alt: 'Slide 1',
-    title: 'Welcome to Pest Control',
-    description: 'Your trusted partner in pest management solutions.',
+    title: 'Expert Home Security',
+    description: 'Protecting your home with professional, eco-friendly pest management services.',
   },
   {
     image: '/images/s22.png',

@@ -1,13 +1,16 @@
 <template>
   <div>
     <!-- About Hero -->
-    <section class="relative pt-24 bg-cover bg-center" style="background-image: url('@/assets/images/about-hero.jpg');">
-      <div class="absolute inset-0 bg-gradient-to-r from-dark-gray/80 to-dark-gray/60"></div>
-      <div class="container-custom relative z-10 py-16 text-center">
-        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 animate-fade-in">About MyArmorHome</h1>
-        <p class="mt-4 text-xl md:text-2xl text-gray-200 max-w-3xl mx-auto animate-slide-up">
-          Protecting Arizona homes and businesses since 2010
-        </p>
+    <section class="relative h-[400px] flex items-center justify-center overflow-hidden">
+      <div class="absolute inset-0 bg-black/50 z-10"></div>
+      <div class="relative z-20 w-full h-full">
+        <img src="/images/image.png" alt="About Us" class="w-full h-full object-cover" />
+        <div class="absolute inset-0 bg-black/40 flex items-center justify-center">
+          <div class="text-center text-white px-4">
+            <h1 class="text-5xl md:text-7xl font-bold mb-6">About Us</h1>
+            <p class="text-xl md:text-3xl font-bold text-white/90 mb-8 max-w-3xl mx-auto">Learn more about our company</p>
+          </div>
+        </div>
       </div>
     </section>
 

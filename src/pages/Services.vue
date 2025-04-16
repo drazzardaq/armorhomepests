@@ -8,10 +8,26 @@
           <div
             v-for="(slide, index) in slides"
             :key="index"
-            class="slider-slide"
+            class="slider-slide absolute inset-0 transition-opacity duration-1000"
+            :class="{ 'opacity-100': currentSlide === index, 'opacity-0': currentSlide !== index }"
           >
-            <img :src="slide.image" :alt="slide.alt" />
+            <img :src="slide.image" :alt="slide.alt" class="w-full h-full object-cover" />
+            <div class="absolute inset-0 bg-black/40 flex items-center justify-center">
+              <div class="text-center text-white px-4">
+                <h1 class="text-5xl md:text-7xl font-bold mb-6">{{ slide.title }}</h1>
+                <p class="text-xl md:text-3xl font-bold text-white/90 mb-8 max-w-3xl mx-auto">{{ slide.description }}</p>
+              </div>
+            </div>
           </div>
+        </div>
+        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex space-x-2 z-30">
+          <button
+            v-for="(slide, index) in slides"
+            :key="index"
+            class="w-3 h-3 rounded-full bg-white/50 hover:bg-white transition-all duration-300"
+            :class="{ 'bg-white': currentSlide === index }"
+            @click="goToSlide(index)"
+          ></button>
         </div>
       </div>
     </section>
@@ -252,17 +268,17 @@ const toggleFaq = (index) => {
 
 const featuredSlides = [
   {
-    image: '@/assets/images/services/general-pest.jpg',
+    image: '/images/termite.jpeg',
     title: 'General Pest Control',
     description: 'Comprehensive solutions for all common household pests'
   },
   {
-    image: '@/assets/images/scorpion.jpg',
+    image: '/images/scorpiona.jpg',
     title: 'Scorpion Control',
     description: 'Specialized treatments for Arizonas most dangerous pests'
   },
   {
-    image: '@/assets/images/services/rodents.jpg',
+    image: '/images/rat.jpeg',
     title: 'Rodent Control',
     description: 'Effective and humane solutions for mice and rats'
   }
@@ -317,31 +333,25 @@ const faqs = [
 ];
 
 const slides = ref([
-  // { image: '/images/slider/slide1.jpg', alt: 'Slide 1' },
-  { image: './images/slider/s22.png', alt: 'Slide 2' },
-  { image: './images/service.png', alt: 'Slide 3' },
-]);
-
-const featuredServices = [
   {
-    image: '/src/assets/images/services/commercial.jpg',
-    title: 'Commercial Pest Control',
-    description: 'Comprehensive solutions for businesses.',
-    link: '/services/commercial',
+    image: '/images/termite.jpeg',
+    alt: 'General Pest Control',
+    title: 'General Pest Control',
+    description: 'Comprehensive solutions for all common household pests'
   },
   {
-    image: '/src/assets/images/mosquito.jpg',
-    title: 'Mosquito Reduction',
-    description: 'Keep your outdoor spaces mosquito-free.',
-    link: '/services/mosquito',
-  },
-  {
-    image: '/src/assets/images/scorpion.jpg',
+    image: '/images/scorpiona.jpg',
+    alt: 'Scorpion Control',
     title: 'Scorpion Control',
-    description: 'Specialized treatments for scorpion infestations.',
-    link: '/services/scorpion',
+    description: 'Specialized treatments for Arizona\'s most dangerous pests'
   },
-];
+  {
+    image: '/images/rat.jpeg',
+    alt: 'Rodent Control',
+    title: 'Rodent Control',
+    description: 'Effective and humane solutions for mice and rats'
+  }
+]);
 
 const currentSlide = ref(0);
 
