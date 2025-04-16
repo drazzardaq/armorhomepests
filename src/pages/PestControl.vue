@@ -111,7 +111,7 @@ const items = ref([
 ]);
 
 const pests = ref([
-  { name: 'Ants', image: '@/assets/images/ants zoomed.jpg' },
+  { name: 'Ants', image: 'images/service.png' },
   { name: 'Cockroaches', image: '@/assets/images/scorpion.jpg' },
   { name: 'Mice', image: '@/assets/images/services/rodents.jpg' },
   { name: 'Termites', image: '@/assets/images/mosquito.jpg' },

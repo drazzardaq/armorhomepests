@@ -33,7 +33,7 @@ defineProps({
   // Ensure the `image` property points to the correct directory
   image: {
     type: String,
-    default: '/src/assets/images/default-service.jpg' // Updated default image path
+    default: 'images/service.png' // Updated default image path
   },
   icon: {
     type: String,

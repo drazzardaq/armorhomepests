@@ -96,7 +96,7 @@
           <ServiceCard
             title="Targeted Insect Control"
             description="Precision treatments that eliminate pests while being safe for your family and pets."
-            image="/src/assets/images/ants zoomed.jpg"
+            image="images/service.png"
             link="/pest-control"
             buttonClass="btn-gradient-green"
             @click="openServiceModal('insect-control')"
@@ -104,7 +104,7 @@
           <ServiceCard
             title="Advanced Rodent Management"
             description="Humane solutions that prevent rodents from entering your home in the first place."
-            image="/src/assets/images/cockroaclhes.jpg"
+            image="images/service.png"
             link="/pest-control"
             buttonClass="btn-gradient-green"
             @click="openServiceModal('rodent-control')"
@@ -112,7 +112,7 @@
           <ServiceCard
             title="Preventive Protection"
             description="Regular inspections and treatments to keep your home pest-free year-round."
-            image="/src/assets/images/house mice mouse.jpg"
+            image="images/service.png"
             link="/pest-control"
             buttonClass="btn-gradient-green"
             @click="openServiceModal('preventive-protection')"
@@ -170,7 +170,7 @@
       v-if="activeModal === 'smart-alarm'"
       :is-open="activeModal === 'smart-alarm'"
       title="Smart Alarm Systems"
-      image="/src/assets/images/bug.jpg"
+      image="images/service.png"
       description="Our AI-powered smart alarm systems learn your daily routines and adapt to provide personalized protection. With advanced sensors and machine learning algorithms, our systems can distinguish between normal household activity and potential security threats."
       :features="[
         'Motion sensors with pet immunity',
@@ -187,7 +187,7 @@
       v-if="activeModal === 'surveillance'"
       :is-open="activeModal === 'surveillance'"
       title="Advanced Surveillance"
-      image="/src/assets/images/bug.jpg"
+      image="images/service.png"
       description="Our HD surveillance cameras with facial recognition technology provide real-time alerts to your mobile device. Monitor your home from anywhere with our secure, encrypted video feed."
       :features="[
         '1080p HD video quality',
@@ -204,7 +204,7 @@
       v-if="activeModal === 'integration'"
       :is-open="activeModal === 'integration'"
       title="Seamless Integration"
-      image="/src/assets/images/bug.jpg"
+      image="images/service.png"
       description="Control your entire home security ecosystem from anywhere with our intuitive mobile app. Our systems integrate with popular smart home platforms, allowing you to create a fully connected home environment."
       :features="[
         'Mobile app for iOS and Android',
@@ -221,7 +221,7 @@
       v-if="activeModal === 'insect-control'"
       :is-open="activeModal === 'insect-control'"
       title="Targeted Insect Control"
-      image="/src/assets/images/ants zoomed.jpg"
+      image="images/service.png"
       description="Our precision treatments target common household pests like ants, cockroaches, and spiders, using methods that are safe for your family and pets. We focus on eliminating the source of the problem, not just the symptoms."
       :features="[
         'Eco-friendly treatment options',
@@ -238,7 +238,7 @@
       v-if="activeModal === 'rodent-control'"
       :is-open="activeModal === 'rodent-control'"
       title="Advanced Rodent Management"
-      image="/src/assets/images/cockroaclhes.jpg"
+      image="images/service.png"
       description="We use humane methods to remove rodents from your home, focusing on prevention to keep them from returning. Our comprehensive approach includes sealing entry points and implementing deterrent strategies."
       :features="[
         'Humane trapping methods',
@@ -255,7 +255,7 @@
       v-if="activeModal === 'preventive-protection'"
       :is-open="activeModal === 'preventive-protection'"
       title="Preventive Protection"
-      image="/src/assets/images/house mice mouse.jpg"
+      image="images/service.png"
       description="Our preventive protection services include regular inspections and treatments to keep your home pest-free year-round. We develop customized plans based on your specific needs and local pest pressures."
       :features="[
         'Quarterly inspections',

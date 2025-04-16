@@ -317,9 +317,9 @@ const faqs = [
 ];
 
 const slides = ref([
-  { image: '/images/slider/slide1.jpg', alt: 'Slide 1' },
-  { image: '/images/slider/slide2.jpg', alt: 'Slide 2' },
-  { image: '/images/slider/slide3.jpg', alt: 'Slide 3' },
+  // { image: '/images/slider/slide1.jpg', alt: 'Slide 1' },
+  { image: './images/slider/s22.png', alt: 'Slide 2' },
+  { image: './images/service.png', alt: 'Slide 3' },
 ]);
 
 const featuredServices = [
