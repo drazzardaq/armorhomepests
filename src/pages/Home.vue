@@ -96,7 +96,7 @@
           <ServiceCard
             title="Targeted Insect Control"
             description="Precision treatments that eliminate pests while being safe for your family and pets."
-            image="/images/termite.jpeg"
+            image="images/termite.jpeg"
             link="/pest-control"
             buttonClass="btn-gradient-green"
             @click="openServiceModal('insect-control')"
@@ -104,7 +104,7 @@
           <ServiceCard
             title="Advanced Rodent Management"
             description="Humane solutions that prevent rodents from entering your home in the first place."
-            image="/images/rat.jpeg"
+            image="images/rat.jpeg"
             link="/pest-control"
             buttonClass="btn-gradient-green"
             @click="openServiceModal('rodent-control')"
@@ -112,7 +112,7 @@
           <ServiceCard
             title="Bird Control"
             description="Professional solutions to protect your property from bird-related damage and health hazards."
-            image="/images/pigeon-capture-phoenix-az_orig.jpeg"
+            image="images/pigeon-capture-phoenix-az_orig.jpeg"
             link="/pest-control"
             buttonClass="btn-gradient-green"
             @click="openServiceModal('bird-control')"
