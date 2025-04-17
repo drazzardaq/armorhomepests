@@ -35,7 +35,7 @@
             </div>
           </div>
           <div class="relative rounded-xl overflow-hidden shadow-lg">
-            <img src="@/assets/images/about-hero.jpg" alt="Our Mission" class="w-full h-full object-cover">
+            <img src="@/assets/images/image.png" alt="Our Mission" class="w-full h-full object-cover">
           </div>
         </div>
       </div>
