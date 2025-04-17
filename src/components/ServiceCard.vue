@@ -1,7 +1,7 @@
 <template>
   <div class="service-card" @click="$emit('click')">
     <div v-if="image" class="service-image">
-      <img :src="image" :alt="title" class="w-full h-48 object-cover">
+      <img :src="'/'+image" :alt="title" class="w-full h-48 object-cover">
     </div>
     <div v-else-if="icon" class="service-icon">
       <i :class="icon"></i>

@@ -104,12 +104,6 @@ const fetchRandomUserAvatars = async () => {
   }
 };
 
-const items = ref([
-  { title: 'Box 1', description: 'Description for box 1' },
-  { title: 'Box 2', description: 'Description for box 2' },
-  { title: 'Box 3', description: 'Description for box 3' },
-]);
-
 const pests = ref([
   { name: 'Ants', image: 'images/termite.jpeg' },
   { name: 'Cockroaches', image: 'images/scorpion.jpg' },
