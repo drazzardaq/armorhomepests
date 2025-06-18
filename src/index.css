@@ -1,0 +1,180 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* PixelPals Design System - Neon colors with dark/light theme support */
+
+@layer base {
+  :root {
+    --background: 0 0% 8%;
+    --foreground: 0 0% 98%;
+
+    --card: 0 0% 12%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 0 0% 12%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 330 100% 50%; /* Hot Pink */
+    --primary-foreground: 0 0% 98%;
+
+    --secondary: 195 100% 50%; /* Electric Blue */
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 0 0% 15%;
+    --muted-foreground: 0 0% 70%;
+
+    --accent: 90 100% 50%; /* Lime Green */
+    --accent-foreground: 0 0% 8%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 0 0% 20%;
+    --input: 0 0% 15%;
+    --ring: 330 100% 50%;
+
+    --radius: 0.5rem;
+
+    /* Custom neon colors */
+    --neon-pink: 330 100% 50%;
+    --neon-blue: 195 100% 50%;
+    --neon-green: 90 100% 50%;
+    --neon-purple: 270 100% 50%;
+  }
+
+  .light {
+    --background: 0 0% 98%;
+    --foreground: 0 0% 8%;
+
+    --card: 0 0% 95%;
+    --card-foreground: 0 0% 8%;
+
+    --popover: 0 0% 95%;
+    --popover-foreground: 0 0% 8%;
+
+    --primary: 330 100% 40%;
+    --primary-foreground: 0 0% 98%;
+
+    --secondary: 195 100% 40%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 0 0% 90%;
+    --muted-foreground: 0 0% 40%;
+
+    --accent: 90 80% 40%;
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 84.2% 50%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 0 0% 85%;
+    --input: 0 0% 90%;
+    --ring: 330 100% 40%;
+
+    /* Light theme neon colors - less intense */
+    --neon-pink: 330 80% 40%;
+    --neon-blue: 195 80% 40%;
+    --neon-green: 90 70% 35%;
+    --neon-purple: 270 80% 40%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground transition-colors duration-300;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+}
+
+@layer components {
+  .neon-glow {
+    box-shadow: 0 0 10px hsl(var(--neon-pink)), 0 0 20px hsl(var(--neon-pink)), 0 0 30px hsl(var(--neon-pink));
+  }
+  
+  .neon-text {
+    text-shadow: 0 0 10px currentColor, 0 0 20px currentColor, 0 0 30px currentColor;
+  }
+  
+  .pixel-border {
+    border-image: url("data:image/svg+xml,%3csvg width='100' height='100' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='m0 0h100v100h-100z' fill='none' stroke='%23ff1493' stroke-width='2'/%3e%3c/svg%3e") 2;
+  }
+  
+  .retro-grid {
+    background-image: 
+      linear-gradient(rgba(255, 20, 147, 0.1) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255, 20, 147, 0.1) 1px, transparent 1px);
+    background-size: 20px 20px;
+  }
+
+  .gradient-cosmic {
+    background: linear-gradient(135deg, 
+      hsl(var(--neon-pink)) 0%, 
+      hsl(var(--neon-purple)) 25%, 
+      hsl(var(--neon-blue)) 50%, 
+      hsl(var(--neon-green)) 75%, 
+      hsl(var(--neon-pink)) 100%);
+    background-size: 400% 400%;
+    animation: gradient-shift 8s ease-in-out infinite;
+  }
+
+  .gradient-neon {
+    background: linear-gradient(45deg, 
+      hsl(var(--neon-pink)), 
+      hsl(var(--neon-blue)), 
+      hsl(var(--neon-green)));
+  }
+
+  .pet-bg {
+    background-image: url('https://images.unsplash.com/photo-1470813740244-df37b8c1edcb?w=800&q=80');
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: overlay;
+  }
+
+  .nature-bg {
+    background-image: url('https://images.unsplash.com/photo-1500673922987-e212871fec22?w=800&q=80');
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: overlay;
+  }
+
+  .forest-bg {
+    background-image: url('https://images.unsplash.com/photo-1523712999610-f77fbcfc3843?w=800&q=80');
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: overlay;
+  }
+}
+
+@keyframes gradient-shift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes pulse-neon {
+  0%, 100% { box-shadow: 0 0 5px hsl(var(--neon-pink)), 0 0 10px hsl(var(--neon-pink)); }
+  50% { box-shadow: 0 0 10px hsl(var(--neon-pink)), 0 0 20px hsl(var(--neon-pink)), 0 0 30px hsl(var(--neon-pink)); }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.animate-pulse-neon {
+  animation: pulse-neon 2s ease-in-out infinite;
+}
+
+.animate-gradient {
+  animation: gradient-shift 8s ease-in-out infinite;
+}
