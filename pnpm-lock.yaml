@@ -189,9 +189,6 @@ importers:
       globals:
         specifier: ^15.9.0
         version: 15.15.0
-      lovable-tagger:
-        specifier: ^1.1.7
-        version: 1.1.8(vite@5.4.19(@types/node@22.15.32))
       postcss:
         specifier: ^8.4.47
         version: 8.5.6
@@ -2084,11 +2081,6 @@ packages:
   loose-envify@1.4.0:
     resolution: {integrity: sha512-lyuxPGr/Wfhrlem2CL/UcnUc1zcqKAImBDzukY7Y5F/yQiNdko6+fRLevlw1HgMySw7f611UIY408EtxRSoK3Q==}
     hasBin: true
-
-  lovable-tagger@1.1.8:
-    resolution: {integrity: sha512-0a8lEpsgk+Z6crd+HE+GTmVzB0f++lMyTgW3QUF+hYZBjsA384RqUfCZAYccHlMLxYPI+dk7zjVuIvJcq8PiBg==}
-    peerDependencies:
-      vite: ^5.0.0
 
   lru-cache@10.4.3:
     resolution: {integrity: sha512-JNAzZcXrCt42VGLuYz0zfAzDfAvJWW6AfYlDBQyDV5DClI2m5sAmK+OIO7s59XfsRsWHp02jAJrRadPRGTt6SQ==}
@@ -4377,18 +4369,6 @@ snapshots:
   loose-envify@1.4.0:
     dependencies:
       js-tokens: 4.0.0
-
-  lovable-tagger@1.1.8(vite@5.4.19(@types/node@22.15.32)):
-    dependencies:
-      '@babel/parser': 7.27.5
-      '@babel/types': 7.27.6
-      esbuild: 0.25.5
-      estree-walker: 3.0.3
-      magic-string: 0.30.17
-      tailwindcss: 3.4.17
-      vite: 5.4.19(@types/node@22.15.32)
-    transitivePeerDependencies:
-      - ts-node
 
   lru-cache@10.4.3: {}
 

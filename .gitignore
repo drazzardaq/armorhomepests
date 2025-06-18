@@ -10,6 +10,10 @@ lerna-debug.log*
 node_modules
 dist
 dist-ssr
+README-local.md
+package-lock.json
+repo-update
+*.zip
 *.local
 
 # Editor directories and files
