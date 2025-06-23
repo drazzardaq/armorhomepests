@@ -1,0 +1,30 @@
+{
+  "name": "Dracoscopia",
+  "short_name": "Dracoscopia",
+  "start_url": "/",
+  "scope": "/",
+  "description": "The Venus Project Team",
+  "lang": "en-US",
+  "dir": "ltr",
+  "theme_color": "#00449f",
+  "background_color": "#000000",
+  "display": "standalone",
+  "display_override": ["standalone", "minimal-ui"],
+  "version": "0.0.2",
+  "icons": [
+    {
+      "src": "https://dracoscopia.com/favicon/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "https://dracoscopia.com/favicon/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
+
+

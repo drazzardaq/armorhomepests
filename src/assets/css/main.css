@@ -1,0 +1,593 @@
+@import 'variables.css';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: var(--font-family-base);
+    font-size: var(--font-size-base);
+    line-height: var(--line-height-base);
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-crypto-dark text-white antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold text-white;
+  }
+
+  h1 {
+    @apply text-4xl md:text-5xl lg:text-6xl;
+  }
+
+  h2 {
+    @apply text-3xl md:text-4xl lg:text-5xl;
+  }
+
+  h3 {
+    @apply text-2xl md:text-3xl lg:text-4xl;
+  }
+
+  h4 {
+    @apply text-xl md:text-2xl lg:text-3xl;
+  }
+
+  h5 {
+    @apply text-lg md:text-xl lg:text-2xl;
+  }
+
+  h6 {
+    @apply text-base md:text-lg lg:text-xl;
+  }
+
+  a {
+    @apply text-crypto-primary hover:text-crypto-accent transition-colors duration-200;
+  }
+}
+
+.btn-outline-white {
+  @apply btn border-2 border-white text-white hover:bg-crypto-primary hover:text-white !important;
+}
+
+
+@layer components {
+  .btn {
+    @apply inline-flex items-center justify-center px-6 py-3 rounded-md font-medium transition-all duration-300;
+  }
+
+  .btn-gradient-crypto {
+    @apply btn bg-gradient-to-r from-crypto-primary to-crypto-secondary text-white hover:from-crypto-secondary hover:to-crypto-primary;
+  }
+
+  .btn-outline-crypto {
+    @apply btn border-2 border-crypto-primary text-crypto-primary hover:bg-crypto-primary hover:text-white;
+  }
+  
+  .btn-outline-white {
+    @apply btn border-2 border-white text-white hover:bg-crypto-primary hover:text-white;
+  }
+
+  .btn-gradient-gold {
+    @apply btn bg-gradient-to-r from-accent-gold to-yellow-400 text-dark-navy hover:from-yellow-400 hover:to-accent-gold;
+  }
+
+  .container-custom {
+    @apply container mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .section {
+    @apply py-12 md:py-16 lg:py-20;
+  }
+
+  .card {
+    @apply bg-crypto-dark/50 rounded-lg shadow-md overflow-hidden transition-all duration-300 border border-crypto-primary/20 backdrop-blur-sm;
+  }
+
+  .card:hover {
+    @apply transform -translate-y-2 shadow-lg border-crypto-primary/40;
+  }
+
+  .input {
+    @apply w-full px-4 py-2 rounded-medium border border-crypto-primary/20 bg-crypto-dark/50 text-white focus:border-crypto-primary focus:ring-2 focus:ring-crypto-primary/20 transition-all duration-200;
+  }
+
+  .textarea {
+    @apply input min-h-[120px] resize-y;
+  }
+
+  .label {
+    @apply block text-sm font-medium text-gray-300 mb-1;
+  }
+
+  .error-message {
+    @apply text-crypto-warning text-sm mt-1;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .bg-gradient-crypto {
+    @apply bg-gradient-to-r from-crypto-primary to-crypto-secondary;
+  }
+
+  .hover-lift {
+    @apply transition-transform duration-300;
+  }
+
+  .hover-lift:hover {
+    @apply transform -translate-y-2 shadow-lg;
+  }
+
+  .hover-shadow {
+    @apply hover:shadow-lg;
+  }
+
+  .animate-fade-in {
+    animation: fadeIn 0.5s ease-out forwards;
+  }
+
+  .animate-slide-up {
+    animation: slideUp 0.5s ease-out forwards;
+  }
+
+  .animate-slide-down {
+    animation: slideDown 0.5s ease-out forwards;
+  }
+
+  .perspective-3d {
+    perspective: 1000px;
+  }
+
+  .transform-3d {
+    transform-style: preserve-3d;
+  }
+
+  .rotate-3d {
+    transform: rotate3d(1, 1, 0, 15deg);
+  }
+
+  .hover-rotate-3d {
+    transition: transform 0.5s ease;
+  }
+
+  .hover-rotate-3d:hover {
+    transform: rotate3d(1, 1, 0, 30deg);
+  }
+
+  .glow-effect {
+    box-shadow: 0 0 20px rgba(130, 71, 229, 0.3);
+  }
+
+  .glow-effect:hover {
+    box-shadow: 0 0 30px rgba(130, 71, 229, 0.5);
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-crypto-dark;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-crypto-primary/50 rounded-none hover:bg-crypto-primary/70 transition-colors duration-200;
+}
+
+/* Focus styles */
+:focus-visible {
+  @apply outline-none ring-2 ring-crypto-primary ring-offset-2 ring-offset-crypto-dark;
+}
+
+/* Selection styles */
+::selection {
+  @apply bg-crypto-primary/20 text-white;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px) rotate3d(1, 1, 0, 0deg);
+  }
+  50% {
+    transform: translateY(-20px) rotate3d(1, 1, 0, 5deg);
+  }
+  100% {
+    transform: translateY(0px) rotate3d(1, 1, 0, 0deg);
+  }
+}
+
+:root {
+  --crypto-dark: #0A0F2E;
+  --crypto-primary: #153695;
+  --crypto-secondary: #00deff;
+  --crypto-accent: #42386c;
+  --crypto-success: #4CAF50;
+  --crypto-warning: #FFD700;
+  --dark-gray: #1F2937;
+  --light-gray: #F3F4F6;
+  --white: #FFFFFF;
+  --black: #000000;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  color: var(--white);
+  line-height: 1.6;
+  background-color: var(--crypto-dark);
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Transitions */
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.3s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
+
+/* Button styles */
+.btn {
+  @apply inline-flex items-center justify-center px-6 py-3 rounded-md font-medium transition-all duration-300;
+}
+
+.btn-gradient-crypto {
+  @apply bg-gradient-to-r from-crypto-primary to-crypto-secondary text-white hover:from-crypto-secondary hover:to-crypto-primary;
+}
+
+.btn-gradient-gold {
+  @apply bg-gradient-to-r from-accent-gold to-yellow-400 text-dark-navy hover:from-yellow-400 hover:to-accent-gold;
+}
+
+.btn-phone {
+  @apply bg-green-600 text-white hover:bg-green-700;
+}
+
+/* Card hover effects */
+.card-hover {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+/* Hero section overlay */
+.hero-section-overlay {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5));
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  /* background: var(--light-gray); */
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--secondary-blue);
+  /* border-radius: 4px; */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-blue);
+}
+
+/* Focus styles for accessibility */
+:focus {
+  outline: 2px solid var(--crypto-accent);
+  outline-offset: 2px;
+}
+
+/* Responsive typography */
+@media (max-width: 640px) {
+  h1 {
+    font-size: 2rem;
+  }
+  h2 {
+    font-size: 1.75rem;
+  }
+  h3 {
+    font-size: 1.5rem;
+  }
+}
+
+/* Base styles */
+@layer base {
+  html {
+    @apply antialiased;
+  }
+  
+  .nav-link {
+    @apply inline-flex items-center px-1 pt-1 text-sm font-medium text-white hover:text-gray-200 transition-colors duration-200;
+  }
+  
+  .mobile-nav-link {
+    @apply block px-3 py-2 rounded-md text-base font-medium text-white hover:text-gray-200 hover:bg-gray-700 transition-colors duration-200;
+  }
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.5s ease-out forwards;
+}
+
+/* Modal styles */
+.modal-overlay {
+  @apply fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4;
+}
+
+.modal-content {
+  @apply bg-white rounded-lg w-full max-w-2xl max-h-[90vh] overflow-y-auto relative;
+}
+
+/* Service card styles */
+.service-card {
+  @apply bg-white rounded-lg shadow-card overflow-hidden transition-all duration-300 cursor-pointer;
+}
+
+.service-card:hover {
+  @apply transform -translate-y-2 shadow-card-hover;
+}
+
+/* Testimonial card styles */
+.testimonial-card {
+  @apply bg-white rounded-lg shadow-card p-6 transition-all duration-300;
+}
+
+.testimonial-card:hover {
+  @apply shadow-card-hover;
+}
+
+/* Header styles */
+.header-logo {
+  @apply transition-transform duration-300;
+}
+
+.header-logo:hover {
+  @apply transform scale-105;
+}
+
+/* Footer styles */
+.footer-link {
+  @apply text-gray-300 hover:text-white transition-colors duration-200;
+}
+
+/* Section styles */
+.section-title {
+  @apply text-4xl font-bold text-center mb-12;
+}
+
+.section-subtitle {
+  @apply text-xl text-center mb-8 text-gray-600;
+}
+
+/* Form styles */
+.form-input {
+  @apply w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-crypto-primary focus:border-transparent;
+}
+
+.form-label {
+  @apply block text-sm font-medium text-gray-700 mb-1;
+}
+
+.form-error {
+  @apply text-red-500 text-sm mt-1;
+}
+
+/* Utility classes */
+.text-gradient {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-tvp-purple via-tvp-blue to-tvp-teal;
+}
+
+.bg-gradient-crypto {
+  @apply bg-gradient-to-r from-tvp-purple via-tvp-blue to-tvp-teal;
+}
+
+.bg-gradient-green {
+  @apply bg-gradient-to-r from-primary-green to-secondary-green;
+}
+
+.shadow-soft {
+  @apply shadow-lg;
+}
+
+.rounded-soft {
+  @apply rounded-lg;
+}
+
+.transition-smooth {
+  @apply transition-all duration-300;
+}
+
+/* Crypto-specific styles */
+.crypto-card {
+  @apply card p-6 perspective-3d transform-3d;
+}
+
+.crypto-card:hover {
+  @apply rotate-3d;
+}
+
+.crypto-price {
+  @apply text-2xl font-bold text-crypto-primary;
+}
+
+.crypto-change {
+  @apply text-sm font-medium;
+}
+
+.crypto-change.positive {
+  @apply text-crypto-success;
+}
+
+.crypto-change.negative {
+  @apply text-crypto-warning;
+}
+
+.token-address {
+  @apply text-sm font-mono text-gray-400 break-all;
+}
+
+.polygon-badge {
+  @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-crypto-primary/50 text-white;
+}
+
+.staking-card {
+  @apply crypto-card bg-gradient-to-br from-crypto-dark/50 to-crypto-primary/20;
+}
+
+.apy-badge {
+  @apply inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-crypto-success/10 text-crypto-success;
+}
+
+/* 3D Animation Classes */
+.float-animation {
+  animation: float 6s ease-in-out infinite;
+}
+
+.glass-effect {
+  @apply bg-crypto-dark/30 backdrop-blur-md border border-white/10;
+}
+
+.gradient-border {
+  position: relative;
+  background: linear-gradient(45deg, var(--color-tvp-purple), var(--color-tvp-blue), var(--color-tvp-teal));
+  padding: 1px;
+  border-radius: 0.5rem;
+}
+
+.gradient-border::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--crypto-dark);
+  border-radius: 0.5rem;
+  z-index: -1;
+}
+
+/* Token Stats */
+.token-stats {
+  @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6;
+}
+
+.stat-card {
+  @apply crypto-card p-6 text-center;
+}
+
+.stat-value {
+  @apply text-3xl font-bold text-crypto-primary mb-2;
+}
+
+.stat-label {
+  @apply text-gray-400 text-sm;
+}
+
+/* Market Data */
+.market-data {
+  @apply grid grid-cols-1 md:grid-cols-3 gap-6;
+}
+
+.market-card {
+  @apply crypto-card p-4;
+}
+
+.market-title {
+  @apply text-gray-400 text-sm mb-2;
+}
+
+.market-value {
+  @apply text-xl font-bold text-white;
+}
+
+/* Tokenomics */
+.tokenomics-grid {
+  @apply grid grid-cols-1 md:grid-cols-2 gap-8;
+}
+
+.tokenomics-card {
+  @apply crypto-card p-6;
+}
+
+.tokenomics-title {
+  @apply text-xl font-bold text-white mb-4;
+}
+
+.tokenomics-list {
+  @apply space-y-4;
+}
+
+.tokenomics-item {
+  @apply flex justify-between items-center;
+}
+
+.tokenomics-label {
+  @apply text-gray-400;
+}
+
+.tokenomics-value {
+  @apply text-crypto-primary font-medium;
+}
