@@ -311,15 +311,11 @@ onMounted(() => {
   min-height: 100vh;
 }
 .proposal-form {
-  background: rgba(255,255,255,0.9);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border-radius: 1rem;
-  box-shadow: 0 4px 24px 0 rgba(66,56,108,0.08);
+  /* Use global glass/frosted styles */
+  @apply frosted-glass-card;
 }
 .location-card {
-  background: rgba(255,255,255,0.7);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
+  /* Use global glass/frosted styles */
+  @apply frosted-glass-card;
 }
 </style>

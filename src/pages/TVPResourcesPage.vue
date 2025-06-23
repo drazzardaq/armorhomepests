@@ -1,5 +1,20 @@
 <template>
-  
+  <SeoHead
+    title="TVP Resource Hub | Books, Documentaries & Knowledge"
+    description="Access The Venus Project’s curated resource hub: documentaries, books, articles, and research on sustainability and the resource-based economy."
+    keywords="The Venus Project, resources, documentaries, books, articles, research, sustainability, knowledge base"
+    image="/the-venus-project-circular-city.jpg"
+    url="https://www.thevenusproject.com/resources"
+    type="website"
+    :schema="{
+      '@context': 'https://schema.org',
+      '@type': 'WebPage',
+      'name': 'TVP Resource Hub',
+      'url': 'https://www.thevenusproject.com/resources',
+      'description': 'A curated collection of resources about The Venus Project and sustainability.'
+    }"
+  />
+
     <div class="space-y-16 w-full">
       <!-- Hero Section -->
       <section class="py-16 text-center">

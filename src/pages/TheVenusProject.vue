@@ -644,3 +644,24 @@ const pledgeChecked = ref(false);
   opacity: 0;
 }
 </style>
+<SeoHead
+    title="The Venus Project | Vision, Solutions & Global Network"
+    description="Explore The Venus Project’s vision for a sustainable future, our solutions to global challenges, and how you can join our worldwide network. Learn about our mission, history, and resource-based economy."
+    keywords="The Venus Project, solutions, global network, resource-based economy, sustainability, mission, history, FAQ"
+    image="/the-venus-project-circular-city.jpg"
+    url="https://www.thevenusproject.com/venus-project"
+    type="website"
+    :schema="{
+      '@context': 'https://schema.org',
+      '@type': 'NGO',
+      'name': 'The Venus Project',
+      'url': 'https://www.thevenusproject.com/',
+      'logo': '/the-venus-project-logo.png',
+      'sameAs': [
+        'https://www.facebook.com/TheVenusProjectGlobal',
+        'https://twitter.com/TheVenusProject',
+        'https://www.youtube.com/user/thevenusprojectmedia'
+      ],
+      'description': 'The Venus Project is a global initiative for a sustainable, resource-based future.'
+    }"
+  />

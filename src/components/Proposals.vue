@@ -5,13 +5,28 @@
       <button v-for="cat in filters" :key="cat" :class="['category-pill', { active: selectedFilter === cat }]" @click="selectedFilter = cat" :aria-selected="selectedFilter === cat" role="tab" tabindex="0">{{ cat }}</button>
     </div>
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-      <div v-for="(proposal, idx) in filteredProposals" :key="proposal.title" class="frosted-glass-card proposal-card rounded-2xl shadow-xl p-0 overflow-hidden relative group flex flex-col transition-transform duration-300 hover:scale-[1.025] hover:shadow-2xl focus-within:scale-[1.025] focus-within:shadow-2xl" :tabindex="0" :aria-expanded="expandedIdx === idx" @keydown.enter="toggleExpand(idx)" @keydown.space.prevent="toggleExpand(idx)" @click.self="toggleExpand(idx)" role="button">
+      <div v-for="(proposal, idx) in filteredProposals" :key="proposal.title" class="frosted-glass-card proposal-card rounded-2xl shadow-xl p-0 overflow-hidden relative group flex flex-col transition-transform duration-300 hover:scale-[1.025] hover:shadow-2xl focus-within:scale-[1.025] focus-within:shadow-2xl animate-pop-in" :tabindex="0" :aria-expanded="expandedIdx === idx" @keydown.enter="toggleExpand(idx)" @keydown.space.prevent="toggleExpand(idx)" @click.self="toggleExpand(idx)" role="button">
         <div class="proposal-gradient-overlay"></div>
+        <div class="proposal-dark-gradient"></div>
         <img :src="proposal.img" :alt="proposal.title" class="w-full h-48 object-cover rounded-t-2xl relative z-10 transition-transform duration-300 group-hover:scale-105 group-focus:scale-105" />
         <div class="p-6 flex-1 flex flex-col relative z-20">
           <h3 class="text-xl font-bold text-blue-900 mb-2">{{ proposal.title }}</h3>
           <p class="text-gray-700 mb-4 line-clamp-3" v-if="expandedIdx !== idx">{{ proposal.desc }}</p>
           <p class="text-gray-700 mb-4" v-else>{{ proposal.longDesc || proposal.desc }}</p>
+          <div v-if="expandedIdx === idx">
+            <div v-if="proposal.realizationPlan" class="mb-2">
+              <strong>Realization Plan:</strong>
+              <div class="text-sm text-gray-800 whitespace-pre-line">{{ proposal.realizationPlan }}</div>
+            </div>
+            <div v-if="proposal.realizationCost" class="mb-2">
+              <strong>Estimated Cost:</strong>
+              <span class="text-tvp-blue font-semibold">{{ proposal.realizationCost }}</span>
+            </div>
+            <div v-if="proposal.contact" class="mb-2">
+              <strong>Contact:</strong>
+              <span class="text-tvp-blue font-semibold">{{ proposal.contact }}</span>
+            </div>
+          </div>
           <div class="flex flex-wrap gap-2 mt-auto">
             <span v-for="tag in proposal.tags" :key="tag" class="inline-block rounded bg-blue-100 px-2 py-1 text-xs font-semibold text-blue-700">{{ tag }}</span>
           </div>
@@ -20,13 +35,20 @@
             <span v-else>Learn More</span>
           </button>
         </div>
+        <!-- Modal/Lightbox for expanded proposal -->
+        <ProposalModal 
+          v-if="expandedIdx === idx" 
+          :proposal="proposal" 
+          @close="toggleExpand(idx)" 
+        />
       </div>
     </div>
   </section>
 </template>
 
 <script setup>
-import { ref, computed } from 'vue';
+import { ref, computed, onMounted, nextTick } from 'vue';
+import ProposalModal from './ProposalModal.vue';
 const props = defineProps({
   proposals: Array,
   filters: Array
@@ -40,6 +62,19 @@ const filteredProposals = computed(() => {
 function toggleExpand(idx) {
   expandedIdx.value = expandedIdx.value === idx ? null : idx;
 }
+// GSAP animation for cards
+onMounted(async () => {
+  await nextTick();
+  if (window.gsap) {
+    window.gsap.from('.proposal-card', {
+      opacity: 0,
+      y: 40,
+      stagger: 0.12,
+      duration: 0.8,
+      ease: 'power2.out',
+    });
+  }
+});
 </script>
 
 <style scoped>
@@ -48,6 +83,7 @@ function toggleExpand(idx) {
   overflow: hidden;
   cursor: pointer;
   outline: none;
+  background: transparent;
 }
 .proposal-card:focus {
   box-shadow: 0 0 0 3px #00deff55;
@@ -59,6 +95,15 @@ function toggleExpand(idx) {
   pointer-events: none;
   background: linear-gradient(120deg, rgba(0,222,255,0.08) 0%, rgba(66,56,108,0.09) 60%, rgba(255,0,128,0.07) 100%);
   mix-blend-mode: lighten;
+  border-radius: 1rem;
+  transition: opacity 0.3s;
+}
+.proposal-dark-gradient {
+  position: absolute;
+  inset: 0;
+  z-index: 6;
+  pointer-events: none;
+  background: linear-gradient(120deg,rgba(21,54,149,0.08) 0%,rgba(0,0,0,0.10) 100%);
   border-radius: 1rem;
   transition: opacity 0.3s;
 }
@@ -101,5 +146,19 @@ function toggleExpand(idx) {
   line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
+}
+.proposals-section .fixed {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  z-index: 50;
+}
+.proposals-section .fixed .bg-white {
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.18);
+  border-radius: 1.5rem;
+  max-width: 90vw;
+  max-height: 90vh;
+  overflow-y: auto;
+  margin: auto;
 }
 </style>

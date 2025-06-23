@@ -15,6 +15,10 @@ const TVPProjects = () => import("@/pages/TVPProjects.vue");
 const TVPTimeline = () => import("@/pages/TVPTimeline.vue");
 const TVPAsiProject = () => import("@/pages/TVPAsiProject.vue");  
 const Resume = () => import("@/pages/Resume.vue");  
+const Mission = () => import("@/pages/Mission.vue");
+const Solutions = () => import("@/pages/Solutions.vue");
+const FAQ = () => import("@/pages/FAQ.vue");
+const Media = () => import("@/pages/Media.vue");
 
 export const routes = [
   {
@@ -100,6 +104,26 @@ export const routes = [
         path: "resources-page",
         name: "TVPResourcesPage",
         component: TVPResourcesPage,
+      },
+      {
+        path: "mission",
+        name: "Mission",
+        component: Mission,
+      },
+      {
+        path: "solutions",
+        name: "Solutions",
+        component: Solutions,
+      },
+      {
+        path: "faq",
+        name: "FAQ",
+        component: FAQ,
+      },
+      {
+        path: "media",
+        name: "Media",
+        component: Media,
       },
     ],
   },

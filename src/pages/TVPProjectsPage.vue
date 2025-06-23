@@ -1,4 +1,19 @@
 <template>
+  <SeoHead
+    title="TVP Projects | Sustainable Designs & Innovations"
+    description="Explore The Venus Project’s innovative projects and sustainable designs. Learn about our approach to urban planning, agriculture, energy, and more."
+    keywords="The Venus Project, projects, sustainable design, urban planning, agriculture, energy, innovation"
+    image="/the-venus-project-circular-city.jpg"
+    url="https://www.thevenusproject.com/projects"
+    type="website"
+    :schema="{
+      '@context': 'https://schema.org',
+      '@type': 'WebPage',
+      'name': 'TVP Projects',
+      'url': 'https://www.thevenusproject.com/projects',
+      'description': 'Innovative projects and sustainable designs by The Venus Project.'
+    }"
+  />
   <TVPLayout active="Projects">
     <div class="space-y-16">
       <!-- Hero Section -->

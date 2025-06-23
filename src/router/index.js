@@ -15,6 +15,10 @@ import TVPProjects from '@/pages/TVPProjects.vue'
 import TVPTimeline from '@/pages/TVPTimeline.vue'
 import Partnership from '@/pages/Partnership.vue'
 import NotFound from '@/pages/NotFound.vue'
+import Mission from '@/pages/Mission.vue'
+import Solutions from '@/pages/Solutions.vue'
+import FAQ from '@/pages/FAQ.vue'
+import Media from '@/pages/Media.vue'
 
 // Unified layout for all main routes
 import TVPLayout from '@/layouts/Layout.vue'
@@ -39,6 +43,10 @@ const routes = [
       { path: 'asi-proposal', name: 'TVPAsiProject', component: TVPAsiProject },
       { path: 'contact', name: 'Contact', component: Contact },
       { path: 'partnership', name: 'Partnership', component: Partnership },
+      { path: 'mission', name: 'Mission', component: Mission },
+      { path: 'solutions', name: 'Solutions', component: Solutions },
+      { path: 'faq', name: 'FAQ', component: FAQ },
+      { path: 'media', name: 'Media', component: Media },
     ]
   },
   // Catch-all for 404

@@ -212,10 +212,31 @@ body,
   opacity: 0;
 }
 .frosted-glass-card {
-  background: #fff;
+  /* background: rgba(255, 255, 255, 0.92); */
   backdrop-filter: blur(16px) saturate(130%);
+  -webkit-backdrop-filter: blur(16px) saturate(130%);
   border: 1.5px solid rgba(66, 56, 108, 0.15);
-  box-shadow: 0 5px 8px 0 rgba(31, 38, 135, 0.15);
+  box-shadow: 0 5px 18px 0 rgba(31, 38, 135, 0.13);
+  position: relative;
+  overflow: hidden;
+}
+.frosted-glass-card:before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background: linear-gradient(120deg, rgba(21, 54, 149, 0.08) 0%, rgba(0, 0, 0, 0.10) 100%);
+  border-radius: 1.25rem;
+}
+.proposal-dark-gradient {
+  position: absolute;
+  inset: 0;
+  z-index: 6;
+  pointer-events: none;
+  background: linear-gradient(120deg, rgba(21, 54, 149, 0.08) 0%, rgba(0, 0, 0, 0.10) 100%);
+  border-radius: 1rem;
+  transition: opacity 0.3s;
 }
 .ai-skills-slider {
   margin-bottom: 2rem;
@@ -344,9 +365,9 @@ body,
   justify-content: center;
 }
 .glass-bg {
-  background: rgba(255,255,255,0.8);
+  background: rgba(255, 255, 255, 0.8);
   border-radius: 0.5rem;
-  box-shadow: 0 2px 8px 0 rgba(31,38,135,0.1);
+  box-shadow: 0 2px 8px 0 rgba(31, 38, 135, 0.1);
   border: 2px solid #bfdbfe;
   padding: 1.5rem;
 }
@@ -361,34 +382,120 @@ body,
 .central-icon-img:hover {
   transform: scale(1.05);
 }
+/* Unify glass/frosted classes and spacing for all sections */
+.glassy-bg, .glass-bg, .frosted-glass-card, .about-tvp-section, .highlights-section, .latest-news-section, .get-involved-section, .circular-cities-section, .knowledge-section {
+  padding: 2rem 1.5rem !important;
+  border-radius: 1.25rem !important;
+  box-shadow: 0 8px 32px 0 rgba(31,38,135,0.10) !important;
+  margin-bottom: 3rem !important;
+  background: rgba(255,255,255,0.92);
+  position: relative;
+  overflow: hidden;
+}
 @media (max-width: 768px) {
-  .glassy-bg, .glass-bg, .frosted-glass-card, .about-tvp-section, .highlights-section, .latest-news-section, .get-involved-section, .circular-cities-section {
+  .glassy-bg, .glass-bg, .frosted-glass-card, .about-tvp-section, .highlights-section, .latest-news-section, .get-involved-section, .circular-cities-section, .knowledge-section {
     padding: 1rem !important;
     border-radius: 0.75rem !important;
     box-shadow: 0 2px 8px 0 rgba(31,38,135,0.08) !important;
+    margin-bottom: 1.5rem !important;
   }
-  .hero-slider-3d {
-    min-height: 220px;
-    height: 220px !important;
-    max-height: 260px;
-  }
-  .hero-slide-overlay {
-    padding: 1.5rem 0.5rem !important;
-    min-height: 40%;
-  }
-  .central-icon-img {
-    width: 3.5rem;
-    height: 3.5rem;
-    max-width: 4.5rem;
-    max-height: 4.5rem;
-  }
-  .slider-btn {
-    width: 36px;
-    height: 36px;
-    font-size: 1.2rem;
-    padding: 0.25rem 0.5rem;
-  }
-  .frosted-glass-card img {
-    height: 120px !important;
-  }
+}
+/* --- Unified Button Styles --- */
+.btn-unified, .btn-glass, .btn-glass-cta, .btn-unified-details, .btn-unified-cta {
+  display: inline-block;
+  padding: 0.75rem 2rem;
+  border-radius: 0.75rem;
+  font-weight: bold;
+  background: linear-gradient(90deg, #42386c 0%, #153695 50%, #00deff 100%);
+  color: #fff;
+  box-shadow: 0 2px 8px 0 rgba(31, 38, 135, 0.1);
+  border: none;
+  transition: background 0.3s, color 0.3s, box-shadow 0.3s;
+  margin: 0.25rem;
+  position: relative;
+  z-index: 1;
+}
+.btn-unified:hover, .btn-glass:hover, .btn-glass-cta:hover, .btn-unified-details:hover, .btn-unified-cta:hover {
+  background: linear-gradient(90deg, #153695 0%, #00deff 100%);
+  color: #fff;
+  box-shadow: 0 4px 16px 0 rgba(31, 38, 135, 0.15);
+}
+.btn-unified:focus, .btn-glass:focus, .btn-glass-cta:focus, .btn-unified-details:focus, .btn-unified-cta:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px #00deff55;
+}
+.btn-unified-cta {
+  background: linear-gradient(90deg, #00deff 0%, #153695 100%);
+}
+.btn-unified-cta:hover {
+  background: linear-gradient(90deg, #153695 0%, #00deff 100%);
+}
+.btn-unified-details {
+  background: linear-gradient(90deg, #42386c 0%, #153695 50%, #00deff 100%);
+}
+.btn-unified-details:hover {
+  background: linear-gradient(90deg, #153695 0%, #00deff 100%);
+}
+
+/* --- Unified Card Styles --- */
+.unified-card, .frosted-glass-card, .glass-bg, .glassy-bg {
+  border-radius: 1.25rem !important;
+  box-shadow: 0 8px 32px 0 rgba(31,38,135,0.10) !important;
+  background: rgba(255,255,255,0.92);
+  position: relative;
+  overflow: hidden;
+  padding: 2rem 1.5rem !important;
+  border: 1.5px solid rgba(66, 56, 108, 0.1);
+}
+.unified-card:focus, .frosted-glass-card:focus, .glass-bg:focus, .glassy-bg:focus {
+  box-shadow: 0 0 0 3px #00deff55 !important;
+}
+
+/* --- Card Gradient Overlay --- */
+.card-gradient-overlay, .proposal-gradient-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 5;
+  pointer-events: none;
+  background: linear-gradient(120deg, rgba(0,222,255,0.08) 0%, rgba(66,56,108,0.09) 60%, rgba(255,0,128,0.07) 100%);
+  mix-blend-mode: lighten;
+  border-radius: 1rem;
+  transition: opacity 0.3s;
+}
+.card-dark-gradient, .proposal-dark-gradient {
+  position: absolute;
+  inset: 0;
+  z-index: 6;
+  pointer-events: none;
+  background: linear-gradient(120deg, rgba(21, 54, 149, 0.08) 0%, rgba(0, 0, 0, 0.10) 100%);
+  border-radius: 1rem;
+  transition: opacity 0.3s;
+}
+
+/* --- Tag Styles --- */
+.proposal-tag, .card-tag {
+  display: inline-block;
+  border-radius: 0.5rem;
+  background: #e0f2fe;
+  color: #153695;
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 0.25rem 0.75rem;
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+/* --- Modal Close Button --- */
+.btn-modal-close {
+  background: none;
+  border: none;
+  color: #153695;
+  font-size: 2rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+.btn-modal-close:hover, .btn-modal-close:focus {
+  color: #00deff;
+  outline: none;
 }

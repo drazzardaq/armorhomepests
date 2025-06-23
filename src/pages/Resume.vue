@@ -131,95 +131,11 @@ import { ref } from "vue";
 import Proposals from '@/components/Proposals.vue';
 import Layout from "@/layouts/Layout.vue";
 import { headingClass, subheadingClass } from "@/layouts/layoutClasses";
+import { allProposals, proposalFilters } from '@/assets/proposals.js';
 const showResume = ref(false);
 const showAppSection = ref(false); // For foldable application section
 const myImage = ref("/tvp/prfile.webp"); // Set your image URL here
 const showPastAI = ref(false);
-
-// Proposal filters and data (same as Home.vue)
-const proposalFilters = [
-  'All',
-  'Sustainability',
-  'Tech',
-  'Community',
-  'Education',
-  'Blockchain',
-];
-const allProposals = [
-  {
-    title: 'TVPOutpost',
-    desc: 'A modular, open-source AI orchestration and automation platform for creative and scientific workflows.',
-    img: '/tvp/logo_full_logo_gdt.svg',
-    tags: ['Tech', 'Sustainability', 'Community'],
-  },
-  {
-    title: 'Reamlsz',
-    desc: 'A decentralized, gamified knowledge and collaboration network for open innovation and learning.',
-    img: '/tvp/Space-1.jpg',
-    tags: ['Tech', 'Community', 'Education'],
-  },
-  {
-    title: 'Dolphinal',
-    desc: 'A privacy-first, open-source digital identity and credentialing system for the new web.',
-    img: '/tvp/resource-based-economy-the-venus-project.jpg',
-    tags: ['Tech', 'Blockchain'],
-  },
-  {
-    title: 'OpenAI Orchestrator',
-    desc: 'A toolkit for building, deploying, and managing autonomous AI agents and workflows.',
-    img: '/tvp/4.jpg',
-    tags: ['Tech', 'Education'],
-  },
-  {
-    title: 'EcoChain',
-    desc: 'A blockchain-based platform for tracking, verifying, and rewarding sustainable actions and projects.',
-    img: '/tvp/sfera-logotip-proekt-venera.jpg',
-    tags: ['Blockchain', 'Sustainability'],
-  },
-  {
-    title: 'DeepSeek Coder V2 LLM Cluster',
-    desc: 'A scalable, collaborative cluster for advanced AI code generation and research.',
-    img: '/tvp/Space-1.jpg',
-    tags: ['Tech', 'Education'],
-  },
-  // Creative new proposals:
-  {
-    title: 'AquaLoop',
-    desc: 'A global open-source network for decentralized, AI-managed aquaponics and food security.',
-    img: '/tvp/Space-1.jpg',
-    tags: ['Sustainability', 'Tech', 'Community'],
-  },
-  {
-    title: 'EduSphere',
-    desc: 'Immersive, AI-powered education platform for lifelong learning and global collaboration.',
-    img: '/tvp/4.jpg',
-    tags: ['Education', 'Tech', 'Community'],
-  },
-  {
-    title: 'SolarShare',
-    desc: 'Peer-to-peer solar energy sharing and microgrid management for resilient communities.',
-    img: '/tvp/resource-based-economy-the-venus-project.jpg',
-    tags: ['Sustainability', 'Tech', 'Community'],
-  },
-  {
-    title: 'HealthMesh',
-    desc: 'A privacy-first, decentralized health data and telemedicine network for all.',
-    img: '/tvp/sfera-logotip-proekt-venera.jpg',
-    tags: ['Tech', 'Community'],
-  },
-  {
-    title: 'GreenLedger',
-    desc: 'A transparent blockchain for tracking, verifying, and rewarding sustainable actions worldwide.',
-    img: '/tvp/logo_full_logo_gdt.svg',
-    tags: ['Blockchain', 'Sustainability'],
-  },
-  {
-    title: 'SkillBridge',
-    desc: 'A global skills exchange and mentorship platform for upskilling and community resilience.',
-    img: '/tvp/4.jpg',
-    tags: ['Education', 'Community'],
-  },
-];
 </script>
 
 <style scoped>

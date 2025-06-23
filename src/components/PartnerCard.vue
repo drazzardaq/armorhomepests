@@ -1,8 +1,20 @@
 <template>
-  <div class="frosted-glass-card flex min-h-[320px] flex-col items-center rounded-2xl bg-white p-8 shadow-xl">
-    <img v-if="img != 'except'" :src="img" :alt="title" class="mb-4 max-h-32 w-auto rounded-xl border-4 object-cover" :class="imgBorder + ` ${padClass}`" />
-    <span v-else-if="img == 'except'" class="mb-4 h-24 w-auto p-2 border-black px-3 border-4">
-      <svg width="264" height="79" viewBox="0 0 264 79" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <div
+    class="partner-card glassy-bg glassy-interact relative flex min-h-[320px] flex-col items-center rounded-2xl border border-white/60 bg-white/70 bg-clip-padding p-8 shadow-2xl backdrop-blur-lg transition hover:scale-[1.025] hover:shadow-3xl focus-within:ring-2 focus-within:ring-blue-400"
+    :class="computedBgClass"
+    tabindex="0"
+    aria-label="Partner: {{ title }}"
+  >
+    <img
+      v-if="img !== 'except'"
+      :src="img"
+      :alt="title"
+      class="mb-4 max-h-32 w-auto rounded-xl border-4 border-white/80 object-cover shadow-lg transition group-hover:scale-105 group-hover:shadow-xl"
+      :class="imgBorder + ` ${padClass}`"
+    />
+    <span v-else-if="img === 'except'" class="mb-4 h-24 w-auto p-2 border-black px-3 border-4 bg-white/80 rounded-xl flex items-center justify-center">
+      <!-- SVG logo fallback -->
+      <svg width="120" height="40" viewBox="0 0 264 79" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
         <g clip-path="url(#clip0)" filter="url(#filter0_d)">
           <path d="M1.13672 62.8046C1.25809 62.7775 1.38249 62.7533 1.51295 62.7473C1.64039 62.7413 1.76479 62.7383 1.88616 62.7383C2.15923 62.7383 2.40803 62.7594 2.63559 62.8046V75.1213C2.40803 75.1636 2.16833 75.1877 1.91043 75.1877C1.77389 75.1877 1.63432 75.1847 1.50082 75.1757C1.36428 75.1696 1.24291 75.1485 1.13672 75.1213V62.8046Z" fill="white" style="fill: rgb(0, 0, 0)"></path>
           <path d="M7.08984 62.8039C7.20818 62.7767 7.33864 62.7526 7.47518 62.7465C7.61172 62.7405 7.73309 62.7375 7.83928 62.7375C8.06381 62.7375 8.30654 62.7586 8.56444 62.8039L15.4004 72.7001V62.8039C15.4307 62.8039 15.4641 62.8008 15.4945 62.7948C15.5218 62.7858 15.5551 62.7827 15.5855 62.7827C15.6613 62.7646 15.7463 62.7526 15.8464 62.7465C15.9435 62.7405 16.0315 62.7375 16.1074 62.7375C16.2136 62.7375 16.3289 62.7405 16.4593 62.7465C16.5868 62.7526 16.696 62.7767 16.787 62.8039V75.1206C16.6808 75.1477 16.5655 75.1689 16.435 75.1749C16.3076 75.184 16.1832 75.187 16.0618 75.187C15.9708 75.187 15.8616 75.184 15.7342 75.1749C15.6037 75.1689 15.4793 75.1477 15.3579 75.1206L8.49466 65.2636V75.1206C8.27013 75.1628 8.0365 75.187 7.79073 75.187C7.548 75.187 7.31437 75.1628 7.08984 75.1206V62.8039Z" fill="white" style="fill: rgb(0, 0, 0)"></path>
@@ -59,21 +71,46 @@
         </defs>
       </svg>
     </span>
-    <h3 class="mb-2 text-2xl font-bold text-gray-900">{{ title }}</h3>
-    <p class="mb-2 text-center text-gray-900">{{ description }}</p>
-    <a target="_blank" v-if="link" :href="link" class="mt-2 inline-block rounded-lg px-6 py-2 font-bold shadow-lg transition" :class="btnClass">{{ linkText }}</a>
+    <h3 class="mb-2 text-2xl font-extrabold text-gray-900 drop-shadow-lg text-center">{{ title }}</h3>
+    <p class="mb-2 text-center text-gray-800 font-medium">{{ description }}</p>
+    <a
+      v-if="link"
+      :href="link"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="btn-glass mt-2 inline-block px-6 py-2 font-bold shadow-lg transition focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-400"
+      :aria-label="`Visit partner: ${title}`"
+    >
+      {{ linkText }}
+    </a>
     <slot></slot>
+    <div v-if="badge" class="absolute right-2 top-2 z-50 flex items-center justify-center">
+      <span class="pulsating-badge bg-gradient-to-r from-emerald-500 to-blue-500 text-white font-bold px-3 py-1 rounded-full text-sm animate-pulse shadow-lg">
+        {{ badge }}
+      </span>
+    </div>
+    <!-- Gradient overlay for premium look -->
+    <div class="pointer-events-none absolute inset-0 rounded-2xl border border-white/30 bg-gradient-to-br from-white/40 via-transparent to-blue-200/30 opacity-80"></div>
   </div>
 </template>
+
 <script setup>
-defineProps({
+import { computed } from "vue";
+
+const props = defineProps({
   img: String,
   title: String,
   description: String,
   link: String,
   linkText: String,
+  badge: { type: String, default: "" },
   imgBorder: { type: String, default: "" },
   padClass: { type: String, default: "" },
-  btnClass: { type: String, default: "bg-blue-700 text-white hover:bg-blue-500" },
+  bgColor1: { type: String, default: "#f8fafc" },
+  bgColor2: { type: String, default: "#e0e7ef" },
 });
+
+const computedBgClass = computed(
+  () => `bg-gradient-to-t from-[${props.bgColor1}] to-[${props.bgColor2}]`
+);
 </script>

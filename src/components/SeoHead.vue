@@ -17,7 +17,7 @@ const props = defineProps({
   },
   image: {
     type: String,
-    default: '/public/images/og-image.jpg' // Updated default image path
+    default: '/prop/01.png' // Updated default image path
   },
   url: {
     type: String,
