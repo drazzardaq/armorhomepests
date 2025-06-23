@@ -3,7 +3,7 @@
     <div 
       v-for="project in displayedProjects" 
       :key="project.id"
-      class="bg-white/80 backdrop-blur-lg rounded-xl overflow-hidden hover:bg-white/90 transition-all duration-300 group shadow-xl focus:outline-none focus:ring-2 focus:ring-[#00deff]"
+      class="bg-white/80 backdrop-blur-lg rounded-xl overflow-hidden hover:bg-white/90 transition-all duration-300 group shadow-xl focus:outline-none focus:ring-2 focus:ring-[#143395]"
       tabindex="0"
       :aria-label="project.title + ' project card'"
       ref="cardRef"
@@ -32,7 +32,7 @@
         <p class="text-gray-700 mb-4">{{ project.description }}</p>
         <div class="flex items-center justify-between">
           <span class="text-sm text-gray-500">{{ project.category }}</span>
-          <button class="text-[#00deff] hover:text-[#153695] text-sm font-medium" aria-label="Learn more about {{ project.title }}">
+          <button class="text-[#143395] hover:text-[#153695] text-sm font-medium" aria-label="Learn more about {{ project.title }}">
             Learn More 3
           </button>
         </div>

@@ -2,7 +2,7 @@
   <div class="venus-project-content w-full px-0 py-8 md:px-0 max-w-none bg-gradient-to-br from-white via-[#f7faff] to-[#eaf6ff] animate-fade-in text-black min-h-screen">
     <div class="flex flex-col items-center mb-12 px-8 animate-slide-down gap-8">
       <img src="@/assets/tvp-logo.svg" alt="The Venus Project Logo" class="h-auto w-[220px] md:w-[350px] animate-pop-in border-0 brightness-100 bg-white p-2 rounded-xl shadow-lg" />
-      <h1 class="text-4xl font-extrabold tracking-tight text-center drop-shadow-lg bg-gradient-to-r from-[#42386c] via-[#153695] to-[#00deff] bg-clip-text text-transparent">Relocation & Proposal – The Venus Project Network</h1>
+      <h1 class="text-4xl font-extrabold tracking-tight text-center drop-shadow-lg bg-gradient-to-r from-[#42386c] via-[#153695] to-[#143395] bg-clip-text text-transparent">Relocation & Proposal – The Venus Project Network</h1>
     </div>
     <section class="mb-16 px-8 py-8 bg-white/80 backdrop-blur-lg rounded-xl shadow-lg animate-fade-in-up">
       <div class="flex flex-col md:flex-row gap-8 items-center">
@@ -17,10 +17,10 @@
             <li>Mentorship, networking, and support</li>
           </ul>
           <div class="flex flex-col md:flex-row gap-4 mt-4">
-            <a href="mailto:dracorisz@outlook.com" class="px-6 py-3 rounded-lg bg-gradient-to-r from-[#42386c] via-[#153695] to-[#00deff] hover:opacity-90 text-white font-bold shadow-lg transition-all duration-300 text-center" aria-label="Contact Me by Email">Contact Me</a>
-            <a href="https://TVPOutpost.com/thevenusproject" target="_blank" rel="noopener" class="px-6 py-3 rounded-lg bg-gradient-to-r from-[#00deff] via-[#153695] to-[#42386c] hover:opacity-90 text-white font-bold shadow-lg transition-all duration-300 text-center" aria-label="See My Work">See My Work</a>
+            <a href="mailto:dracorisz@outlook.com" class="px-6 py-3 rounded-lg bg-gradient-to-r from-[#42386c] via-[#153695] to-[#143395] hover:opacity-90 text-white font-bold shadow-lg transition-all duration-300 text-center" aria-label="Contact Me by Email">Contact Me</a>
+            <a href="https://TVPOutpost.com/thevenusproject" target="_blank" rel="noopener" class="px-6 py-3 rounded-lg bg-gradient-to-r from-[#143395] via-[#153695] to-[#42386c] hover:opacity-90 text-white font-bold shadow-lg transition-all duration-300 text-center" aria-label="See My Work">See My Work</a>
           </div>
-          <div class="mt-8 text-lg text-[#00deff] font-semibold">
+          <div class="mt-8 text-lg text-[#143395] font-semibold">
             <span class="inline-block bg-[#153695]/10 px-4 py-2 rounded-lg shadow">Ready to take action and join a global movement for a better world. Let's build the future together!</span>
           </div>
         </div>

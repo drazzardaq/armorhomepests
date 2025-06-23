@@ -19,6 +19,8 @@ import Mission from '@/pages/Mission.vue'
 import Solutions from '@/pages/Solutions.vue'
 import FAQ from '@/pages/FAQ.vue'
 import Media from '@/pages/Media.vue'
+import Tokenomics from '@/pages/Tokenomics.vue'
+import OutpostProposal from "@/pages/OutpostProposal.vue";
 
 // Unified layout for all main routes
 import TVPLayout from '@/layouts/Layout.vue'
@@ -39,12 +41,14 @@ const routes = [
       { path: 'visit', name: 'TVPVisit', component: TVPVisit },
       { path: 'featuring-activist', name: 'TVPFeaturingActivist', component: TVPFeaturingActivist },
       { path: 'relocation-proposal', name: 'TVPRelocationProposal', component: TVPRelocationProposal },
+      { path: 'outpostproposal', name: 'OutpostProposal', component:      OutpostProposal },
       { path: 'advisors', name: 'TVPAdvisors', component: TVPAdvisors },
       { path: 'asi-proposal', name: 'TVPAsiProject', component: TVPAsiProject },
       { path: 'contact', name: 'Contact', component: Contact },
       { path: 'partnership', name: 'Partnership', component: Partnership },
       { path: 'mission', name: 'Mission', component: Mission },
       { path: 'solutions', name: 'Solutions', component: Solutions },
+      { path: 'tokenomics', name: 'Tokenomics', component: Tokenomics },
       { path: 'faq', name: 'FAQ', component: FAQ },
       { path: 'media', name: 'Media', component: Media },
     ]

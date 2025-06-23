@@ -1,5 +1,5 @@
 <template>
-  <div class="testimonial-card bg-white/80 backdrop-blur-lg rounded-xl shadow-lg p-6 focus:outline-none focus:ring-2 focus:ring-[#00deff] transition-all duration-300" tabindex="0" :aria-label="'Testimonial by ' + name" ref="cardRef">
+  <div class="testimonial-card bg-white/80 backdrop-blur-lg rounded-xl shadow-lg p-6 focus:outline-none focus:ring-2 focus:ring-[#143395] transition-all duration-300" tabindex="0" :aria-label="'Testimonial by ' + name" ref="cardRef">
     <div class="flex items-center mb-4">
       <img :src="image" :alt="name + ' photo'" class="w-12 h-12 rounded-full mr-4 object-cover" loading="lazy" />
       <div>
@@ -58,6 +58,6 @@ defineProps({
 }
 
 .testimonial-card:focus {
-  box-shadow: 0 0 0 3px #00deff55;
+  box-shadow: 0 0 0 3px #14339555;
 }
 </style>

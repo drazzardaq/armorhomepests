@@ -1,5 +1,5 @@
 <template>
-  <div class="slider3d-container" :class="{ 'full-height': fullHeight }">
+  <div class="slider3d-container" :class="{ 'full-height': fullHeight }" aria-label="3D Image Slider" tabindex="0" role="region">
     <swiper-container 
       :slides-per-view="1"
       :speed="1000"
@@ -15,8 +15,9 @@
         shadowScale: 0.94
       }"
       class="slider3d"
+      style="min-height: 220px; height: 320px; max-height: 60vw;"
     >
-      <swiper-slide v-for="(slide, index) in slides" :key="index" class="slider3d-slide">
+      <swiper-slide v-for="(slide, index) in slides" :key="index" class="slider3d-slide" tabindex="0" role="group" :aria-label="slide.alt">
         <div class="relative h-full">
           <img 
             :src="slide.image" 
@@ -25,11 +26,9 @@
             :class="imageClass"
           />
           <div v-if="slide.showText" class="absolute inset-0 bg-black/40 flex items-center justify-center">
-            <div class="text-center text-white px-4">
-              <h2 class="text-4xl md:text-6xl font-bold mb-6 text-white animate-fade-in">{{ slide.title }}</h2>
-              <p class="text-lg md:text-xl text-white/90 mb-8 max-w-3xl mx-auto animate-fade-in" 
-                 style="animation-delay: 0.2s"
-              >{{ slide.description }}</p>
+            <div class="text-center text-white px-2 md:px-4">
+              <h2 class="text-2xl md:text-6xl font-bold mb-4 md:mb-6 text-white animate-fade-in">{{ slide.title }}</h2>
+              <p class="text-base md:text-xl text-white/90 mb-4 md:mb-8 max-w-3xl mx-auto animate-fade-in" style="animation-delay: 0.2s">{{ slide.description }}</p>
               <slot name="extra-content" :slide="slide"></slot>
             </div>
           </div>

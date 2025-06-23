@@ -1,5 +1,5 @@
 <template>
-  <div class="service-card bg-white/80 backdrop-blur-lg rounded-xl shadow-lg overflow-hidden transition-all duration-300 cursor-pointer border border-black/10 focus:outline-none focus:ring-2 focus:ring-[#00deff]" @click="$emit('click')" tabindex="0" :aria-label="title + ' service card'" ref="cardRef">
+  <div class="service-card bg-white/80 backdrop-blur-lg rounded-xl shadow-lg overflow-hidden transition-all duration-300 cursor-pointer border border-black/10 focus:outline-none focus:ring-2 focus:ring-[#143395]" @click="$emit('click')" tabindex="0" :aria-label="title + ' service card'" ref="cardRef">
     <div v-if="image" class="service-image">
       <img :src="image" :alt="title + ' image'" class="w-full h-48 object-cover" loading="lazy" />
     </div>
@@ -11,7 +11,7 @@
       <p class="service-description text-gray-700 mb-4">{{ description }}</p>
       <router-link 
         :to="link" 
-        class="service-button px-4 py-2 rounded-lg bg-gradient-to-r from-[#42386c] via-[#153695] to-[#00deff] text-white font-bold shadow-lg hover:opacity-90 transition"
+        class="service-button px-4 py-2 rounded-lg bg-gradient-to-r from-[#42386c] via-[#153695] to-[#143395] text-white font-bold shadow-lg hover:opacity-90 transition"
         :class="buttonClass"
         aria-label="Learn more about {{ title }}"
       >
@@ -66,7 +66,7 @@ defineEmits(['click']);
 
 <style scoped>
 .service-card {
-  @apply bg-white/80 backdrop-blur-lg rounded-xl shadow-lg overflow-hidden transition-all duration-300 cursor-pointer border border-black/10 focus:outline-none focus:ring-2 focus:ring-[#00deff];
+  @apply bg-white/80 backdrop-blur-lg rounded-xl shadow-lg overflow-hidden transition-all duration-300 cursor-pointer border border-black/10 focus:outline-none focus:ring-2 focus:ring-[#143395];
 }
 
 .service-card:hover {
@@ -74,7 +74,7 @@ defineEmits(['click']);
 }
 
 .service-card:focus {
-  box-shadow: 0 0 0 3px #00deff55;
+  box-shadow: 0 0 0 3px #14339555;
 }
 
 .service-image {

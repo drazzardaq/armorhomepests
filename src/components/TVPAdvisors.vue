@@ -3,7 +3,7 @@
     <div 
       v-for="advisor in advisors" 
       :key="advisor.id"
-      class="bg-white/80 backdrop-blur-lg p-6 text-center rounded-xl hover:bg-white/90 transition-colors shadow-xl focus:outline-none focus:ring-2 focus:ring-[#00deff]"
+      class="bg-white/80 backdrop-blur-lg p-6 text-center rounded-xl hover:bg-white/90 transition-colors shadow-xl focus:outline-none focus:ring-2 focus:ring-[#143395]"
       tabindex="0"
       :aria-label="advisor.name + ' advisor card'"
       ref="cardRef"
@@ -24,7 +24,7 @@
           v-if="advisor.linkedin" 
           :href="advisor.linkedin" 
           target="_blank"
-          class="text-gray-400 hover:text-[#00deff] transition-colors"
+          class="text-gray-400 hover:text-[#143395] transition-colors"
           aria-label="LinkedIn profile for {{ advisor.name }}"
         >
           <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -35,7 +35,7 @@
           v-if="advisor.twitter" 
           :href="advisor.twitter" 
           target="_blank"
-          class="text-gray-400 hover:text-[#00deff] transition-colors"
+          class="text-gray-400 hover:text-[#143395] transition-colors"
           aria-label="Twitter profile for {{ advisor.name }}"
         >
           <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -46,7 +46,7 @@
           v-if="advisor.website" 
           :href="advisor.website" 
           target="_blank"
-          class="text-gray-400 hover:text-[#00deff] transition-colors"
+          class="text-gray-400 hover:text-[#143395] transition-colors"
           aria-label="Website for {{ advisor.name }}"
         >
           <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">

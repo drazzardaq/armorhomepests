@@ -65,10 +65,38 @@
           <p class="text-gray-800">His work culminated in The Venus Project, which he founded with his partner Roxanne Meadows to promote his vision of a sustainable future.</p>
         </div>
       </section>
+      
       <!-- Advisors Section -->
       <section class="glassy-bg rounded-3xl shadow-xl mb-12 animate-fade-in-up" aria-label="Our Advisors">
         <h2 class="mb-8 text-center text-3xl font-bold text-gradient">Our Advisors</h2>
         <TVPAdvisors />
+      </section>
+      <!-- Dracoscopia & TVP Chain Vision Section -->
+      <section class="glassy-bg rounded-3xl shadow-xl mb-12 p-8 animate-fade-in-up border-2 border-tvp-blue/30" aria-label="Dracoscopia & TVP Chain Vision">
+        <h2 class="mb-6 text-3xl font-bold text-gradient">Dracoscopia & TVP Chain: The Next Step</h2>
+        <p class="mb-4 text-gray-800">The Venus Project is pioneering a new era of collaboration and transparency by integrating the <span class="font-bold text-tvp-blue">Dracoscopia</span> creative network and the <span class="font-bold text-tvp-blue">TVP Chain</span> custom blockchain. This infrastructure will power proposals, resource management, and global participation, ensuring every project is secure, transparent, and community-driven.</p>
+        <ul class="list-disc ml-8 text-gray-800 mb-4">
+          <li>All proposals and projects are validated and tracked on the TVP Chain</li>
+          <li>Dracoscopia enables creative, scientific, and technical collaboration across borders</li>
+          <li>TVP-owned data centers and machines ensure sustainable, ethical computation</li>
+          <li>Open participation and transparent governance for all contributors</li>
+        </ul>
+        <p class="text-tvp-blue font-semibold">This vision is at the heart of every new proposal and partnership. <router-link to="/OutpostProposal" class="underline hover:text-tvp-teal">Submit your proposal</router-link> and help build the future of The Venus Project!</p>
+      </section>
+      <!-- Dracoscopia & TVP Chain Vision Proposal Callout -->
+      <section class="glassy-bg border-l-4 border-tvp-blue/60 bg-tvp-blue/5 rounded-2xl shadow-lg mb-12 p-6 animate-fade-in-up max-w-4xl mx-auto" aria-label="Dracoscopia & TVP Chain Vision for Proposals">
+        <h2 class="mb-2 text-2xl font-bold text-tvp-blue flex items-center gap-2">
+          <svg class="inline-block w-7 h-7 text-tvp-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m4 0h-1v-4h-1m-4 0h-1v-4h-1"/></svg>
+          Proposal Vision: Dracoscopia & TVP Chain
+        </h2>
+        <p class="text-gray-800">All proposals and new initiatives are designed to be part of the <span class='font-bold text-tvp-blue'>Dracoscopia</span> creative network and validated on the <span class='font-bold text-tvp-blue'>TVP Chain</span> blockchain. This ensures that every idea, from sustainable cities to planetary habitats, is transparent, collaborative, and future-ready—empowering humanity to build a legacy of ethical, decentralized progress.</p>
+        <div class="mt-6 text-center">
+          <router-link to="/OutpostProposal" class="inline-block rounded-lg bg-gradient-to-r from-tvp-blue via-tvp-teal to-tvp-purple px-6 py-3 text-white font-bold shadow hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-tvp-blue" aria-label="Submit your proposal">Submit Your Proposal</router-link>
+        </div>
+      </section>
+      <!-- Learn More Section -->
+      <section class="mb-12 text-center">
+        <BaseButton color="primary" class="w-full rounded-lg">Learn More</BaseButton>
       </section>
     </div>
   </div>
@@ -76,26 +104,21 @@
 
 <script setup>
 import TVPAdvisors from '@/components/TVPAdvisors.vue';
+import BaseButton from '@/components/BaseButton.vue';
 </script>
 
 <SeoHead
-  title="About The Venus Project | Vision, Mission & History"
-  description="Learn about The Venus Project: our mission, vision, history, and the people behind a sustainable, resource-based future. Discover our core principles and how you can get involved."
-  keywords="The Venus Project, mission, vision, history, Jacque Fresco, resource-based economy, sustainability, solutions, FAQ"
+  title="Mission & Vision | The Venus Project"
+  description="Learn about the mission and vision of The Venus Project: a sustainable, resource-based future for humanity."
+  keywords="The Venus Project, mission, vision, sustainability, resource-based economy, future"
   image="/the-venus-project-circular-city.jpg"
-  url="https://www.thevenusproject.com/about"
-  type="website"
+  url="https://www.thevenusproject.com/mission"
+  type="article"
   :schema="{
     '@context': 'https://schema.org',
-    '@type': 'Organization',
-    'name': 'The Venus Project',
-    'url': 'https://www.thevenusproject.com/',
-    'logo': '/the-venus-project-logo.png',
-    'sameAs': [
-      'https://www.facebook.com/TheVenusProjectGlobal',
-      'https://twitter.com/TheVenusProject',
-      'https://www.youtube.com/user/thevenusprojectmedia'
-    ],
-    'description': 'The Venus Project is a non-profit organization advocating for a sustainable, resource-based economy and a new vision for humanity.'
+    '@type': 'AboutPage',
+    'name': 'Mission & Vision',
+    'url': 'https://www.thevenusproject.com/mission',
+    'description': 'Learn about the mission and vision of The Venus Project: a sustainable, resource-based future for humanity.'
   }"
 />

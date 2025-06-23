@@ -9,7 +9,8 @@ export default {
       colors: {
         'tvp-purple': '#42386c',
         'tvp-blue': '#153695',
-        'tvp-teal': '#00deff',
+        'tvp-teal': '#153e95',
+        // 'tvp-teal': '#00deff',
         'primary': '#000000',
         'background': '#FFFFFF',
         'accent-gradient-from': '#42386c',

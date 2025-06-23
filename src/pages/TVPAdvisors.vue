@@ -1,11 +1,28 @@
 <template>
+  <!-- Dracoscopia & TVP Chain Vision Proposal Callout -->
+  <section class="glassy-bg border-l-4 border-tvp-blue/60 bg-tvp-blue/5 rounded-2xl shadow-lg mb-12 p-6 animate-fade-in-up max-w-4xl mx-auto" aria-label="Dracoscopia & TVP Chain Vision for Proposals">
+    <h2 class="mb-2 text-2xl font-bold text-tvp-blue flex items-center gap-2">
+      <svg class="inline-block w-7 h-7 text-tvp-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m4 0h-1v-4h-1m-4 0h-1v-4h-1"/></svg>
+      Proposal Vision: Dracoscopia & TVP Chain
+    </h2>
+    <p class="text-gray-800">All proposals and new initiatives are designed to be part of the <span class='font-bold text-tvp-blue'>Dracoscopia</span> creative network and validated on the <span class='font-bold text-tvp-blue'>TVP Chain</span> blockchain. This ensures that every idea, from sustainable cities to planetary habitats, is transparent, collaborative, and future-ready—empowering humanity to build a legacy of ethical, decentralized progress.</p>
+    <div class="mt-6 text-center">
+      <router-link to="/OutpostProposal" class="inline-block rounded-lg bg-gradient-to-r from-tvp-blue via-tvp-teal to-tvp-purple px-6 py-3 text-white font-bold shadow hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-tvp-blue" aria-label="Submit your proposal">Submit Your Proposal</router-link>
+    </div>
+  </section>
+  <!-- Dracoscopia & TVP Chain Advisory Callout -->
+  <section class="glassy-bg rounded-2xl shadow-lg mb-12 p-6 border-l-4 border-tvp-blue/60 bg-tvp-blue/5 animate-fade-in-up" aria-label="Advisory Focus: Dracoscopia & TVP Chain">
+    
+    <!-- <p class="text-gray-800">Our advisors are actively guiding the integration of the <span class="font-bold text-tvp-blue">Dracoscopia</span> creative network and the <span class="font-bold text-tvp-blue">TVP Chain</span> blockchain. Their expertise ensures that every project, partnership, and proposal leverages this secure, transparent, and collaborative infrastructure for a sustainable future.</p> -->
+  </section>
+  <!-- Advisors Section -->
   <section class="glassy-bg rounded-3xl shadow-xl p-8 animate-fade-in-up" aria-label="Our Advisors">
     <h1 class="text-3xl md:text-4xl font-extrabold text-gradient mb-8 text-center">Our Advisors</h1>
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-      <div 
+      <BaseCard 
         v-for="advisor in advisors" 
         :key="advisor.id"
-        class="frosted-glass-card bg-white/80 rounded-3xl p-6 text-center animate-pop-in focus:outline-none focus:ring-2 focus:ring-tvp-blue"
+        customClass="frosted-glass-card bg-white/80 rounded-3xl p-6 text-center animate-pop-in focus:outline-none focus:ring-2 focus:ring-tvp-blue"
         tabindex="0"
         :aria-label="advisor.name + ', ' + advisor.title"
       >
@@ -55,7 +72,7 @@
             </svg>
           </a>
         </div>
-      </div>
+      </BaseCard>
     </div>
   </section>
 </template>

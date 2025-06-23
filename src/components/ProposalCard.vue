@@ -1,6 +1,6 @@
 <template>
   <div
-    class="unified-card group relative flex flex-col min-h-[420px] rounded-2xl shadow-2xl bg-white/80 backdrop-blur-lg border border-white/20 overflow-hidden transition-transform duration-300 hover:scale-[1.03] focus-within:scale-[1.03] animate-pop-in"
+    class="!p-0 unified-card group relative flex flex-col min-h-[420px] rounded-2xl shadow-2xl bg-white/80 backdrop-blur-lg border border-white/20 overflow-hidden transition-transform duration-300 hover:scale-[1.03] focus-within:scale-[1.03] animate-pop-in"
     tabindex="0"
     :aria-label="'Proposal card for ' + title"
   >
@@ -19,14 +19,15 @@
         <div v-if="contact" class="mb-1"><strong>Contact:</strong> <span class="text-tvp-blue font-semibold">{{ contact }}</span></div>
       </div>
       <div class="flex flex-col gap-2 mt-auto">
-        <button class="btn-unified-details" @click="$emit('details')" :aria-label="'Show details for ' + title">Details</button>
-        <a v-if="link" :href="link" target="_blank" rel="noopener" class="btn-unified-cta" :aria-label="linkText || 'Open link'">{{ linkText || 'Visit' }}</a>
+        <BaseButton color="accent" @click="$emit('details')" :aria-label="'Show details for ' + title">Details</BaseButton>
+        <BaseButton v-if="link" color="primary" :as="'a'" :href="link" target="_blank" rel="noopener" :aria-label="linkText || 'Open link'">{{ linkText || 'Visit' }}</BaseButton>
       </div>
     </div>
   </div>
 </template>
 
 <script setup>
+import BaseButton from './BaseButton.vue';
 defineProps({
   img: String,
   title: String,
@@ -49,7 +50,7 @@ defineEmits(['details']);
   box-shadow: 0 8px 32px 0 rgba(66,56,108,0.10);
 }
 .unified-card:focus {
-  box-shadow: 0 0 0 3px #00deff55;
+  box-shadow: 0 0 0 3px #14339555;
 }
 .card-gradient-overlay {
   position: absolute;
@@ -82,7 +83,7 @@ defineEmits(['details']);
   overflow: hidden;
 }
 .btn-unified-details {
-  background: linear-gradient(90deg, #00deff 0%, #153695 100%);
+  background: linear-gradient(90deg, #143395 0%, #153695 100%);
 }
 .btn-unified-cta {
   background: linear-gradient(90deg, #42386c 0%, #153695 100%);

@@ -19,6 +19,8 @@ const Mission = () => import("@/pages/Mission.vue");
 const Solutions = () => import("@/pages/Solutions.vue");
 const FAQ = () => import("@/pages/FAQ.vue");
 const Media = () => import("@/pages/Media.vue");
+const Tokenomics = () => import("@/pages/Tokenomics.vue");
+const OutpostProposal = () => import("@/pages/OutpostProposal.vue");
 
 export const routes = [
   {
@@ -29,6 +31,11 @@ export const routes = [
         path: "",
         name: "Home",
         component: Home,
+      },
+      {
+        path: "outpostproposal",
+        name: "OutpostProposal",
+        component: OutpostProposal,
       },
       {
         path: "about",
@@ -124,6 +131,11 @@ export const routes = [
         path: "media",
         name: "Media",
         component: Media,
+      },
+      {
+        path: "tokenomics",
+        name: "Tokenomics",
+        component: Tokenomics,
       },
     ],
   },

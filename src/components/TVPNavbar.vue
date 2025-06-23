@@ -88,12 +88,12 @@ onMounted(() => {
   background: none;
 }
 .nav-link.active-link {
-  background: linear-gradient(90deg, #42386c, #153695, #00deff);
+  background: linear-gradient(90deg, #42386c, #153695, #143395);
   color: #fff !important;
   box-shadow: 0 2px 8px 0 rgba(0,222,255,0.08);
 }
 .nav-link.contact-btn {
-  background: linear-gradient(90deg, #00deff, #153695);
+  background: linear-gradient(90deg, #143395, #153695);
   color: #fff !important;
   border-radius: 0.5rem;
   padding: 0.5rem 1.25rem;
@@ -103,7 +103,7 @@ onMounted(() => {
   transition: background 0.2s, color 0.2s;
 }
 .nav-link.contact-btn:hover, .nav-link.contact-btn:focus {
-  background: linear-gradient(90deg, #153695, #00deff);
+  background: linear-gradient(90deg, #153695, #143395);
   color: #fff !important;
 }
 .menu-button {

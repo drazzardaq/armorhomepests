@@ -81,7 +81,7 @@ import ContactCTA from '@/components/common/ContactCTA.vue';
 
 <style scoped>
 .text-gradient {
-  background: linear-gradient(90deg, #42386c 0%, #153695 50%, #00deff 100%);
+  background: linear-gradient(90deg, #42386c 0%, #153695 50%, #143395 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;

@@ -4,8 +4,8 @@
     <div class="category-bar sticky top-0 z-20 mb-8 flex gap-3 overflow-x-auto rounded-xl bg-white/70 px-2 py-2 shadow" role="tablist" aria-label="Proposal Categories">
       <button v-for="cat in filters" :key="cat" :class="['category-pill', { active: selectedFilter === cat }]" @click="selectedFilter = cat" :aria-selected="selectedFilter === cat" role="tab" tabindex="0">{{ cat }}</button>
     </div>
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-      <div v-for="(proposal, idx) in filteredProposals" :key="proposal.title" class="frosted-glass-card proposal-card rounded-2xl shadow-xl p-0 overflow-hidden relative group flex flex-col transition-transform duration-300 hover:scale-[1.025] hover:shadow-2xl focus-within:scale-[1.025] focus-within:shadow-2xl animate-pop-in" :tabindex="0" :aria-expanded="expandedIdx === idx" @keydown.enter="toggleExpand(idx)" @keydown.space.prevent="toggleExpand(idx)" @click.self="toggleExpand(idx)" role="button">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
+      <div v-for="(proposal, idx) in filteredProposals" :key="proposal.title" class=" proposal-card rounded-2xl shadow-xl !p-0 overflow-hidden relative group flex flex-col transition-transform duration-300 hover:scale-[1.025] hover:shadow-2xl focus-within:scale-[1.025] focus-within:shadow-2xl animate-pop-in" :tabindex="0" :aria-expanded="expandedIdx === idx" @keydown.enter="toggleExpand(idx)" @keydown.space.prevent="toggleExpand(idx)" @click.self="toggleExpand(idx)" role="button">
         <div class="proposal-gradient-overlay"></div>
         <div class="proposal-dark-gradient"></div>
         <img :src="proposal.img" :alt="proposal.title" class="w-full h-48 object-cover rounded-t-2xl relative z-10 transition-transform duration-300 group-hover:scale-105 group-focus:scale-105" />
@@ -30,7 +30,7 @@
           <div class="flex flex-wrap gap-2 mt-auto">
             <span v-for="tag in proposal.tags" :key="tag" class="inline-block rounded bg-blue-100 px-2 py-1 text-xs font-semibold text-blue-700">{{ tag }}</span>
           </div>
-          <button class="mt-4 btn-glass-cta w-fit self-end" @click.stop="toggleExpand(idx)" :aria-label="expandedIdx === idx ? 'Collapse details' : 'Expand details'">
+          <button class="!mt-5 btn-glass-cta w-fit self-end" @click.stop="toggleExpand(idx)" :aria-label="expandedIdx === idx ? 'Collapse details' : 'Expand details'">
             <span v-if="expandedIdx === idx">Show Less</span>
             <span v-else>Learn More</span>
           </button>
@@ -86,7 +86,7 @@ onMounted(async () => {
   background: transparent;
 }
 .proposal-card:focus {
-  box-shadow: 0 0 0 3px #00deff55;
+  box-shadow: 0 0 0 3px #14339555;
 }
 .proposal-gradient-overlay {
   position: absolute;
@@ -136,7 +136,7 @@ onMounted(async () => {
   color: #153695;
 }
 .category-pill.active {
-  background: linear-gradient(90deg, #00deff 0%, #153695 100%);
+  background: linear-gradient(90deg, #143395 0%, #153695 100%);
   color: #fff;
   border-color: transparent;
 }

@@ -9,15 +9,15 @@ import { useRoute } from 'vue-router'
 const props = defineProps({
   title: {
     type: String,
-    default: 'Armor Home Solutions'
+    default: 'The Venus Project | A Blueprint for a Sustainable Future'
   },
   description: {
     type: String,
-    default: 'Protecting homes and families with advanced security and pest control solutions.'
+    default: 'Explore The Venus Project: a comprehensive vision for a sustainable, resource-based economy, circular cities, and a future where technology and human values align. Discover our mission, solutions, proposals, and global network.'
   },
   image: {
     type: String,
-    default: '/prop/01.png' // Updated default image path
+    default: '/the-venus-project-circular-city.jpg'
   },
   url: {
     type: String,
@@ -26,6 +26,14 @@ const props = defineProps({
   type: {
     type: String,
     default: 'website'
+  },
+  keywords: {
+    type: String,
+    default: 'The Venus Project, mission, solutions, resource-based economy, circular cities, sustainability, FAQ, media, proposals'
+  },
+  schema: {
+    type: Object,
+    default: null
   }
 })
 
@@ -41,6 +49,7 @@ const updateMetaTags = () => {
   
   // Update meta tags
   updateMetaTag('description', props.description)
+  updateMetaTag('keywords', props.keywords)
   updateMetaTag('og:title', props.title)
   updateMetaTag('og:description', props.description)
   updateMetaTag('og:image', props.image)
@@ -73,13 +82,28 @@ const updateMetaTag = (name, content) => {
   element.setAttribute('content', content)
 }
 
-// Watch for route changes to update meta tags
+// Update Schema.org structured data
+const updateSchema = () => {
+  if (props.schema) {
+    let script = document.querySelector('script[type="application/ld+json"]')
+    if (!script) {
+      script = document.createElement('script')
+      script.setAttribute('type', 'application/ld+json')
+      document.head.appendChild(script)
+    }
+    script.textContent = JSON.stringify(props.schema)
+  }
+}
+
+// Watch for route changes to update meta tags and schema
 watch(() => route.path, () => {
   updateMetaTags()
+  updateSchema()
 })
 
-// Update meta tags on mount
+// Update meta tags and schema on mount
 onMounted(() => {
   updateMetaTags()
+  updateSchema()
 })
 </script>

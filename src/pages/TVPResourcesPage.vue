@@ -41,7 +41,8 @@
       <!-- Resources Grid -->
       <section>
         <div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4">
-          <div v-for="resource in filteredResources" :key="resource.id" class="group cursor-pointer rounded-xl bg-white/80 backdrop-blur-lg p-6 transition-all duration-300 hover:bg-white/90 focus:outline-none focus:ring-2 focus:ring-[#00deff] shadow-xl" @click="openResource(resource)" tabindex="0" :aria-label="resource.title + ' resource card'">
+          <BaseCard v-for="resource in filteredResources" :key="resource.id" customClass="group cursor-pointer rounded-xl bg-white/80 backdrop-blur-lg p-6 transition-all duration-300 hover:bg-white/90 focus:outline-none focus:ring-2 focus:ring-[#143395] shadow-xl">
+            <!-- Card content here -->
             <div class="mb-4 flex items-center">
               <div :class="['mr-4 flex h-12 w-12 items-center justify-center rounded-lg', resource.type === 'video' ? 'bg-red-600' : resource.type === 'book' ? 'bg-green-600' : resource.type === 'article' ? 'bg-blue-600' : 'bg-purple-600']">
                 <svg v-if="resource.type === 'video'" class="h-6 w-6 text-white" fill="currentColor" viewBox="0 0 24 24">
@@ -67,7 +68,7 @@
               <span>{{ resource.duration || resource.pages || resource.length }}</span>
               <span>{{ resource.category }}</span>
             </div>
-          </div>
+          </BaseCard>
         </div>
       </section>
 
@@ -85,7 +86,7 @@
             <p class="mb-4 text-gray-300">{{ collection.description }}</p>
             <div class="flex items-center justify-between">
               <span class="text-sm text-gray-400">{{ collection.itemCount }} items</span>
-              <button class="text-sm font-medium text-blue-400 hover:text-blue-300">Explore →</button>
+              <BaseButton color="primary" class="w-full rounded-lg">Explore →</BaseButton>
             </div>
           </div>
         </div>
@@ -141,7 +142,7 @@
         </div>
 
         <div class="mt-8 text-center">
-          <button class="rounded-lg bg-blue-600 px-8 py-3 font-semibold text-white transition-colors hover:bg-blue-700">Enroll Now</button>
+          <BaseButton color="primary" class="w-full rounded-lg">Enroll Now</BaseButton>
         </div>
       </section>
     </div>

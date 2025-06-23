@@ -44,7 +44,7 @@
       <section class="rounded-lg bg-blue-600 p-8 text-center">
         <h2 class="mb-4 text-3xl font-bold">Want to Contribute?</h2>
         <p class="mb-6 text-xl">Join our community of designers, engineers, and visionaries working towards a sustainable future.</p>
-        <button class="rounded-lg bg-white px-8 py-3 font-semibold text-blue-600 transition-colors hover:bg-gray-100">Get Involved</button>
+        <BaseButton color="primary" class="w-full rounded-lg">Get Involved</BaseButton>
       </section>
     </div>
   </TVPLayout>

@@ -1,5 +1,5 @@
 <template>
-  <footer class="footer-glass border-t border-white/30 bg-white py-12 text-blue-50 backdrop-blur-md">
+  <footer class="footer-glass border-t border-white/30 bg-white py-12 text-blue-50 backdrop-blur-md" aria-label="Site Footer">
     <div class="mx-auto max-w-7xl px-4">
       <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
         <div class="space-y-4">
@@ -8,10 +8,10 @@
           </router-link>
           <p class="mb-4 text-gray-50">Presenting a bold, new direction for humanity that entails nothing less than the total redesign of our culture.</p>
           <div class="flex space-x-4">
-            <a href="https://facebook.com/TheVenusProject" target="_blank" aria-label="Facebook" class="transition hover:text-tvp-blue focus:outline-none focus:ring-2 focus:ring-tvp-blue"><font-awesome-icon :icon="['fab', 'facebook-f']" size="xl" /></a>
-            <a href="https://www.youtube.com/user/thevenusprojectmedia" target="_blank" aria-label="YouTube" class="transition hover:text-red-500 focus:outline-none focus:ring-2 focus:ring-red-400"><font-awesome-icon :icon="['fab', 'youtube']" size="xl" /></a>
-            <a href="https://www.instagram.com/thevenusproject/" target="_blank" aria-label="Instagram" class="transition hover:text-pink-500 focus:outline-none focus:ring-2 focus:ring-pink-400"><font-awesome-icon :icon="['fab', 'instagram']" size="xl" /></a>
-            <a href="https://twitter.com/TheVenusProject" target="_blank" aria-label="Twitter/X" class="transition hover:text-tvp-teal focus:outline-none focus:ring-2 focus:ring-tvp-teal"><font-awesome-icon :icon="['fab', 'x-twitter']" size="xl" /></a>
+            <a href="https://facebook.com/TheVenusProject" target="_blank" aria-label="Facebook" class="btn-glass-aa"><font-awesome-icon :icon="['fab', 'facebook-f']" size="xl" /></a>
+            <a href="https://www.youtube.com/user/thevenusprojectmedia" target="_blank" aria-label="YouTube" class="btn-glass-aa"><font-awesome-icon :icon="['fab', 'youtube']" size="xl" /></a>
+            <a href="https://www.instagram.com/thevenusproject/" target="_blank" aria-label="Instagram" class="btn-glass-aa"><font-awesome-icon :icon="['fab', 'instagram']" size="xl" /></a>
+            <a href="https://twitter.com/TheVenusProject" target="_blank" aria-label="Twitter/X" class="btn-glass-aa"><font-awesome-icon :icon="['fab', 'x-twitter']" size="xl" /></a>
           </div>
         </div>
 
@@ -41,7 +41,7 @@
             <li><router-link to="/featuring-activist" class="font-semibold text-gray-50 hover:text-white">Activist</router-link></li>
             <li><router-link to="/asi-proposal" class="font-semibold text-gray-50 hover:text-white">ASI Proposal</router-link></li>
             <li><router-link to="/outpostproposal" class="font-semibold text-gray-50 hover:text-white">Outpost Proposal</router-link></li>
-            <li><router-link to="/projects" class="font-semibold text-gray-50 hover:text-white">Tokenomics</router-link></li>
+            <li><router-link to="/tokenomics" class="font-semibold text-gray-50 hover:text-white">Tokenomics</router-link></li>
             <li>
               <a href="https://www.thevenusproject.com" target="_blank" rel="noopener noreferrer" class="inline-flex items-center font-semibold text-gray-50 hover:text-white">
                 Official Site
@@ -84,7 +84,7 @@
               <span class="line-clamp-2 text-sm text-gray-200">{{ proposal.desc }}</span>
             </div>
           </div>
-          <button v-if="footerProposals.length > visibleProposals.length" @click="loadMoreProposals" class="mt-2 text-sm text-blue-200 underline hover:text-white focus:outline-none">Load More</button>
+          <BaseButton v-if="footerProposals.length > visibleProposals.length" @click="loadMoreProposals" color="primary" class="w-full rounded-lg">Load More</BaseButton>
         </div>
         <ProposalModal v-if="openProposal" :proposal="openProposal" @close="closeProposalModal" />
       </div>
@@ -95,21 +95,25 @@
         <img src="/the-venus-project-logo.png" alt="The Venus Project Icon" class="mx-auto h-10 w-auto transition-transform" />
       </router-link>
       <div class="mx-auto my-5 flex max-w-xl flex-wrap justify-center gap-4">
-        <a href="https://www.facebook.com/TheVenusProjectGlobal/" target="_blank" class="btn-glass-aa flex items-center gap-2"><font-awesome-icon :icon="['fab', 'facebook-f']" class="mr-2" />Facebook</a>
-        <a href="https://twitter.com/TheVenusProject" target="_blank" class="btn-glass-aa flex items-center gap-2"><font-awesome-icon :icon="['fab', 'twitter']" class="mr-2" />Twitter</a>
-        <a href="https://www.linkedin.com/company/the-venus-project/" target="_blank" class="btn-glass-aa flex items-center gap-2"><font-awesome-icon :icon="['fab', 'linkedin-in']" class="mr-2" />LinkedIn</a>
-        <a href="https://www.instagram.com/thevenusproject/" target="_blank" class="btn-glass-aa flex items-center gap-2"><font-awesome-icon :icon="['fab', 'instagram']" class="mr-2" />Instagram</a>
-        <a href="https://www.pinterest.com/thevenusproject/" target="_blank" class="btn-glass-aa flex items-center gap-2"><font-awesome-icon :icon="['fab', 'pinterest-p']" class="mr-2" />Pinterest</a>
-        <a href="https://www.youtube.com/channel/UCPNMR_iABvyFmc3G9i1r3Lw" target="_blank" class="btn-glass-aa flex items-center gap-2"><font-awesome-icon :icon="['fab', 'youtube']" class="mr-2" />YouTube</a>
+        <a href="https://www.facebook.com/TheVenusProjectGlobal/" target="_blank" aria-label="Facebook" class="btn-glass-aa flex items-center gap-2"><font-awesome-icon :icon="['fab', 'facebook-f']" class="mr-2" />Facebook</a>
+        <a href="https://twitter.com/TheVenusProject" target="_blank" aria-label="Twitter" class="btn-glass-aa flex items-center gap-2"><font-awesome-icon :icon="['fab', 'twitter']" class="mr-2" />Twitter</a>
+        <a href="https://www.linkedin.com/company/the-venus-project/" target="_blank" aria-label="LinkedIn" class="btn-glass-aa flex items-center gap-2"><font-awesome-icon :icon="['fab', 'linkedin-in']" class="mr-2" />LinkedIn</a>
+        <a href="https://www.instagram.com/thevenusproject/" target="_blank" aria-label="Instagram" class="btn-glass-aa flex items-center gap-2"><font-awesome-icon :icon="['fab', 'instagram']" class="mr-2" />Instagram</a>
+        <a href="https://www.pinterest.com/thevenusproject/" target="_blank" aria-label="Pinterest" class="btn-glass-aa flex items-center gap-2"><font-awesome-icon :icon="['fab', 'pinterest-p']" class="mr-2" />Pinterest</a>
+        <a href="https://www.youtube.com/channel/UCPNMR_iABvyFmc3G9i1r3Lw" target="_blank" aria-label="YouTube" class="btn-glass-aa flex items-center gap-2"><font-awesome-icon :icon="['fab', 'youtube']" class="mr-2" />YouTube</a>
       </div>
       <div class="mt-2 text-sm">© 2025 The Venus Project | All rights reserved unless otherwise noted.</div>
       <div class="mt-2 text-xs !text-gray-50">
         <a href="https://www.thevenusproject.com/about/contacts/" target="_blank" class="text-gray-50">Contact</a> · <a href="https://www.thevenusproject.com/privacy-policy/" target="_blank" class="text-gray-50">Privacy Policy</a> ·
         <a href="https://www.thevenusproject.com/terms-and-conditions-of-use/" target="_blank" class="text-gray-50">Terms</a>
       </div>
-      <div class="mt-4 text-xs italic text-gray-300">
-        Robots are disabled here to prevent negative SEO impact on the origin domain due to reused content. SEO can be further optimized if the project is officially approved and relevant to The Venus Project Nonprofit. This website is undergoing updates. Some content and features may change.
-        <span class="ml-2 font-mono">v1.1.3</span>
+      <div class="mt-4 text-xs italic text-gray-300 max-w-3xl mx-auto">
+        <!-- SEO/Meta: This site is a non-official outpost for The Venus Project. Robots are disabled to prevent negative SEO impact on the origin domain due to reused content. -->
+        Robots are disabled here to prevent negative SEO impact on the origin domain due to reused content. SEO can be further optimized if the project is officially approved and relevant to The Venus Project. 
+        <br><br>
+        This website is undergoing updates. Some content and features may change.
+        <br><br>
+        <span class="font-mono">v1.1.3-tvpo</span>
       </div>
     </div>
   </footer>

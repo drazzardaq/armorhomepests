@@ -9,17 +9,16 @@
             <h3 class="text-3xl font-extrabold text-gradient mb-2">{{ proposal.title }}</h3>
             <p class="text-gray-800 mb-4 text-lg">{{ proposal.longDesc || proposal.desc }}</p>
             <div v-if="proposal.realizationPlan" class="mb-2">
-              <strong>Realization Plan:</strong><br/></br>
+              <strong>Realization Plan:</strong><br/>
               <div class="text-sm text-gray-800 whitespace-pre-line">{{ proposal.realizationPlan }}</div>
             </div>
             <div v-if="proposal.realizationCost" class="mb-2">
-              <strong>Estimated Cost:</strong>
+              <strong>Estimated Cost: </strong>
               <span class="text-tvp-blue font-semibold">{{ proposal.realizationCost }}</span>
             </div>
             <div v-if="proposal.contact" class="mb-2">
-              <!-- <strong>Contact:</strong><br/></br> -->
               <span class="text-tvp-blue font-semibold">{{ proposal.contact }}</span>
-              <a v-if="proposal.contactLink" :href="proposal.contactLink" target="_blank" rel="noopener" class="btn-unified-cta ml-2">Contact</a>
+              <BaseButton v-if="proposal.contactLink" color="primary" :as="'a'" :href="proposal.contactLink" target="_blank" rel="noopener" class="mt-2">Contact</BaseButton>
             </div>
             <div class="flex flex-wrap gap-2 mt-4">
               <span v-for="tag in proposal.tags" :key="tag" class="card-tag">{{ tag }}</span>
@@ -33,6 +32,7 @@
 
 <script setup>
 import { ref, watch, onMounted, nextTick } from 'vue';
+import BaseButton from './BaseButton.vue';
 import gsap from 'gsap';
 const emit = defineEmits(['close']);
 const props = defineProps({
@@ -67,7 +67,7 @@ function closeModal() {
   outline: none;
 }
 .proposal-modal-3d:focus {
-  box-shadow: 0 0 0 3px #00deff55;
+  box-shadow: 0 0 0 3px #14339555;
 }
 .proposal-modal-3d {
   will-change: transform, opacity;
@@ -81,13 +81,14 @@ function closeModal() {
 }
 .btn-modal-close:hover,
 .btn-modal-close:focus {
-  background: #00deff22;
+  background: #14339522;
 }
 .proposal-modal-3d-enter-active,
 .proposal-modal-3d-leave-active {
   transition: none;
 }
 strong {
-  @apply font-semibold text-gray-900;
+  font-weight: 600;
+  color: #1f2937;
 }
 </style>

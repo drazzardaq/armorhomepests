@@ -87,9 +87,9 @@
             <textarea v-model="booking.specialRequests" rows="4" class="w-full rounded-lg border border-white/20 bg-white/10 px-3 py-2 text-white placeholder-gray-400 focus:border-blue-500 focus:outline-none" placeholder="Any special accommodations or questions?"></textarea>
           </div>
 
-          <button type="submit" :disabled="isSubmitting" class="w-full rounded-lg bg-blue-600 px-6 py-3 font-semibold text-white transition-colors hover:bg-blue-700 disabled:bg-gray-600">
-            {{ isSubmitting ? "Submitting..." : "Book Tour" }}
-          </button>
+          <BaseButton color="primary" class="w-full rounded-lg">
+            Submit
+          </BaseButton>
         </form>
       </section>
 
@@ -195,3 +195,40 @@ const submitBooking = async () => {
   }
 };
 </script>
+
+<SeoHead
+  title="Visit The Venus Project | Research Center Tour"
+  description="Book a tour of The Venus Project research center in Venus, Florida. Experience sustainable living, see our models, and learn about the future."
+  keywords="The Venus Project, visit, tour, research center, sustainable living, Florida, booking"
+  image="/tvp/sustainable-future-the-venus-project.jpg"
+  url="https://www.thevenusproject.com/visit"
+  type="article"
+  :schema="{
+    '@context': 'https://schema.org',
+    '@type': 'Event',
+    'name': 'Visit The Venus Project',
+    'location': {
+      '@type': 'Place',
+      'name': 'The Venus Project Research Center',
+      'address': {
+        '@type': 'PostalAddress',
+        'streetAddress': '21 Valley Lane',
+        'addressLocality': 'Venus',
+        'addressRegion': 'FL',
+        'postalCode': '33960',
+        'addressCountry': 'US'
+      }
+    },
+    'description': 'Book a tour of The Venus Project research center in Venus, Florida. Experience sustainable living, see our models, and learn about the future.',
+    'image': '/tvp/sustainable-future-the-venus-project.jpg',
+    'startDate': '',
+    'endDate': '',
+    'eventStatus': 'https://schema.org/EventScheduled',
+    'eventAttendanceMode': 'https://schema.org/OfflineEventAttendanceMode',
+    'organizer': {
+      '@type': 'Organization',
+      'name': 'The Venus Project',
+      'url': 'https://www.thevenusproject.com/'
+    }
+  }"
+/>

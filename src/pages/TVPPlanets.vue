@@ -1,7 +1,19 @@
 <template>
+  <!-- Dracoscopia & TVP Chain Vision Callout -->
+  <section class="glassy-bg border-l-4 border-tvp-blue/60 bg-tvp-blue/5 rounded-2xl shadow-lg mb-12 p-6 animate-fade-in-up max-w-4xl mx-auto" aria-label="Dracoscopia & TVP Chain Vision for Proposals">
+    <h2 class="mb-2 text-2xl font-bold text-tvp-blue flex items-center gap-2">
+      <svg class="inline-block w-7 h-7 text-tvp-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m4 0h-1v-4h-1m-4 0h-1v-4h-1"/></svg>
+      Proposal Vision: Dracoscopia & TVP Chain
+    </h2>
+    <p class="text-gray-800">All proposals for planetary habitats and concepts are designed to be part of the <span class='font-bold text-tvp-blue'>Dracoscopia</span> creative network and validated on the <span class='font-bold text-tvp-blue'>TVP Chain</span> blockchain. This ensures that every idea, from Earth to Mars and beyond, is transparent, collaborative, and future-ready—empowering humanity to thrive among the stars with ethical, decentralized infrastructure.</p>
+    <div class="mt-6 text-center">
+      <router-link to="/OutpostProposal" class="inline-block rounded-lg bg-gradient-to-r from-tvp-blue via-tvp-teal to-tvp-purple px-6 py-3 text-white font-bold shadow hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-tvp-blue" aria-label="Submit your planetary proposal">Submit Your Planetary Proposal</router-link>
+    </div>
+  </section>
+
   <div class="min-h-screen bg-gradient-to-br from-white via-[#f7faff] to-[#eaf6ff] text-black flex flex-col items-center justify-center">
     <div class="max-w-7xl w-full mx-auto p-8 bg-white/80 rounded-3xl shadow-2xl backdrop-blur-2xl">
-      <h1 class="text-4xl font-bold mb-8 text-center bg-gradient-to-r from-[#42386c] via-[#153695] to-[#00deff] bg-clip-text text-transparent">Planets of the Solar System</h1>
+      <h1 class="text-4xl font-bold mb-8 text-center bg-gradient-to-r from-[#42386c] via-[#153695] to-[#143395] bg-clip-text text-transparent">Planets of the Solar System</h1>
       <p class="mb-10 text-lg text-center text-gray-700">Explore planetary concepts, sustainable habitats, and future visions for humanity among the stars.</p>
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         <PlanetCard
@@ -15,7 +27,7 @@
         />
       </div>
       <div class="mt-12 text-center">
-        <router-link to="/" class="inline-block rounded-lg bg-gradient-to-r from-[#42386c] via-[#153695] to-[#00deff] px-6 py-3 text-white font-bold shadow hover:opacity-90">Back to Home</router-link>
+        <router-link to="/" class="inline-block rounded-lg bg-gradient-to-r from-[#42386c] via-[#153695] to-[#143395] px-6 py-3 text-white font-bold shadow hover:opacity-90">Back to Home</router-link>
       </div>
     </div>
   </div>
@@ -118,3 +130,19 @@ const planets = [
 
 <style scoped>
 </style>
+
+<SeoHead
+  title="TVP Planets | Sustainable Habitats & Vision"
+  description="Discover planetary concepts and sustainable habitats, all designed with the Dracoscopia network and TVP Chain for a transparent, collaborative future."
+  keywords="The Venus Project, planets, habitats, Dracoscopia, TVP Chain, sustainability, blockchain, space, infrastructure"
+  image="/the-venus-project-circular-city.jpg"
+  url="https://www.thevenusproject.com/planets"
+  type="website"
+  :schema="{
+    '@context': 'https://schema.org',
+    '@type': 'WebPage',
+    'name': 'TVP Planets',
+    'url': 'https://www.thevenusproject.com/planets',
+    'description': 'Discover planetary concepts and sustainable habitats, all designed with the Dracoscopia network and TVP Chain for a transparent, collaborative future.'
+  }"
+/>

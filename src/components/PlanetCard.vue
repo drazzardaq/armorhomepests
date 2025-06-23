@@ -1,6 +1,6 @@
 <template>
   <div
-    :class="['planet-card', 'bg-white/80', 'backdrop-blur-lg', 'border', 'border-black/10', 'shadow-xl', 'transition-transform', 'hover:scale-105', 'hover:shadow-2xl', 'duration-300', 'flex', 'flex-col', 'justify-start', 'items-start', 'p-4', 'md:p-6', 'rounded-2xl', 'mb-4', 'min-h-[350px]', 'w-full', 'max-w-md', 'mx-auto', 'focus:outline-none', 'focus:ring-2', 'focus:ring-[#00deff]']"
+    :class="['planet-card', 'bg-white/80', 'backdrop-blur-lg', 'border', 'border-black/10', 'shadow-xl', 'transition-transform', 'hover:scale-105', 'hover:shadow-2xl', 'duration-300', 'flex', 'flex-col', 'justify-start', 'items-start', 'p-4', 'md:p-6', 'rounded-2xl', 'mb-4', 'min-h-[350px]', 'w-full', 'max-w-md', 'mx-auto', 'focus:outline-none', 'focus:ring-2', 'focus:ring-[#143395]']"
     ref="cardRef"
     tabindex="0"
     :aria-label="'Planet card for ' + name"
@@ -48,6 +48,6 @@ defineProps({
   outline: none;
 }
 .planet-card:focus {
-  box-shadow: 0 0 0 3px #00deff55;
+  box-shadow: 0 0 0 3px #14339555;
 }
 </style>

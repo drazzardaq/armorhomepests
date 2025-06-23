@@ -1,19 +1,20 @@
 <template>
   <SeoHead
-    title="History of The Venus Project | Timeline & Legacy"
-    description="Discover the history and legacy of The Venus Project, from its origins with Jacque Fresco to its global impact on sustainability and design."
-    keywords="The Venus Project, history, Jacque Fresco, timeline, legacy, sustainability, resource-based economy"
+    title="TVP History | Legacy & Future Infrastructure"
+    description="Trace the history and legacy of The Venus Project, and see how the Dracoscopia network and TVP Chain carry its vision into a new era of transparent, sustainable progress."
+    keywords="The Venus Project, history, legacy, Dracoscopia, TVP Chain, sustainability, blockchain, infrastructure"
     image="/the-venus-project-circular-city.jpg"
     url="https://www.thevenusproject.com/history"
     type="website"
     :schema="{
       '@context': 'https://schema.org',
       '@type': 'WebPage',
-      'name': 'History of The Venus Project',
+      'name': 'TVP History',
       'url': 'https://www.thevenusproject.com/history',
-      'description': 'The history and legacy of The Venus Project and Jacque Fresco.'
+      'description': 'Trace the history and legacy of The Venus Project, and see how the Dracoscopia network and TVP Chain carry its vision into a new era of transparent, sustainable progress.'
     }"
   />
+  
   <div class="venus-project-content min-h-screen w-full px-0 py-8 md:px-0 max-w-none bg-gradient-to-br from-white via-[#f7faff] to-[#eaf6ff] animate-fade-in text-black">
     <div class="space-y-12 max-w-5xl mx-auto">
       <section class="glassy-bg rounded-3xl shadow-xl mb-12 p-8 animate-fade-in-up" aria-label="History of The Venus Project">

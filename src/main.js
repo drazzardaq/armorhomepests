@@ -30,6 +30,7 @@ register()
 
 // Import routes
 import { routes } from './router/routes'
+import TVPFooter from '@/components/TVPFooter.vue';
 
 const router = createRouter({
   history: createWebHistory(),
@@ -53,6 +54,7 @@ const router = createRouter({
 })
 
 const app = createApp(App)
+app.component('TVPFooter', TVPFooter)
 
 // Configure Vue to recognize Swiper custom elements
 app.config.compilerOptions.isCustomElement = (tag) => {

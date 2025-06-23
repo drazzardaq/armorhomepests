@@ -53,7 +53,7 @@
             </div>
           </div>
           <div class="mt-8">
-            <button @click="showAppSection = !showAppSection" class="mb-4 w-full rounded-lg bg-gradient-to-r from-tvp-blue to-tvp-teal px-6 py-3 text-lg font-bold text-white shadow-lg transition-all duration-300 hover:opacity-90">{{ showAppSection ? "Hide" : "Show" }} Software Team Application & Commitment</button>
+            <BaseButton @click="showAppSection = !showAppSection" color="primary" class="mb-4 w-full">Show Software Team Application & Commitment</BaseButton>
             <transition name="fade">
               <div v-if="showAppSection" class="frosted-glass-card mt-2 rounded-xl p-6 shadow-xl">
                 <h2 class="mb-2 text-2xl font-bold text-blue-700">The Venus Project Network - Software Team Application</h2>

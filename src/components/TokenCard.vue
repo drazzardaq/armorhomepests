@@ -15,10 +15,11 @@
         'shadow-xl',
         'focus:outline-none',
         'focus:ring-2',
-        'focus:ring-[#00deff]'
+        'focus:ring-[#143395]',
+        'animate-fade-in-up'
     ]"
     :style="{
-        background: gradient || 'linear-gradient(135deg, #42386c20 20%, #00deff10 100%)'
+        background: gradient || 'linear-gradient(135deg, #42386c20 20%, #14339510 100%)'
     }"
     ref="cardRef"
     tabindex="0"
@@ -114,7 +115,7 @@ defineProps({
   badgeClass: String
 });
 function addExternalIcon(html) {
-  const extIcon = `<svg class='inline w-4 h-4 ml-1 -mt-1 text-[#00deff]' fill='none' stroke='currentColor' stroke-width='2' viewBox='0 0 24 24'><path d='M18 13v6a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6m5-3h5v5m-10 4L21 3'/></svg>`;
+  const extIcon = `<svg class='inline w-4 h-4 ml-1 -mt-1 text-[#143395]' fill='none' stroke='currentColor' stroke-width='2' viewBox='0 0 24 24'><path d='M18 13v6a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6m5-3h5v5m-10 4L21 3'/></svg>`;
   return html ? html.replace(/<a ([^>]+)>(.*?)<\/a>/g, (match, attrs, text) => {
     if (attrs.includes('target')) {
       return `<a ${attrs}>${text} ${extIcon}</a>`;
