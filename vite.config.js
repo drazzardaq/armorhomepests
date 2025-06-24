@@ -69,43 +69,31 @@ export default defineConfig({
           }
         ]
       },
-      // workbox: {
-      //   cleanupOutdatedCaches: true,
-      //   sourcemap: true,
-      //   runtimeCaching: [
-      //     {
-      //       urlPattern: /^https:\/\/dracoscopia\.com\/.*/i,
-      //       handler: 'CacheFirst',
-      //       options: {
-      //         cacheName: 'dracoscopia-images',
-      //         expiration: {
-      //           maxEntries: 60,
-      //           maxAgeSeconds: 30 * 24 * 60 * 60 // 30 days
-      //         },
-      //         cacheableResponse: {
-      //           statuses: [0, 200]
-      //         }
-      //       }
-      //     },
-      //     {
-      //       urlPattern: /^https:\/\/api\.dracoscopia\.com\/.*/i,
-      //       handler: 'NetworkFirst',
-      //       options: {
-      //         cacheName: 'dracoscopia-api',
-      //         networkTimeoutSeconds: 10,
-      //         expiration: {
-      //           maxEntries: 50,
-      //           maxAgeSeconds: 5 * 60 // 5 minutes
-      //         }
-      //       }
-      //     }
-      //   ]
-      // },
-      // devOptions: {
-      //   enabled: true,
-      //   type: 'module',
-      //   navigateFallback: 'index.html'
-      // }
+      workbox: {
+        cleanupOutdatedCaches: true,
+        sourcemap: true,
+        runtimeCaching: [
+          {
+            urlPattern: /^https:\/\/dracoscopia\.com\/.*/i,
+            handler: 'CacheFirst',
+            options: {
+              cacheName: 'tvp-dracoscopia-images',
+              expiration: {
+                maxEntries: 60,
+                maxAgeSeconds: 30 * 24 * 60 * 60 // 30 days
+              },
+              cacheableResponse: {
+                statuses: [0, 200]
+              }
+            }
+          },
+        ]
+      },
+      devOptions: {
+        enabled: true,
+        type: 'module',
+        navigateFallback: 'index.html'
+      }
     })
   ],
   resolve: {

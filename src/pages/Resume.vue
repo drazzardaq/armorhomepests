@@ -1,5 +1,4 @@
 <template>
-  <!-- <Layout :activeSection="'resume'"> -->
   <section class="venus-project-content min-h-screen w-full max-w-none animate-fade-in px-0 py-8 text-gray-900 md:px-0">
     <div class="frosted-glass-card flex flex-col gap-8 p-8">
       <header>
@@ -47,7 +46,7 @@
                 <li>Location: Serbia <span class="ml-2 inline-block rounded bg-emerald-500/70 px-3 py-1 text-sm font-semibold uppercase text-emerald-100">Aiming to Relocate</span></li>
                 <li>Birthday: January 17, 1989</li>
                 <li>Horoscope: Capricorn</li>
-                <li>Chinese Zodiac: Earth Dragon <img src="/tvp/sad.png" alt="Earth Dragon" class="ml-1 inline h-6 w-6 align-middle" /></li>
+                <li>Chinese Zodiac: Earth Dragon <img src="@/assets/images/tvp/sad.png" alt="Earth Dragon" class="ml-1 inline h-6 w-6 align-middle" /></li>
                 <li>Hourly Rate: $50 USD / Hour <span class="ml-2 inline-block rounded bg-crypto-warning/20 px-3 py-1 text-sm font-semibold uppercase text-crypto-warning">Goal $0 Economy Leaving</span></li>
               </ul>
             </div>
@@ -123,14 +122,11 @@
       </div>
     </div>
   </section>
-  <!-- </Layout> -->
 </template>
 
 <script setup>
 import { ref } from "vue";
 import Proposals from '@/components/Proposals.vue';
-import Layout from "@/layouts/Layout.vue";
-import { headingClass, subheadingClass } from "@/layouts/layoutClasses";
 import { allProposals, proposalFilters } from '@/assets/proposals.js';
 const showResume = ref(false);
 const showAppSection = ref(false); // For foldable application section

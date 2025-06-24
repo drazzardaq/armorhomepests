@@ -24,9 +24,9 @@
           </div>
         </div>
       </div>
-      <div class="flex items-center justify-center">
+      <!-- <div class="flex items-center justify-center">
         <img src="/the-venus-project-circular-city.jpg" alt="TVP Research Center" class="rounded-2xl shadow-xl w-full max-w-md object-cover" loading="lazy" />
-      </div>
+      </div> -->
     </section>
     <!-- Booking Form -->
     <section class="glassy-bg animate-fade-in-up max-w-2xl mx-auto mb-12 rounded-2xl shadow-2xl px-4 py-12 md:px-10">
@@ -103,7 +103,6 @@
 
 <script setup>
 import { ref } from "vue";
-import { headingClass, subheadingClass } from '@/layouts/layoutClasses';
 import BaseButton from '@/components/BaseButton.vue';
 
 const booking = ref({

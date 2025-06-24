@@ -2,7 +2,7 @@
   <div class="min-h-screen bg-gradient-to-b from-crypto-dark to-dark-purple flex items-center justify-center px-4">
     <div class="text-center">
       <div class="-mb-10 relative z-20">
-        <img src="@assets/images/vvv.png" alt="TVPOutpost Logo" class="w-auto h-64 mx-auto opacity-100 brightness-125" />
+        <img src="@/assets/images/vvv.png" alt="TVPOutpost Logo" class="w-auto h-64 mx-auto opacity-100 brightness-125" />
       </div>
       <h1 class="text-4xl -mt-2 z-30 block relative font-bold text-crypto-primary mb-4">404</h1>
       <h2 class="text-2xl font-semibold text-white mb-6">Page Not Found</h2>

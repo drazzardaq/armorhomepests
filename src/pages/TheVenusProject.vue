@@ -4,16 +4,7 @@
     <div class="animate-pop-in mb-6 flex w-full justify-center">
       <img src="https://www.thevenusproject.com/wp-content/uploads/2023/11/tvp-header-image-back-home-scaled.jpg" alt="The Venus Project Header" class="w-full max-w-5xl rounded-2xl border-4 border-blue-900 object-cover shadow-2xl" />
     </div>
-    <!-- Header & Logos -->
-    <div class="mb-12 flex animate-slide-down flex-col items-center gap-8 px-8">
-      <!-- <img src="https://www.thevenusproject.com/wp-content/uploads/2015/11/tvp_header_logo_mirror-300x66.jpg" alt="The Venus Project Logo" class="h-[66px] w-[300px] animate-pop-in border-0 grayscale brightness-[0.9]" /> -->
 
-      <!-- Venus Project Logo -->
-      <img src="@/assets/tvp-logo.svg" alt="The Venus Project Logo" class="animate-pop-in h-auto w-[350px] border-0 bg-white !fill-white p-2 !text-white brightness-100" />
-      <!-- Partner SVG Logos (imported from assets) -->
-
-      <h1 class="text-center text-4xl font-extrabold tracking-tight text-blue-200 drop-shadow-lg md:text-left">The Venus Project - Software Team Application</h1>
-    </div>
     <!-- TVP Media Slider Section (IMPROVED) -->
     <section class="bg-gray-900 py-16">
       <div class="w-fill container">
@@ -31,7 +22,7 @@
           </swiper-slide>
           <swiper-slide>
             <div class="relative flex h-[400px] w-full items-center justify-center overflow-hidden rounded-2xl bg-gradient-to-br from-purple-900/40 to-gray-900/40 shadow-2xl md:h-[520px]">
-              <img src="/tvp/The-Venus-Project-concept-city-3.jpg" alt="Concept City" class="absolute inset-0 z-0 h-full w-full scale-105 object-cover opacity-90" />
+              <img src="@/assets/images/tvp/The-Venus-Project-concept-city-3.jpg" alt="Concept City" class="absolute inset-0 z-0 h-full w-full scale-105 object-cover opacity-90" />
               <div class="absolute inset-0 z-10 bg-gradient-to-br from-purple-900/40 to-gray-900/40 opacity-60"></div>
               <div class="relative z-20 w-full text-center">
                 <span class="inline-block rounded-xl bg-white/10 px-6 py-3 text-2xl font-bold text-purple-200 shadow-xl drop-shadow-lg backdrop-blur">Concept City</span>
@@ -41,7 +32,7 @@
           </swiper-slide>
           <swiper-slide>
             <div class="relative flex h-[400px] w-full items-center justify-center overflow-hidden rounded-2xl bg-gradient-to-br from-yellow-200/40 to-gray-900/40 shadow-2xl md:h-[520px]">
-              <img src="/tvp/sfera-logotip-proekt-venera.jpg" alt="Sfera Logotip" class="absolute inset-0 z-0 h-full w-full scale-105 object-cover opacity-90" />
+              <img src="@/assets/images/tvp/sfera-logotip-proekt-venera.jpg" alt="Sfera Logotip" class="absolute inset-0 z-0 h-full w-full scale-105 object-cover opacity-90" />
               <div class="absolute inset-0 z-10 bg-gradient-to-br from-yellow-200/40 to-gray-900/40 opacity-60"></div>
               <div class="relative z-20 w-full text-center">
                 <span class="inline-block rounded-xl bg-white/10 px-6 py-3 text-2xl font-bold text-yellow-900 shadow-xl drop-shadow-lg backdrop-blur">Unity & Vision</span>
@@ -51,7 +42,7 @@
           </swiper-slide>
           <swiper-slide>
             <div class="relative flex h-[400px] w-full items-center justify-center overflow-hidden rounded-2xl bg-gradient-to-br from-green-900/40 to-gray-900/40 shadow-2xl md:h-[520px]">
-              <img src="/tvp/gpe.png" alt="Global Pledge Event" class="absolute inset-0 z-0 h-full w-full scale-105 object-cover opacity-90" />
+              <img src="@/assets/images/tvp/gpe.png" alt="Global Pledge Event" class="absolute inset-0 z-0 h-full w-full scale-105 object-cover opacity-90" />
               <div class="absolute inset-0 z-10 bg-gradient-to-br from-green-900/40 to-gray-900/40 opacity-60"></div>
               <div class="relative z-20 w-full text-center">
                 <span class="inline-block rounded-xl bg-white/10 px-6 py-3 text-2xl font-bold text-green-200 shadow-xl drop-shadow-lg backdrop-blur">Global Pledge</span>
@@ -61,7 +52,7 @@
           </swiper-slide>
           <swiper-slide>
             <div class="relative flex h-[400px] w-full items-center justify-center overflow-hidden rounded-2xl bg-gradient-to-br from-blue-800/40 to-gray-900/40 shadow-2xl md:h-[520px]">
-              <img src="/tvp/the-venus-project-circular-city.jpg" alt="Circular City" class="absolute inset-0 z-0 h-full w-full scale-105 object-cover opacity-90" />
+              <img src="@/assets/images/tvp/the-venus-project-circular-city.jpg" alt="Circular City" class="absolute inset-0 z-0 h-full w-full scale-105 object-cover opacity-90" />
               <div class="absolute inset-0 z-10 bg-gradient-to-br from-blue-800/40 to-gray-900/40 opacity-60"></div>
               <div class="relative z-20 w-full text-center">
                 <span class="inline-block rounded-xl bg-white/10 px-6 py-3 text-2xl font-bold text-blue-100 shadow-xl drop-shadow-lg backdrop-blur">Circular City</span>
@@ -144,7 +135,7 @@
 
     <!-- Venus Token and Blockchain Section (renamed and updated) -->
     <section class="animate-fade-in-up relative z-20 mb-16 overflow-hidden rounded-xl bg-transparent bg-gradient-to-br from-purple-900/50 to-gray-900/20 px-8 py-8 shadow-lg" id="venus-token">
-      <img src="/tvp/sfera-logotip-proekt-venera.jpg" alt="VENUS Token Coin" class="absolute inset-0 z-0 h-full w-full object-cover opacity-50" />
+      <img src="@/assets/images/tvp/sfera-logotip-proekt-venera.jpg" alt="VENUS Token Coin" class="absolute inset-0 z-0 h-full w-full object-cover opacity-50" />
       <div class="relative z-30 flex flex-col items-center gap-8 md:flex-row">
         <div>
           <h2 class="mb-4 text-3xl font-bold text-purple-300">TVP, VENUS & JFF Tokens & Blockchain</h2>
@@ -162,7 +153,7 @@
               <img class="rounded-full border-0 bg-white -hue-rotate-90" src="https://i.pinimg.com/280x280_RS/c9/a6/24/c9a624d27142baf6bd3c54bd01c9caee.jpg" alt="TVP Token" />
             </div>
             <img class="h-20 w-20 rounded-full border-2 border-blue-900/70 bg-white p-1" src="https://i.pinimg.com/280x280_RS/c9/a6/24/c9a624d27142baf6bd3c54bd01c9caee.jpg" alt="VENUS Token" />
-            <img class="h-20 w-20 rounded-full border-[3px] border-gray-300 bg-white p-1 saturate-0" src="/tvp/JFFlogo.png" alt="JFF Token" />
+            <img class="h-20 w-20 rounded-full border-[3px] border-gray-300 bg-white p-1 saturate-0" src="@/assets/images/tvp/JFFlogo.png" alt="JFF Token" />
           </div>
         </div>
       </div>
@@ -198,12 +189,12 @@
           <a href="https://www.thevenusproject.com/resource-based-economy/environment/circular-city/" class="text-blue-400 underline" target="_blank">Learn more about Circular Cities &rarr;</a>
         </div>
         <div class="flex flex-1 flex-col items-center">
-          <img src="@/assets/tvp-slides/1.jpg" alt="Circular City Concept" class="mb-4 w-full max-w-md rounded-2xl shadow-xl" />
-          <img src="@/assets/tvp-slides/2.jpg" alt="Circular City Interior" class="w-full max-w-md rounded-2xl shadow-xl" />
+          <img src="@/assets/images/tvp-slides/1.jpg" alt="Circular City Concept" class="mb-4 w-full max-w-md rounded-2xl shadow-xl" />
+          <img src="@/assets/images/tvp-slides/2.jpg" alt="Circular City Interior" class="w-full max-w-md rounded-2xl shadow-xl" />
         </div>
       </div>
       <!-- Circular City Image Slider -->
-      <div class="mx-auto mt-8 w-full max-w-4xl">
+      <!-- <div class="mx-auto mt-8 w-full max-w-4xl">
         <swiper-container :slides-per-view="1" :space-between="0" :navigation="true" :pagination="{ clickable: true }" class="circular-city-slider">
           <swiper-slide v-for="(img, i) in circularCitySlides" :key="i">
             <div class="relative flex h-96 w-full items-center justify-center overflow-hidden rounded-2xl bg-gray-900 shadow-2xl">
@@ -211,7 +202,7 @@
             </div>
           </swiper-slide>
         </swiper-container>
-      </div>
+      </div> -->
     </section>
 
     <!-- Meet the Genius Section -->
@@ -227,7 +218,7 @@
             <li><strong>Born:</strong> March 13, 1916 (Manhattan, NY, USA)</li>
             <li><strong>Died:</strong> May 18, 2017 (Sebring, FL, USA)</li>
             <li><strong>Astrology:</strong> <a href="https://www.astrotheme.com/astrology/Jacque_Fresco" class="text-blue-400 underline" target="_blank">Pisces</a></li>
-            <li><strong>Chinese Zodiac:</strong> Fire Dragon <img src="/tvp/sad.png" alt="Fire Dragon" class="ml-1 inline h-6 w-6" /></li>
+            <li><strong>Chinese Zodiac:</strong> Fire Dragon <img src="@/assets/images/tvp/sad.png" alt="Fire Dragon" class="ml-1 inline h-6 w-6" /></li>
             <li><a href="https://www.thevenusproject.com/jacque-fresco/" class="mr-2 text-blue-400 underline" target="_blank">Official Jacque Fresco Page</a></li>
           </ul>
           <div class="mb-2 flex flex-wrap justify-center gap-3">
@@ -243,7 +234,7 @@
           <ul class="mb-2 text-sm text-gray-400">
             <li><strong>Born:</strong> March 6, 1943 (USA)</li>
             <li><strong>Astrology:</strong> Pisces</li>
-            <li class="flex items-center gap-2"><strong>Chinese Zodiac:</strong> Water Goat <img src="/tvp/goat.png" alt="Water Goat" class="ml-1 inline h-6 w-6" /></li>
+            <li class="flex items-center gap-2"><strong>Chinese Zodiac:</strong> Water Goat <img src="@/assets/images/tvp/goat.png" alt="Water Goat" class="ml-1 inline h-6 w-6" /></li>
             <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/roxanne-meadows-a2879711/" class="text-green-400 underline" target="_blank">roxanne-meadows</a></li>
             <li><a href="https://www.thevenusproject.com/the-venus-project/roxanne-meadows/" class="mr-2 text-green-400 underline" target="_blank">Official Roxanne Meadows Page</a></li>
           </ul>
@@ -358,7 +349,7 @@
                 <li>Birthday: January 17, 1989</li>
                 <li>Horoscope: Capricorn</li>
                 <li>
-                  Chinese Zodiac: Earth Dragon <img src="/tvp/sad.png" alt="Earth Dragon" class="ml-1 inline h-6 w-6 align-middle" />
+                  Chinese Zodiac: Earth Dragon <img src="@/assets/images/tvp/sad.png" alt="Earth Dragon" class="ml-1 inline h-6 w-6 align-middle" />
                   <span class="group relative ml-2 cursor-pointer">
                     <svg xmlns="http://www.w3.org/2000/svg" class="inline h-5 w-5 text-blue-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <circle cx="12" cy="12" r="10" stroke-width="2" />
@@ -494,7 +485,7 @@
           <p class="mb-1 text-gray-400">Chinese Zodiac: <span class="font-bold">Fire Dragon</span> (Feb 4, 1916 – Jan 22, 1917)</p>
         </div>
         <div class="flex w-full max-w-lg items-center gap-3 rounded-xl border border-green-500/30 bg-gray-900/80 p-6">
-          <img src="/tvp/sad.png" alt="Earth Dragon" class="h-10 w-10 rounded-full" />
+          <img src="@/assets/images/tvp/sad.png" alt="Earth Dragon" class="h-10 w-10 rounded-full" />
           <div>
             <h3 class="mb-1 text-lg font-semibold text-green-300">Dragoljub</h3>
             <p class="mb-1 text-gray-400">Birthday: <span class="font-bold">January 17, 1989</span></p>
@@ -560,7 +551,7 @@ function spriteSliderStyle(i) {
 }
 
 // Import circular city images for the slider
-const circularCitySlides = [new URL("@/assets/tvp-slides/1.jpg", import.meta.url).href, new URL("@/assets/tvp-slides/2.jpg", import.meta.url).href, new URL("@/assets/tvp-slides/3.jpg", import.meta.url).href, new URL("@/assets/tvp-slides/4.jpg", import.meta.url).href, new URL("@/assets/tvp-slides/5.jpg", import.meta.url).href, new URL("@/assets/tvp-slides/6.jpg", import.meta.url).href, new URL("@/assets/tvp-slides/7.jpg", import.meta.url).href, new URL("@/assets/tvp-slides/8.jpg", import.meta.url).href, new URL("@/assets/tvp-slides/9.jpg", import.meta.url).href, new URL("@/assets/tvp-slides/10.jpg", import.meta.url).href, new URL("@/assets/tvp-slides/11.jpg", import.meta.url).href];
+// const circularCitySlides = [new URL("@/assets/images/tvp-slides/1.jpg", import.meta.url).href, new URL("@/assets/images/tvp-slides/2.jpg", import.meta.url).href, new URL("@/assets/images/tvp-slides/3.jpg", import.meta.url).href, new URL("@/assets/images/tvp-slides/4.jpg", import.meta.url).href, new URL("@/assets/images/tvp-slides/5.jpg", import.meta.url).href, new URL("@/assets/images/tvp-slides/6.jpg", import.meta.url).href, new URL("@/assets/images/tvp-slides/7.jpg", import.meta.url).href, new URL("@/assets/images/tvp-slides/8.jpg", import.meta.url).href, new URL("@/assets/images/tvp-slides/9.jpg", import.meta.url).href, new URL("@/assets/images/tvp-slides/10.jpg", import.meta.url).href, new URL("@/assets/images/tvp-slides/11.jpg", import.meta.url).href];
 
 // Fix for showAddress not defined
 const showAddress = ref(false);
