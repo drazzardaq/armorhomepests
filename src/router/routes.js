@@ -21,6 +21,7 @@ const FAQ = () => import("@/pages/FAQ.vue");
 const Media = () => import("@/pages/Media.vue");
 const Tokenomics = () => import("@/pages/Tokenomics.vue");
 const OutpostProposal = () => import("@/pages/OutpostProposal.vue");
+const TheVenusProject = () => import("@/pages/TheVenusProject.vue");
 
 export const routes = [
   {
@@ -36,6 +37,11 @@ export const routes = [
         path: "outpostproposal",
         name: "OutpostProposal",
         component: OutpostProposal,
+      },
+      {
+        path: "thevenusproject",
+        name: "TheVenusProject",
+        component: TheVenusProject,
       },
       {
         path: "about",

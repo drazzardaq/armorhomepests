@@ -1,12 +1,12 @@
 <template>
   <Teleport to="body">
     <Transition name="modal">
-      <div v-if="isOpen" class="modal-overlay" @click="closeOnOverlay && close()">
-        <div class="modal-container" @click.stop>
+      <div v-if="isOpen" class="modal-overlay" @click="closeOnOverlay && close()" aria-modal="true" role="dialog" tabindex="-1">
+        <div class="modal-container unified-card" @click.stop>
           <div class="modal-header">
-            <h3 class="modal-title">{{ title }}</h3>
-            <button class="modal-close" @click="close">
-              <i class="fas fa-times"></i>
+            <h3 class="modal-title" id="modal-title">{{ title }}</h3>
+            <button class="btn-modal-close" @click="close" aria-label="Close modal">
+              <span aria-hidden="true">&times;</span>
             </button>
           </div>
           <div class="modal-content">
@@ -22,77 +22,67 @@
 </template>
 
 <script setup>
-import { defineProps, defineEmits } from 'vue';
-
+import { defineProps, defineEmits, onMounted, watch, nextTick } from 'vue';
 const props = defineProps({
-  isOpen: {
-    type: Boolean,
-    required: true
-  },
-  title: {
-    type: String,
-    default: ''
-  },
-  closeOnOverlay: {
-    type: Boolean,
-    default: true
-  }
+  isOpen: { type: Boolean, required: true },
+  title: { type: String, default: '' },
+  closeOnOverlay: { type: Boolean, default: true }
 });
-
 const emit = defineEmits(['close']);
-
-const close = () => {
-  emit('close');
-};
+function close() { emit('close'); }
+// Focus trap for accessibility
+let modalRef = null;
+onMounted(() => {
+  watch(() => props.isOpen, (open) => {
+    if (open) nextTick(() => { modalRef?.focus(); });
+  });
+});
 </script>
 
 <style scoped>
 .modal-overlay {
-  @apply fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50;
+  position: fixed;
+  inset: 0;
+  background: rgba(21, 54, 149, 0.18);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-
 .modal-container {
-  @apply bg-white rounded-lg shadow-xl w-full max-w-2xl max-h-[90vh] overflow-y-auto;
+  min-width: 320px;
+  max-width: 95vw;
+  max-height: 90vh;
+  overflow-y: auto;
+  outline: none;
+  transition: all 0.3s;
+  opacity: 1;
+  transform: scale(1);
 }
-
 .modal-header {
-  @apply flex items-center justify-between p-4 border-b;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
 }
-
 .modal-title {
-  @apply text-xl font-bold text-gray-800;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #153695;
 }
-
-.modal-close {
-  @apply text-gray-500 hover:text-gray-700 focus:outline-none;
-}
-
 .modal-content {
-  @apply p-4;
+  margin-bottom: 1rem;
 }
-
 .modal-footer {
-  @apply p-4 border-t flex justify-end space-x-2;
+  text-align: right;
 }
-
-/* Transition animations */
 .modal-enter-active,
 .modal-leave-active {
-  @apply transition-opacity duration-300;
+  transition: opacity 0.3s, transform 0.3s;
 }
-
 .modal-enter-from,
 .modal-leave-to {
-  @apply opacity-0;
+  opacity: 0;
+  transform: scale(0.95);
 }
-
-.modal-enter-active .modal-container,
-.modal-leave-active .modal-container {
-  @apply transition-all duration-300;
-}
-
-.modal-enter-from .modal-container,
-.modal-leave-to .modal-container {
-  @apply transform scale-95 opacity-0;
-}
-</style> 
+</style>

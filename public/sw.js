@@ -4,25 +4,8 @@ const urlsToCache = [
   '/index.html',
   '/manifest.json',
   '/images/ai/1.webp',
-  '/images/ai/2.png',
-  '/images/ai/3.png',
-  '/images/ai/4.png',
-  '/images/ai/5.png',
   '/images/dracaris.png',
-  '/images/vapor.png',
   '/images/dragonorb.png',
-  '/images/chains/ethereum-eth-logo.svg',
-  '/images/chains/polygon-matic-logo.svg',
-  '/images/chains/bnb-bnb-logo.svg',
-  '/images/chains/solana-sol-logo.svg',
-  '/images/chains/arbitrum-arb-logo.svg',
-  '/images/chains/optimism-op-logo.svg',
-  '/images/chains/avalanche-avax-logo.svg',
-  '/images/chains/fantom-ftm-logo.svg',
-  '/ase.png',
-  '/ee.png',
-  '/tt.png',
-  '/56.png'
 ];
 
 // Install event - cache assets

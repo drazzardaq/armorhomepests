@@ -492,9 +492,7 @@
 </template>
 
 <script setup>
-import "@/assets/tvp-global.css";
 import TokenCard from "@/components/TokenCard.vue";
-import ContactCTA from "@/components/common/ContactCTA.vue";
 import SeoHead from "@/components/SeoHead.vue";
 import PartnerCard from "@/components/PartnerCard.vue";
 import CentralIcon from "@/components/common/CentralIcon.vue";

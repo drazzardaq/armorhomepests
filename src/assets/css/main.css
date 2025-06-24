@@ -1,4 +1,4 @@
-@import 'variables.css';
+@import "variables.css";
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -15,7 +15,12 @@
     @apply bg-crypto-dark text-white antialiased;
   }
 
-  h1, h2, h3, h4, h5, h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     @apply font-bold text-white;
   }
 
@@ -44,7 +49,7 @@
   }
 
   a {
-    @apply text-crypto-primary hover:text-crypto-accent transition-colors duration-200;
+    @apply text-white/50 !no-underline transition-colors duration-300 hover:text-white;
   }
 }
 
@@ -52,10 +57,9 @@
   @apply btn border-2 border-white text-white hover:bg-crypto-primary hover:text-white !important;
 }
 
-
 @layer components {
   .btn {
-    @apply inline-flex items-center justify-center px-6 py-3 rounded-md font-medium transition-all duration-300;
+    @apply inline-flex items-center justify-center rounded-md px-6 py-3 font-medium transition-all duration-300;
   }
 
   .btn-gradient-crypto {
@@ -65,7 +69,7 @@
   .btn-outline-crypto {
     @apply btn border-2 border-crypto-primary text-crypto-primary hover:bg-crypto-primary hover:text-white;
   }
-  
+
   .btn-outline-white {
     @apply btn border-2 border-white text-white hover:bg-crypto-primary hover:text-white;
   }
@@ -83,15 +87,15 @@
   }
 
   .card {
-    @apply bg-crypto-dark/50 rounded-lg shadow-md overflow-hidden transition-all duration-300 border border-crypto-primary/20 backdrop-blur-sm;
+    @apply overflow-hidden rounded-lg border border-crypto-primary/20 bg-crypto-dark/50 shadow-md backdrop-blur-sm transition-all duration-300;
   }
 
   .card:hover {
-    @apply transform -translate-y-2 shadow-lg border-crypto-primary/40;
+    @apply -translate-y-2 transform border-crypto-primary/40 shadow-lg;
   }
 
   .input {
-    @apply w-full px-4 py-2 rounded-medium border border-crypto-primary/20 bg-crypto-dark/50 text-white focus:border-crypto-primary focus:ring-2 focus:ring-crypto-primary/20 transition-all duration-200;
+    @apply w-full rounded-medium border border-crypto-primary/20 bg-crypto-dark/50 px-4 py-2 text-white transition-all duration-200 focus:border-crypto-primary focus:ring-2 focus:ring-crypto-primary/20;
   }
 
   .textarea {
@@ -99,11 +103,11 @@
   }
 
   .label {
-    @apply block text-sm font-medium text-gray-300 mb-1;
+    @apply mb-1 block text-sm font-medium text-gray-300;
   }
 
   .error-message {
-    @apply text-crypto-warning text-sm mt-1;
+    @apply mt-1 text-sm text-crypto-warning;
   }
 }
 
@@ -121,7 +125,7 @@
   }
 
   .hover-lift:hover {
-    @apply transform -translate-y-2 shadow-lg;
+    @apply -translate-y-2 transform shadow-lg;
   }
 
   .hover-shadow {
@@ -179,7 +183,7 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  @apply bg-crypto-primary/50 rounded-none hover:bg-crypto-primary/70 transition-colors duration-200;
+  @apply rounded-none bg-crypto-primary/50 transition-colors duration-200 hover:bg-crypto-primary/70;
 }
 
 /* Focus styles */
@@ -239,20 +243,31 @@
 }
 
 :root {
-  --crypto-dark: #0A0F2E;
+  --crypto-dark: #0a0f2e;
   --crypto-primary: #153695;
   --crypto-secondary: #143395;
   --crypto-accent: #42386c;
-  --crypto-success: #4CAF50;
-  --crypto-warning: #FFD700;
-  --dark-gray: #1F2937;
-  --light-gray: #F3F4F6;
-  --white: #FFFFFF;
+  --crypto-success: #4caf50;
+  --crypto-warning: #ffd700;
+  --dark-gray: #1f2937;
+  --light-gray: #f3f4f6;
+  --white: #ffffff;
   --black: #000000;
 }
 
 body {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family:
+    "Inter",
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    "Open Sans",
+    "Helvetica Neue",
+    sans-serif;
   color: var(--white);
   line-height: 1.6;
   background-color: var(--crypto-dark);
@@ -276,7 +291,7 @@ html {
 
 /* Button styles */
 .btn {
-  @apply inline-flex items-center justify-center px-6 py-3 rounded-md font-medium transition-all duration-300;
+  @apply inline-flex items-center justify-center rounded-md px-6 py-3 font-medium transition-all duration-300;
 }
 
 .btn-gradient-crypto {
@@ -293,12 +308,16 @@ html {
 
 /* Card hover effects */
 .card-hover {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 .card-hover:hover {
   transform: translateY(-5px);
-  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  box-shadow:
+    0 10px 25px -5px rgba(0, 0, 0, 0.1),
+    0 10px 10px -5px rgba(0, 0, 0, 0.04);
 }
 
 /* Hero section overlay */
@@ -349,13 +368,13 @@ html {
   html {
     @apply antialiased;
   }
-  
+
   .nav-link {
-    @apply inline-flex items-center px-1 pt-1 text-sm font-medium text-white hover:text-gray-200 transition-colors duration-200;
+    @apply inline-flex items-center px-1 pt-1 text-sm font-medium text-white transition-colors duration-200 hover:text-gray-200;
   }
-  
+
   .mobile-nav-link {
-    @apply block px-3 py-2 rounded-md text-base font-medium text-white hover:text-gray-200 hover:bg-gray-700 transition-colors duration-200;
+    @apply block rounded-md px-3 py-2 text-base font-medium text-white transition-colors duration-200 hover:bg-gray-700 hover:text-gray-200;
   }
 }
 
@@ -377,25 +396,25 @@ html {
 
 /* Modal styles */
 .modal-overlay {
-  @apply fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4;
+  @apply fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50 p-4;
 }
 
 .modal-content {
-  @apply bg-white rounded-lg w-full max-w-2xl max-h-[90vh] overflow-y-auto relative;
+  @apply relative max-h-[90vh] w-full max-w-2xl overflow-y-auto rounded-lg bg-white;
 }
 
 /* Service card styles */
 .service-card {
-  @apply bg-white rounded-lg shadow-card overflow-hidden transition-all duration-300 cursor-pointer;
+  @apply cursor-pointer overflow-hidden rounded-lg bg-white shadow-card transition-all duration-300;
 }
 
 .service-card:hover {
-  @apply transform -translate-y-2 shadow-card-hover;
+  @apply -translate-y-2 transform shadow-card-hover;
 }
 
 /* Testimonial card styles */
 .testimonial-card {
-  @apply bg-white rounded-lg shadow-card p-6 transition-all duration-300;
+  @apply rounded-lg bg-white p-6 shadow-card transition-all duration-300;
 }
 
 .testimonial-card:hover {
@@ -408,39 +427,39 @@ html {
 }
 
 .header-logo:hover {
-  @apply transform scale-105;
+  @apply scale-105 transform;
 }
 
 /* Footer styles */
 .footer-link {
-  @apply text-gray-300 hover:text-white transition-colors duration-200;
+  @apply text-gray-300 transition-colors duration-200 hover:text-white;
 }
 
 /* Section styles */
 .section-title {
-  @apply text-4xl font-bold text-center mb-12;
+  @apply mb-12 text-center text-4xl font-bold;
 }
 
 .section-subtitle {
-  @apply text-xl text-center mb-8 text-gray-600;
+  @apply mb-8 text-center text-xl text-gray-600;
 }
 
 /* Form styles */
 .form-input {
-  @apply w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-crypto-primary focus:border-transparent;
+  @apply w-full rounded-md border border-gray-300 px-4 py-2 focus:border-transparent focus:ring-2 focus:ring-crypto-primary;
 }
 
 .form-label {
-  @apply block text-sm font-medium text-gray-700 mb-1;
+  @apply mb-1 block text-sm font-medium text-gray-700;
 }
 
 .form-error {
-  @apply text-red-500 text-sm mt-1;
+  @apply mt-1 text-sm text-red-500;
 }
 
 /* Utility classes */
 .text-gradient {
-  @apply bg-clip-text text-transparent bg-gradient-to-r from-tvp-purple via-tvp-blue to-tvp-teal;
+  @apply bg-gradient-to-r from-tvp-purple via-tvp-blue to-tvp-teal bg-clip-text text-transparent;
 }
 
 .bg-gradient-crypto {
@@ -465,7 +484,7 @@ html {
 
 /* Crypto-specific styles */
 .crypto-card {
-  @apply card p-6 perspective-3d transform-3d;
+  @apply card perspective-3d transform-3d p-6;
 }
 
 .crypto-card:hover {
@@ -489,11 +508,11 @@ html {
 }
 
 .token-address {
-  @apply text-sm font-mono text-gray-400 break-all;
+  @apply break-all font-mono text-sm text-gray-400;
 }
 
 .polygon-badge {
-  @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-crypto-primary/50 text-white;
+  @apply inline-flex items-center rounded-full bg-crypto-primary/50 px-2.5 py-0.5 text-xs font-medium text-white;
 }
 
 .staking-card {
@@ -501,7 +520,7 @@ html {
 }
 
 .apy-badge {
-  @apply inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-crypto-success/10 text-crypto-success;
+  @apply inline-flex items-center rounded-full bg-crypto-success/10 px-3 py-1 text-sm font-medium text-crypto-success;
 }
 
 /* 3D Animation Classes */
@@ -510,7 +529,7 @@ html {
 }
 
 .glass-effect {
-  @apply bg-crypto-dark/30 backdrop-blur-md border border-white/10;
+  @apply border border-white/10 bg-crypto-dark/30 backdrop-blur-md;
 }
 
 .gradient-border {
@@ -521,7 +540,7 @@ html {
 }
 
 .gradient-border::before {
-  content: '';
+  content: "";
   position: absolute;
   inset: 0;
   background: var(--crypto-dark);
@@ -531,7 +550,7 @@ html {
 
 /* Token Stats */
 .token-stats {
-  @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6;
+  @apply grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4;
 }
 
 .stat-card {
@@ -539,16 +558,16 @@ html {
 }
 
 .stat-value {
-  @apply text-3xl font-bold text-crypto-primary mb-2;
+  @apply mb-2 text-3xl font-bold text-crypto-primary;
 }
 
 .stat-label {
-  @apply text-gray-400 text-sm;
+  @apply text-sm text-gray-400;
 }
 
 /* Market Data */
 .market-data {
-  @apply grid grid-cols-1 md:grid-cols-3 gap-6;
+  @apply grid grid-cols-1 gap-6 md:grid-cols-3;
 }
 
 .market-card {
@@ -556,7 +575,7 @@ html {
 }
 
 .market-title {
-  @apply text-gray-400 text-sm mb-2;
+  @apply mb-2 text-sm text-gray-400;
 }
 
 .market-value {
@@ -565,7 +584,7 @@ html {
 
 /* Tokenomics */
 .tokenomics-grid {
-  @apply grid grid-cols-1 md:grid-cols-2 gap-8;
+  @apply grid grid-cols-1 gap-8 md:grid-cols-2;
 }
 
 .tokenomics-card {
@@ -573,7 +592,7 @@ html {
 }
 
 .tokenomics-title {
-  @apply text-xl font-bold text-white mb-4;
+  @apply mb-4 text-xl font-bold text-white;
 }
 
 .tokenomics-list {
@@ -581,7 +600,7 @@ html {
 }
 
 .tokenomics-item {
-  @apply flex justify-between items-center;
+  @apply flex items-center justify-between;
 }
 
 .tokenomics-label {
@@ -589,5 +608,5 @@ html {
 }
 
 .tokenomics-value {
-  @apply text-crypto-primary font-medium;
+  @apply font-medium text-crypto-primary;
 }

@@ -15,137 +15,128 @@
     }"
   />
 
-    <div class="space-y-16 w-full">
-      <!-- Hero Section -->
-      <section class="py-16 text-center">
-        <h1 class="mb-6 text-4xl font-bold md:text-5xl">Resource Hub</h1>
-        <p class="mx-auto max-w-3xl text-xl text-gray-700">Access our comprehensive collection of educational materials, documentaries, books, and research papers about The Venus Project and resource-based economy.</p>
-      </section>
+  <div class="venus-project-content space-y-16 w-full">
+    <!-- Hero Section -->
+    <section class="glassy-bg py-16 text-center max-w-3xl mx-auto rounded-2xl shadow-lg animate-fade-in-up">
+      <h1 class="mb-6 text-4xl font-extrabold tracking-tight text-green-200 drop-shadow-lg">Resource Hub</h1>
+      <p class="mx-auto max-w-2xl text-xl text-green-100">Access our comprehensive collection of educational materials, documentaries, books, and research papers about The Venus Project and resource-based economy.</p>
+    </section>
 
-      <!-- Search and Filter -->
-      <section class="mx-auto max-w-4xl">
-        <div class="mb-8 flex flex-col gap-4 md:flex-row">
-          <div class="flex-1">
-            <input v-model="searchQuery" type="text" placeholder="Search resources..." class="w-full rounded-lg border border-blue-200 bg-white/60 px-4 py-3 text-gray-900 placeholder-gray-400 focus:border-blue-500 focus:outline-none" />
-          </div>
-          <select v-model="selectedType" class="rounded-lg border border-blue-200 bg-white/60 px-4 py-3 text-gray-900 focus:border-blue-500 focus:outline-none">
-            <option value="">All Types</option>
-            <option value="video">Videos</option>
-            <option value="book">Books</option>
-            <option value="article">Articles</option>
-            <option value="presentation">Presentations</option>
-          </select>
+    <!-- Search and Filter -->
+    <section class="glassy-bg mx-auto max-w-4xl rounded-2xl shadow-lg p-8 animate-fade-in-up">
+      <div class="mb-8 flex flex-col gap-4 md:flex-row">
+        <div class="flex-1">
+          <input v-model="searchQuery" type="text" placeholder="Search resources..." class="w-full rounded-lg border border-blue-200 bg-white/60 px-4 py-3 text-gray-900 placeholder-gray-400 focus:border-blue-500 focus:outline-none" />
         </div>
-      </section>
+        <select v-model="selectedType" class="rounded-lg border border-blue-200 bg-white/60 px-4 py-3 text-gray-900 focus:border-blue-500 focus:outline-none">
+          <option value="">All Types</option>
+          <option value="video">Videos</option>
+          <option value="book">Books</option>
+          <option value="article">Articles</option>
+          <option value="presentation">Presentations</option>
+        </select>
+      </div>
+    </section>
 
-      <!-- Resources Grid -->
-      <section>
-        <div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4">
-          <BaseCard v-for="resource in filteredResources" :key="resource.id" customClass="group cursor-pointer rounded-xl bg-white/80 backdrop-blur-lg p-6 transition-all duration-300 hover:bg-white/90 focus:outline-none focus:ring-2 focus:ring-[#143395] shadow-xl">
-            <!-- Card content here -->
-            <div class="mb-4 flex items-center">
-              <div :class="['mr-4 flex h-12 w-12 items-center justify-center rounded-lg', resource.type === 'video' ? 'bg-red-600' : resource.type === 'book' ? 'bg-green-600' : resource.type === 'article' ? 'bg-blue-600' : 'bg-purple-600']">
-                <svg v-if="resource.type === 'video'" class="h-6 w-6 text-white" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M8 5v14l11-7z" />
-                </svg>
-                <svg v-else-if="resource.type === 'book'" class="h-6 w-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
-                </svg>
-                <svg v-else-if="resource.type === 'article'" class="h-6 w-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-                </svg>
-                <svg v-else class="h-6 w-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
-                </svg>
-              </div>
-              <div>
-                <h3 class="font-semibold text-black transition-colors group-hover:text-[#153695]">{{ resource.title }}</h3>
-                <p class="text-sm capitalize text-gray-500">{{ resource.type }}</p>
-              </div>
+    <!-- Resources Grid -->
+    <section>
+      <div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4">
+        <BaseCard v-for="resource in filteredResources" :key="resource.id" customClass="frosted-glass-card group cursor-pointer rounded-xl p-6 transition-all duration-300 hover:bg-white/30 focus:outline-none focus:ring-2 focus:ring-green-400 shadow-xl" @click="openResource(resource)" tabindex="0" :aria-label="'Open resource: ' + resource.title">
+          <!-- Card content here -->
+          <div class="mb-4 flex items-center">
+            <div :class="['mr-4 flex h-12 w-12 items-center justify-center rounded-lg', resource.type === 'video' ? 'bg-red-600' : resource.type === 'book' ? 'bg-green-600' : resource.type === 'article' ? 'bg-blue-600' : 'bg-purple-600']">
+              <!-- SVG icons as before -->
+              <svg v-if="resource.type === 'video'" class="h-6 w-6 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z" /></svg>
+              <svg v-else-if="resource.type === 'book'" class="h-6 w-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" /></svg>
+              <svg v-else-if="resource.type === 'article'" class="h-6 w-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg>
+              <svg v-else class="h-6 w-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" /></svg>
             </div>
-            <p class="mb-3 text-sm text-gray-700">{{ resource.description }}</p>
-            <div class="flex items-center justify-between text-xs text-gray-500">
-              <span>{{ resource.duration || resource.pages || resource.length }}</span>
-              <span>{{ resource.category }}</span>
-            </div>
-          </BaseCard>
-        </div>
-      </section>
-
-      <!-- Featured Collections -->
-      <section>
-        <h2 class="mb-8 text-center text-3xl font-bold">Featured Collections</h2>
-        <div class="grid gap-8 md:grid-cols-3">
-          <div v-for="collection in collections" :key="collection.id" class="rounded-lg bg-white/5 p-6 transition-colors hover:bg-white/10">
-            <div class="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-blue-600">
-              <svg class="h-6 w-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" :d="collection.icon" />
-              </svg>
-            </div>
-            <h3 class="mb-3 text-xl font-bold text-white">{{ collection.title }}</h3>
-            <p class="mb-4 text-gray-300">{{ collection.description }}</p>
-            <div class="flex items-center justify-between">
-              <span class="text-sm text-gray-400">{{ collection.itemCount }} items</span>
-              <BaseButton color="primary" class="w-full rounded-lg">Explore →</BaseButton>
+            <div>
+              <h2 class="font-semibold text-white transition-colors group-hover:text-green-200">{{ resource.title }}</h2>
+              <p class="text-sm capitalize text-green-100">{{ resource.type }}</p>
             </div>
           </div>
-        </div>
-      </section>
-
-      <!-- Educational Programs -->
-      <section class="rounded-lg bg-white/5 p-8">
-        <h2 class="mb-6 text-center text-3xl font-bold">Educational Programs</h2>
-        <div class="grid gap-8 md:grid-cols-2">
-          <div>
-            <h3 class="mb-4 text-xl font-semibold">Online Courses</h3>
-            <ul class="space-y-3">
-              <li class="flex items-center">
-                <div class="mr-3 h-2 w-2 rounded-full bg-blue-500"></div>
-                <span class="text-gray-300">Introduction to Resource-Based Economy</span>
-              </li>
-              <li class="flex items-center">
-                <div class="mr-3 h-2 w-2 rounded-full bg-blue-500"></div>
-                <span class="text-gray-300">Sustainable City Design Principles</span>
-              </li>
-              <li class="flex items-center">
-                <div class="mr-3 h-2 w-2 rounded-full bg-blue-500"></div>
-                <span class="text-gray-300">Automation and Society</span>
-              </li>
-              <li class="flex items-center">
-                <div class="mr-3 h-2 w-2 rounded-full bg-blue-500"></div>
-                <span class="text-gray-300">Environmental Systems Thinking</span>
-              </li>
-            </ul>
+          <p class="mb-3 text-sm text-green-100">{{ resource.description }}</p>
+          <div class="flex items-center justify-between text-xs text-green-200">
+            <span>{{ resource.duration || resource.pages || resource.length }}</span>
+            <span>{{ resource.category }}</span>
           </div>
+        </BaseCard>
+      </div>
+    </section>
 
-          <div>
-            <h3 class="mb-4 text-xl font-semibold">Workshops & Seminars</h3>
-            <ul class="space-y-3">
-              <li class="flex items-center">
-                <div class="mr-3 h-2 w-2 rounded-full bg-green-500"></div>
-                <span class="text-gray-300">Monthly Virtual Seminars</span>
-              </li>
-              <li class="flex items-center">
-                <div class="mr-3 h-2 w-2 rounded-full bg-green-500"></div>
-                <span class="text-gray-300">Design Thinking Workshops</span>
-              </li>
-              <li class="flex items-center">
-                <div class="mr-3 h-2 w-2 rounded-full bg-green-500"></div>
-                <span class="text-gray-300">Student Research Programs</span>
-              </li>
-              <li class="flex items-center">
-                <div class="mr-3 h-2 w-2 rounded-full bg-green-500"></div>
-                <span class="text-gray-300">Educator Training Sessions</span>
-              </li>
-            </ul>
+    <!-- Featured Collections -->
+    <section class="glassy-bg max-w-5xl mx-auto rounded-2xl shadow-lg p-8 animate-fade-in-up">
+      <h2 class="mb-8 text-center text-3xl font-bold text-green-200">Featured Collections</h2>
+      <div class="grid gap-8 md:grid-cols-3">
+        <div v-for="collection in collections" :key="collection.id" class="frosted-glass-card rounded-lg p-6 transition-colors hover:bg-white/20">
+          <div class="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-blue-600">
+            <svg class="h-6 w-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" :d="collection.icon" />
+            </svg>
+          </div>
+          <h3 class="mb-3 text-xl font-bold text-white">{{ collection.title }}</h3>
+          <p class="mb-4 text-green-100">{{ collection.description }}</p>
+          <div class="flex items-center justify-between">
+            <span class="text-sm text-green-200">{{ collection.itemCount }} items</span>
+            <BaseButton color="primary" class="btn-unified w-full">Explore →</BaseButton>
           </div>
         </div>
+      </div>
+    </section>
 
-        <div class="mt-8 text-center">
-          <BaseButton color="primary" class="w-full rounded-lg">Enroll Now</BaseButton>
+    <!-- Educational Programs -->
+    <section class="frosted-glass-card rounded-2xl bg-white/5 p-8 max-w-4xl mx-auto animate-fade-in-up">
+      <h2 class="mb-6 text-center text-3xl font-bold text-green-200">Educational Programs</h2>
+      <div class="grid gap-8 md:grid-cols-2">
+        <div>
+          <h3 class="mb-4 text-xl font-semibold text-green-100">Online Courses</h3>
+          <ul class="space-y-3">
+            <li class="flex items-center">
+              <div class="mr-3 h-2 w-2 rounded-full bg-blue-500"></div>
+              <span class="text-green-100">Introduction to Resource-Based Economy</span>
+            </li>
+            <li class="flex items-center">
+              <div class="mr-3 h-2 w-2 rounded-full bg-blue-500"></div>
+              <span class="text-green-100">Sustainable City Design Principles</span>
+            </li>
+            <li class="flex items-center">
+              <div class="mr-3 h-2 w-2 rounded-full bg-blue-500"></div>
+              <span class="text-green-100">Automation and Society</span>
+            </li>
+            <li class="flex items-center">
+              <div class="mr-3 h-2 w-2 rounded-full bg-blue-500"></div>
+              <span class="text-green-100">Environmental Systems Thinking</span>
+            </li>
+          </ul>
         </div>
-      </section>
-    </div>
+        <div>
+          <h3 class="mb-4 text-xl font-semibold text-green-100">Workshops & Seminars</h3>
+          <ul class="space-y-3">
+            <li class="flex items-center">
+              <div class="mr-3 h-2 w-2 rounded-full bg-green-500"></div>
+              <span class="text-green-100">Monthly Virtual Seminars</span>
+            </li>
+            <li class="flex items-center">
+              <div class="mr-3 h-2 w-2 rounded-full bg-green-500"></div>
+              <span class="text-green-100">Design Thinking Workshops</span>
+            </li>
+            <li class="flex items-center">
+              <div class="mr-3 h-2 w-2 rounded-full bg-green-500"></div>
+              <span class="text-green-100">Student Research Programs</span>
+            </li>
+            <li class="flex items-center">
+              <div class="mr-3 h-2 w-2 rounded-full bg-green-500"></div>
+              <span class="text-green-100">Educator Training Sessions</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="mt-8 text-center">
+        <BaseButton color="primary" class="btn-unified w-full">Enroll Now</BaseButton>
+      </div>
+    </section>
+  </div>
 </template>
 
 <script setup>
@@ -265,3 +256,32 @@ const collections = ref([
   },
 ]);
 </script>
+
+<style scoped>
+.venus-project-content {
+  font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+}
+.btn-unified {
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: bold;
+  box-shadow: 0 2px 8px 0 rgba(0,0,0,0.12);
+  transition: all 0.3s;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  outline: none;
+}
+.btn-unified:focus {
+  box-shadow: 0 0 0 3px #38bdf8, 0 2px 8px 0 rgba(0,0,0,0.12);
+}
+.glassy-bg {
+  background: rgba(255,255,255,0.10);
+  backdrop-filter: blur(8px);
+}
+.frosted-glass-card {
+  background: rgba(255,255,255,0.20);
+  backdrop-filter: blur(16px);
+}
+</style>

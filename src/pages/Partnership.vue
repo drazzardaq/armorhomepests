@@ -109,12 +109,9 @@
 
     <!-- Contact CTA -->
     <ContactCTA 
-      title="Ready to Partner With Us?" 
-      description="Let's discuss how we can create value together in the blockchain gaming and NFT space."
-      :showButton="true"
-      buttonText="Start Discussion"
-      buttonLink="/contact"
-      variant="partnership"
+      title="Ready to Partner or Propose?"
+      description="Reach out to discuss partnership opportunities or submit your proposal."
+      variant="default"
     />
   </div>
 </template>
@@ -134,4 +131,4 @@ library.add(faEnvelope, faCloud, faCheck, faGithub)
 .btn-gradient-crypto {
   @apply px-6 py-3 bg-gradient-to-r from-crypto-primary to-crypto-accent text-white rounded-lg hover:opacity-90 transition-opacity;
 }
-</style> 
+</style>

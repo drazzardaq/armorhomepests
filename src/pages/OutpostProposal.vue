@@ -142,13 +142,13 @@
       <h2 class="text-4xl font-bold text-black mb-8 text-center drop-shadow-sm">Partners & Network</h2>
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-8">
         <div class="frosted-glass-card p-8 rounded-2xl shadow-xl flex flex-col items-center min-h-[320px]">
-          <img src="/tvp/logo_full_logo_gdt.svg" alt="Global Design Team" class="mb-4 w-24 h-24 rounded-full object-cover border-4 border-blue-400 shadow-lg bg-white" />
+          <img src="/icon.png" alt="Global Design Team" class="mb-4 w-24 h-24 rounded-full object-cover border-4 border-blue-400 shadow-lg bg-white" />
           <h3 class="text-2xl font-bold text-blue-700 mb-2">Global Design Team</h3>
           <p class="text-center text-blue-800 mb-2">A worldwide network of designers, engineers, and volunteers collaborating on open-source solutions for TVP and beyond. Join the team and contribute your skills!</p>
           <a href="https://www.thevenusproject.com/participate/teams/" target="_blank" class="mt-2 inline-block px-6 py-2 rounded-lg bg-blue-700 text-white font-bold shadow-lg hover:bg-blue-500 transition">Join the Team</a>
         </div>
         <div class="frosted-glass-card p-8 rounded-2xl shadow-xl flex flex-col items-center min-h-[320px]">
-          <img src="/tvp/JFFlogo.png" alt="Jacque Fresco Foundation" class="mb-4 w-24 h-24 rounded-full object-cover border-4 border-yellow-400 shadow-lg" />
+          <img :src="'@assets/images/JFFlogo.png'" alt="Jacque Fresco Foundation" class="mb-4 w-24 h-24 rounded-full object-cover border-4 border-yellow-400 shadow-lg" />
           <h3 class="text-2xl font-bold text-yellow-700 mb-2">Jacque Fresco Foundation</h3>
           <p class="text-center text-yellow-800 mb-2">Honoring the legacy of Jacque Fresco, the Foundation supports education, archives, and events to advance the vision of a sustainable, science-based future.</p>
           <a href="https://www.thevenusproject.com/jacque-fresco/" target="_blank" class="mt-2 inline-block px-6 py-2 rounded-lg bg-yellow-700 text-white font-bold shadow-lg hover:bg-yellow-500 transition">Learn More</a>
@@ -162,8 +162,8 @@
       </div>
       <div class="mt-8 text-center">
         <a href="https://wa.me/38169698442" target="_blank" class="inline-flex items-center gap-2 rounded-lg bg-green-600 px-8 py-4 text-xl font-bold text-white shadow-lg transition-all duration-300 hover:bg-green-500">
-          <svg xmlns="http://www.w3.org/2000/svg" class="mr-2 inline h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.031-.967-.273-.099-.472-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.149-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.447-.52.149-.174.198-.298.298-.497.099-.198.05-.372-.025-.521-.075-.149-.669-1.611-.916-2.206-.242-.579-.487-.5-.669-.51-.173-.008-.372-.01-.571-.01-.198 0-.52.075-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.099 3.205 5.077 4.372.71.306 1.263.489 1.694.626.712.227 1.36.195 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.413-.074-.124-.272-.198-.57-.347zm-5.421 7.617h-.001a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.999-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.455 4.436-9.89 9.893-9.89 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.896 6.994c-.003 5.456-4.438 9.891-9.893 9.891zm8.413-18.306A11.815 11.815 0 0012.05 0C5.495 0 .06 5.435.058 12.086c0 2.13.557 4.213 1.615 6.044L0 24l6.064-1.591a11.876 11.876 0 005.983 1.527h.005c6.554 0 11.89-5.435 11.893-12.086a11.82 11.82 0 00-3.49-8.463z" /></svg>
-          Become a Partner – WhatsApp
+          
+          WhatsApp
         </a>
       </div>
     </div>
@@ -174,17 +174,17 @@
         <div class="frosted-glass-card p-8 rounded-lg">
           <h3 class="text-2xl font-bold text-[#153695] mb-4">Technical Integration</h3>
           <p class="text-gray-700 mb-6">Integrate your technology, research, or solutions into our ecosystem.</p>
-          <a href="https://wa.me/38169698442" target="_blank" class="text-[#143395] hover:underline">Contact Us →</a>
+          
         </div>
         <div class="frosted-glass-card p-8 rounded-lg">
           <h3 class="text-2xl font-bold text-[#153695] mb-4">Content & Education</h3>
           <p class="text-gray-700 mb-6">Collaborate on educational content, open-source projects, or digital art for global impact.</p>
-          <a href="https://wa.me/38169698442" target="_blank" class="text-[#143395] hover:underline">Contact Us →</a>
+          
         </div>
         <div class="frosted-glass-card p-8 rounded-lg">
           <h3 class="text-2xl font-bold text-[#153695] mb-4">Community & Outreach</h3>
           <p class="text-gray-700 mb-6">Join our network to promote sustainability, youth engagement, and ethical innovation.</p>
-          <a href="https://wa.me/38169698442" target="_blank" class="text-[#143395] hover:underline">Contact Us →</a>
+          
         </div>
       </div>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
@@ -208,126 +208,75 @@
         </div>
       </div>
     </div>
-    <!-- Ecosystem Overview Section -->
-    <div class="container mx-auto px-4 mt-20">
-      <h2 class="text-4xl font-bold text-black mb-8 text-center drop-shadow-sm">Ecosystem Overview</h2>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-12">
-        <div>
-          <h3 class="text-3xl font-bold text-[#153695] mb-6">Dual Token Economy</h3>
-          <div class="space-y-4">
-            <div class="bg-gradient-to-br from-[#42386c]/10 to-[#143395]/10 rounded-xl p-6 border-2 border-[#153695]/10">
-              <h4 class="text-xl font-bold text-[#153695] mb-3">$DRACO Token</h4>
-              <p class="text-gray-700">Governance token for the TVPOutpost ecosystem. Used for platform decisions and exclusive benefits.</p>
-            </div>
-            <div class="bg-gradient-to-br from-[#42386c]/10 to-[#143395]/10 rounded-xl p-6 border-2 border-[#153695]/10">
-              <h4 class="text-xl font-bold text-[#153695] mb-3">$DRC Token</h4>
-              <p class="text-gray-700">Utility token for NFT transactions and staking rewards in the marketplace.</p>
-            </div>
-          </div>
-        </div>
-        <div class="relative">
-          <img src="/images/banner.png" alt="Token Economy" class="w-full rounded-lg shadow-2xl" />
-        </div>
-      </div>
-    </div>
+    
     <!-- Platform Features Section -->
     <div class="container mx-auto px-4 mt-20">
       <h2 class="text-4xl font-bold text-black mb-8 text-center drop-shadow-sm">Platform Features</h2>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-        <div class="bg-white/80 rounded-xl p-6 border border-[#153695]/10">
-          <img src="/icon.png" alt="NFT Marketplace" class="w-16 h-16 mb-4 rounded-lg" />
-          <h3 class="text-xl font-bold text-[#153695] mb-3">NFT Marketplace</h3>
-          <ul class="space-y-2 text-gray-700">
-            <li>• Cross-chain trading</li>
-            <li>• Automated royalties</li>
-            <li>• Auction system</li>
-          </ul>
-        </div>
-        <div class="bg-white/80 rounded-xl p-6 border border-[#153695]/10">
-          <img src="/prop/08.png" alt="Staking System" class="w-16 h-16 mb-4 rounded-lg" />
-          <h3 class="text-xl font-bold text-[#153695] mb-3">Staking System</h3>
-          <ul class="space-y-2 text-gray-700">
-            <li>• Multiple pools</li>
-            <li>• NFT staking</li>
-            <li>• Daily rewards</li>
-          </ul>
-        </div>
-        <div class="bg-white/80 rounded-xl p-6 border border-[#153695]/10">
-          <img src="/prop/05.png" alt="Gaming Integration" class="w-16 h-16 mb-4 rounded-lg" />
-          <h3 class="text-xl font-bold text-[#153695] mb-3">Gaming Integration</h3>
-          <ul class="space-y-2 text-gray-700">
-            <li>• Play-to-earn</li>
-            <li>• NFT utilities</li>
-            <li>• Tournament rewards</li>
-          </ul>
-        </div>
+      <TokenCard 
+        name="TVP Token" 
+        icon="/icon.png" 
+        iconClass="border-green-700" 
+        borderColor="border-green-400/40" 
+        titleColor="text-blue-400" 
+        stats="Total Supply: 1,000,000,000 TVP" 
+        network="Polygon" 
+        type="Governance & Utility" 
+        description="The primary token of the ecosystem, used for governance, NFT purchases, and platform fees. TVP is the core governance and utility token for The Venus Project ecosystem. Holders can participate in proposals, vote, and pay for platform services." 
+        gradient="linear-gradient(135deg, #2563eb 0%, #1e293b 100%)" 
+        :details="['Governance: Vote on proposals and platform changes', 'Utility: Pay for services, NFTs, and platform fees', 'Supply: 1,000,000,000 TVP', 'Network: Polygon', 'Open source: Yes']" 
+        badge="Awaiting Approval" 
+        badgeClass="bg-yellow-600 text-white" 
+      />
+      <TokenCard 
+        name="VENUS Token" 
+        icon="/icon.png" 
+        iconClass="border-pink-400" 
+        borderColor="border-pink-400/40" 
+        titleColor="text-pink-400" 
+        stats="Type: Staking Rewards" 
+        network="Polygon" 
+        type="Staking Rewards" 
+        description="Earned through staking TVP tokens, VENUS provides enhanced governance rights and exclusive platform benefits. VENUS is the reward and incentive token, with a focus on community engagement and platform growth." 
+        gradient="linear-gradient(135deg, #ec489966 0%, #f472b666 100%)" 
+        :details="['Earned by staking TVP', 'Enhanced governance rights', 'Exclusive platform benefits', 'Network: Polygon', 'Open source: Yes']" 
+        badge="Awaiting Approval" 
+        badgeClass="bg-yellow-600 text-white" 
+      />
+      <TokenCard 
+        name="JFF Token" 
+        icon="/JFFlogo.png" 
+        iconClass="'border-gray-500 grayscale contrast-200'" 
+        borderColor="'border-gray-400/40'" 
+        titleColor="'text-gray-400'" 
+        stats="Type: Legacy & Knowledge" 
+        network="Polygon" 
+        type="Legacy & Knowledge" 
+        description="JFF is the token of the Jacque Fresco Foundation, honoring the legacy of Jacque Fresco. It unlocks exclusive knowledge, digital archives, and participation in educational initiatives and events dedicated to advancing the vision of a sustainable, scientifically-grounded future." 
+        gradient="linear-gradient(135deg, #d1d5db55 0%, #6b728555 100%)" 
+        :details="['Access to Jacque Fresco Foundation archives', 'Educational content', 'Special events']" 
+        extra="<span class='font-bold text-green-400'>Proposal</span>: Access to Jacque Fresco Foundation archives, educational content, and special events." 
+        badge="Proposal" 
+        badgeClass="bg-green-700 text-white" 
+      />
       </div>
     </div>
-    <!-- Roadmap Section -->
-    <div class="container mx-auto px-4 mt-20">
-      <h2 class="text-4xl font-bold text-black mb-8 text-center drop-shadow-sm">Development Roadmap</h2>
-      <div class="relative mb-12">
-        <div class="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-gradient-to-b from-[#153695] to-[#143395]"></div>
-        <div class="space-y-12">
-          <div class="relative">
-            <div class="absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-8 h-8 bg-[#153695] rounded-full border-4 border-white flex items-center justify-center">
-              <div class="w-2 h-2 bg-white rounded-full"></div>
-            </div>
-            <div class="ml-[55%] bg-white/80 rounded-xl p-6 border border-[#153695]/10">
-              <h3 class="text-xl font-bold text-[#153695] mb-3">Q2 2025 - Platform Launch</h3>
-              <ul class="space-y-2 text-gray-700">
-                <li>• NFT Marketplace Beta</li>
-                <li>• Initial Collections Release</li>
-                <li>• Token Launch</li>
-              </ul>
-            </div>
-          </div>
-          <div class="relative">
-            <div class="absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-8 h-8 bg-[#143395] rounded-full border-4 border-white flex items-center justify-center">
-              <div class="w-2 h-2 bg-white rounded-full"></div>
-            </div>
-            <div class="mr-[55%] bg-white/80 rounded-xl p-6 border border-[#153695]/10">
-              <h3 class="text-xl font-bold text-[#153695] mb-3">Q3 2025 - Gaming Integration</h3>
-              <ul class="space-y-2 text-gray-700">
-                <li>• Realmsz Integration</li>
-                <li>• Play-to-Earn Launch</li>
-                <li>• Tournament System</li>
-              </ul>
-            </div>
-          </div>
-          <div class="relative">
-            <div class="absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-8 h-8 bg-[#153695] rounded-full border-4 border-white flex items-center justify-center">
-              <div class="w-2 h-2 bg-white rounded-full"></div>
-            </div>
-            <div class="ml-[55%] bg-white/80 rounded-xl p-6 border border-[#153695]/10">
-              <h3 class="text-xl font-bold text-[#153695] mb-3">Q4 2025 - Ecosystem Expansion</h3>
-              <ul class="space-y-2 text-gray-700">
-                <li>• Mobile App</li>
-                <li>• Cross-chain Bridge</li>
-                <li>• DAO Governance</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+
     <!-- Community Section -->
     <div class="container mx-auto px-4 mt-20 mb-20 text-center">
-      <h2 class="text-4xl font-bold text-black mb-8 text-center drop-shadow-sm">Join Our Community</h2>
+      <h2 class="text-4xl font-bold text-black mb-8 text-center drop-shadow-sm">Let's Reach Further and Build Community</h2>
       <p class="text-xl text-gray-700 max-w-3xl mx-auto mb-12">
-        Be part of our growing ecosystem and stay updated with the latest developments.
+      Join our mission to create a sustainable future. Connect with like-minded individuals and contribute to our shared vision.
       </p>
       <div class="flex flex-col sm:flex-row gap-6 justify-center">
-        <a href="https://discord.gg/vPyfYzYw" target="_blank" class="py-4 px-8 rounded-lg bg-gradient-to-r from-[#153695] to-[#143395] text-white font-bold hover:opacity-90 transition-all duration-300 transform hover:scale-105">
-          <i class="fab fa-discord mr-2"></i> Join Discord
-        </a>
-        <a href="https://instagram.com/dracorisz" target="_blank" class="py-4 px-8 rounded-lg border-2 border-[#153695]/20 text-[#153695] font-bold hover:border-[#143395] transition-all duration-300 transform hover:scale-105">
-          <i class="fab fa-instagram mr-2"></i> Follow Updates
-        </a>
+     
+      <a href="https://instagram.com/dracorisz" target="_blank" class="py-4 px-8 rounded-lg border-2 border-[#153695]/20 !text-[#153695] bg-[#153695]/5 font-bold hover:border-[#143395] transition-all duration-300 transform hover:scale-105">
+        <font-awesome-icon :icon="['fab', 'instagram']" class="text-xl mr-2" /> Follow TVP on Instagram
+      </a>
       </div>
     </div>
     <!-- Dracoscopia & TVP Chain Vision Proposal Callout -->
-    <section class="glassy-bg border-l-4 border-tvp-blue/60 bg-tvp-blue/5 rounded-2xl shadow-lg mb-12 p-6 animate-fade-in-up max-w-4xl mx-auto" aria-label="Dracoscopia & TVP Chain Vision for Proposals">
+    <!-- <section class="glassy-bg border-l-4 border-tvp-blue/60 bg-tvp-blue/5 rounded-2xl shadow-lg mb-12 p-6 animate-fade-in-up max-w-4xl mx-auto" aria-label="Dracoscopia & TVP Chain Vision for Proposals">
       <h2 class="mb-2 text-2xl font-bold text-tvp-blue flex items-center gap-2">
         <svg class="inline-block w-7 h-7 text-tvp-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m4 0h-1v-4h-1m-4 0h-1v-4h-1"/></svg>
         Proposal Vision: Dracoscopia & TVP Chain
@@ -336,13 +285,13 @@
       <div class="mt-6 text-center">
         <router-link to="/OutpostProposal" class="inline-block rounded-lg bg-gradient-to-r from-tvp-blue via-tvp-teal to-tvp-purple px-6 py-3 text-white font-bold shadow hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-tvp-blue" aria-label="Submit your proposal">Submit Your Proposal</router-link>
       </div>
-    </section>
+    </section> -->
   </section>
 </template>
 
 <script setup>
 import { ref, computed, onMounted } from 'vue'
-
+import TokenCard from '@/components/TokenCard.vue'
 const locations = [
   {
     id: 1,

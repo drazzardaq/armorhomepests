@@ -67,8 +67,8 @@
     <section class="mb-16">
       <ContactCTA
         title="Ready to Partner or Propose?"
-        description="Connect via WhatsApp or email to discuss partnerships, proposals, or collaboration. All communication is direct and personal."
-        variant="partnership"
+        description="Reach out to discuss partnership opportunities or submit your proposal."
+        variant="default"
       />
     </section>
   </div>

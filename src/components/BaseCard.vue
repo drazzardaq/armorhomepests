@@ -1,5 +1,5 @@
 <template>
-  <div :class="['base-card', customClass]">
+  <div :class="['unified-card', customClass]" tabindex="0" role="region">
     <slot />
   </div>
 </template>
@@ -11,7 +11,7 @@ const props = defineProps({
 </script>
 
 <style scoped>
-.base-card {
+.unified-card {
   background: rgba(255,255,255,0.85);
   border-radius: 1.25rem;
   box-shadow: 0 4px 24px 0 rgba(0,0,0,0.10);
@@ -21,7 +21,7 @@ const props = defineProps({
   flex-direction: column;
   gap: 1rem;
 }
-.base-card:hover {
+.unified-card:hover {
   box-shadow: 0 8px 32px 0 rgba(59,130,246,0.15);
   transform: translateY(-2px) scale(1.01);
 }

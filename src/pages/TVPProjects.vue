@@ -1,47 +1,28 @@
 <template>
   <div
-    class="venus-project-content min-h-screen w-full max-w-none animate-fade-in bg-gradient-to-br from-white via-[#f7faff] to-[#eaf6ff] px-0 py-8 text-black md:px-0">
-    <!-- Dracoscopia & TVP Chain Vision Callout -->
-    <section class="glassy-bg border-l-4 border-tvp-blue/60 bg-tvp-blue/5 rounded-2xl shadow-lg mb-12 p-6 animate-fade-in-up max-w-4xl mx-auto"
-      aria-label="Dracoscopia & TVP Chain Vision for Proposals">
-      <h3 class="mb-2 text-2xl font-bold text-tvp-blue flex items-center gap-2">
-        <svg class="inline-block w-7 h-7 text-tvp-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-          aria-hidden="true">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m4 0h-1v-4h-1m-4 0h-1v-4h-1" />
-        </svg>
-        Proposal Infrastructure: Dracoscopia & TVP Chain
-      </h3>
-      <p class="text-gray-800">All proposals for TVP projects are designed to leverage the <span class="font-bold text-tvp-blue">Dracoscopia</span>
-        creative network and the <span class="font-bold text-tvp-blue">TVP Chain</span> blockchain. This ensures transparent
-        tracking, open collaboration, and secure resource management for every initiative. Our infrastructure vision includes
-        decentralized data centers, community-driven governance, and scalable, ethical technology for a sustainable future.
-      </p>
-      <div class="mt-6 text-center">
-        <router-link to="/OutpostProposal" class="inline-block rounded-lg bg-gradient-to-r from-tvp-blue via-tvp-teal to-tvp-purple px-6 py-3 text-white font-bold shadow hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-tvp-blue" aria-label="Submit your project proposal">Submit Your Project Proposal</router-link>
-      </div>
-    </section>
+    class="venus-project-content min-h-screen w-full max-w-none bg-gradient-to-br from-gray-900 via-gray-800 to-gray-950 px-0 py-8 text-white animate-fade-in">
 
     <!-- Active TVP Projects Section -->
-    <section class="glassy-bg animate-fade-in-up mx-auto mb-16 max-w-7xl rounded-xl shadow-lg">
-      <h2 class="text-gradient mb-8 text-center text-3xl font-bold">Active TVP Projects</h2>
+    <section class="glassy-bg animate-fade-in-up mx-auto mb-16 max-w-7xl rounded-2xl shadow-lg p-8">
+      <h1 class="text-4xl font-extrabold tracking-tight text-green-200 text-center drop-shadow-lg mb-8">Active TVP Projects</h1>
       <div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
         <BaseCard v-for="project in projects" :key="project.id"
           customClass="frosted-glass-card border border-blue-500/20 rounded-xl overflow-hidden hover:border-blue-400/40 transition-all animate-pop-in">
           <!-- Project Image -->
           <div class="aspect-w-16 aspect-h-9">
-            <img :src="project.image" :alt="project.title" class="h-full w-full object-cover" />
+            <img :src="project.image" :alt="project.title + ' project image'" class="h-full w-full object-cover rounded-t-xl" />
           </div>
 
           <!-- Project Content -->
           <div class="p-6">
             <div class="mb-4 flex items-start justify-between">
-              <h3 class="text-xl font-bold text-tvp-blue">{{ project.title }}</h3>
-              <span :class="['rounded-full px-2 py-1 text-xs font-semibold', statusColors[project.status]]">
+              <h2 class="text-xl font-bold text-tvp-blue">{{ project.title }}</h2>
+              <span :class="['rounded-full px-2 py-1 text-xs font-semibold', statusColors[project.status]]" aria-label="Project status">
                 {{ project.status }}
               </span>
             </div>
 
-            <p class="mb-4 text-gray-700">{{ project.description }}</p>
+            <p class="mb-4 text-gray-200">{{ project.description }}</p>
 
             <!-- Progress Bar -->
             <div class="mb-4">
@@ -52,7 +33,7 @@
               <div class="h-2 w-full overflow-hidden rounded-full bg-blue-900/10">
                 <div
                   class="h-full rounded-full bg-gradient-to-r from-tvp-purple via-tvp-blue to-tvp-teal transition-all duration-500"
-                  :style="{ width: project.progress + '%' }"></div>
+                  :style="{ width: project.progress + '%' }" aria-label="Project progress"></div>
               </div>
             </div>
 
@@ -73,22 +54,28 @@
             </div>
 
             <!-- Action Button -->
-            <BaseButton color="primary" class="mt-6 w-full">Get Involved</BaseButton>
+            <BaseButton color="primary" class="mt-6 w-full btn-unified">Get Involved</BaseButton>
           </div>
         </BaseCard>
       </div>
     </section>
 
+    <!-- Vision Alignment Callout -->
+    <section class="frosted-glass-card max-w-4xl mx-auto mb-16 rounded-2xl shadow-lg p-8 animate-fade-in-up">
+      <h2 class="text-2xl font-bold mb-4 text-green-200">Building a Sustainable, Transparent Future</h2>
+      <p class="text-lg text-green-100 mb-2">All TVP projects are powered by the Dracoscopia creative network and TVP Chain, ensuring transparent, decentralized, and sustainable progress. Join us in shaping a future where technology, ecology, and humanity thrive together.</p>
+    </section>
+
     <!-- Proposed Projects & Proposals Section -->
-    <!-- <section class="glassy-bg animate-fade-in-up mb-16 rounded-xl !p-0 max-w-7xl mx-auto shadow-lg"> -->
-      <Proposals :proposals="allProposals" :filters="proposalFilters" />
-    <!-- </section> -->
+    <Proposals :proposals="allProposals" :filters="proposalFilters" />
   </div>
 </template>
 
 <script setup>
 import { headingClass, subheadingClass } from "@/layouts/layoutClasses";
 import Proposals from "@/components/Proposals.vue";
+import BaseCard from "@/components/BaseCard.vue";
+import BaseButton from "@/components/BaseButton.vue";
 import { allProposals, proposalFilters } from "@/assets/proposals.js";
 import { onMounted, nextTick } from "vue";
 import gsap from "gsap";
@@ -162,15 +149,34 @@ onMounted(async () => {
 </script>
 
 <style scoped>
-.text-gradient {
-  background: linear-gradient(90deg, #42386c, #153695, #143395);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+.venus-project-content {
+  font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
 }
-
+.btn-unified {
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: bold;
+  box-shadow: 0 2px 8px 0 rgba(0,0,0,0.12);
+  transition: all 0.3s;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  outline: none;
+}
+.btn-unified:focus {
+  box-shadow: 0 0 0 3px #38bdf8, 0 2px 8px 0 rgba(0,0,0,0.12);
+}
+.glassy-bg {
+  background: rgba(255,255,255,0.10);
+  backdrop-filter: blur(8px);
+}
+.frosted-glass-card {
+  background: rgba(255,255,255,0.20);
+  backdrop-filter: blur(16px);
+}
 .text-tvp-blue {
-  color: #153695;
+  color: #38bdf8;
 }
 </style>
 

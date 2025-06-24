@@ -92,8 +92,10 @@
         <svg class="inline-block w-7 h-7 text-tvp-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m4 0h-1v-4h-1m-4 0h-1v-4h-1"/></svg>
         Proposal Vision: Dracoscopia & TVP Chain
       </h2>
-      <p class="text-gray-800">All proposals and tokenomics initiatives are designed to be part of the <span class='font-bold text-tvp-blue'>Dracoscopia</span> creative network and validated on the <span class='font-bold text-tvp-blue'>TVP Chain</span> blockchain. This ensures that every token, project, and economic model is transparent, collaborative, and future-ready—empowering a sustainable, decentralized future for all.</p>
-      <div class="mt-6 text-center">
+      <p class="text-gray-800">All proposals and tokenomics initiatives are designed to be part of the <span class='font-bold text-tvp-blue'>Dracoscopia</span> creative network and validated on the <span class='font-bold text-tvp-blue'>TVP Chain</span> blockchain. This ensures that every token, project, and economic model is transparent, collaborative, and future-ready—empowering a sustainable, decentralized future for all. <router-link to="/Proposals" class="text-tvp-blue underline ml-1">See all proposals</router-link> or <router-link to="/community" class="text-tvp-blue underline ml-1">join the community</router-link>.</p>
+      <div class="my-6 flex flex-col items-center">
+        <!-- Placeholder for future SVG/diagram -->
+        <img src="/images/infra/infra-diagram-placeholder.svg" alt="TVP Decentralized Infrastructure Diagram" class="w-full max-w-md mb-4" />
         <router-link to="/OutpostProposal" class="inline-block rounded-lg bg-gradient-to-r from-tvp-blue via-tvp-teal to-tvp-purple px-6 py-3 text-white font-bold shadow hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-tvp-blue" aria-label="Submit your tokenomics proposal">Submit Your Tokenomics Proposal</router-link>
       </div>
     </section>

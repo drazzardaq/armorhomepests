@@ -1,125 +1,157 @@
 <template>
-  <SeoHead
-  title="Mission & Vision | The Venus Project"
-  description="Learn about the mission and vision of The Venus Project: a sustainable, resource-based future for humanity."
-  keywords="The Venus Project, mission, vision, sustainability, resource-based economy, future"
-  image="/the-venus-project-circular-city.jpg"
-  url="https://www.thevenusproject.com/mission"
-  type="article"
-  :schema="{
-    '@context': 'https://schema.org',
-    '@type': 'AboutPage',
-    'name': 'Mission & Vision',
-    'url': 'https://www.thevenusproject.com/mission',
-    'description': 'Learn about the mission and vision of The Venus Project: a sustainable, resource-based future for humanity.'
-  }"
-/>
-  <div class="venus-project-content min-h-screen w-full px-0 py-8 md:px-0 max-w-none bg-gradient-to-br from-white via-[#f7faff] to-[#eaf6ff] animate-fade-in text-black">
-    <div class="space-y-16 max-w-7xl mx-auto">
-      <!-- Hero Section -->
-      <section class="glassy-bg rounded-3xl shadow-2xl mb-12 animate-fade-in-up" aria-label="About The Venus Project">
-        <h1 class="mb-6 text-4xl font-extrabold md:text-5xl text-gradient text-center">About The Venus Project</h1>
-        <p class="mx-auto max-w-3xl text-xl text-gray-800 text-center">Founded by social engineer Jacque Fresco, The Venus Project presents a bold, new direction for humanity that entails nothing less than the total redesign of our culture.</p>
-      </section>
-      <!-- Vision Section -->
-      <section class="glassy-bg rounded-3xl shadow-xl mb-12 p-8 grid items-center gap-12 md:grid-cols-2 animate-fade-in-up" aria-label="Our Vision">
-        <div>
-          <h2 class="mb-6 text-3xl font-bold text-gradient">Our Vision</h2>
-          <p class="mb-4 text-gray-800">The Venus Project proposes an alternative vision of what the future can be if we apply what we already know in order to achieve a sustainable new world civilization.</p>
-          <p class="mb-4 text-gray-800">It calls for a straightforward redesign of our culture in which the age-old inadequacies of war, poverty, hunger, debt and unnecessary human suffering are viewed not only as avoidable, but as totally unacceptable.</p>
-          <p class="text-gray-800">Anything less will result in a continuation of the same catalog of problems inherent in today's world.</p>
-        </div>
-        <div class="relative flex flex-col gap-4">
-          <img src="https://www.thevenusproject.com/wp-content/uploads/2023/11/Website-graphics-Vision-B-720x380.png" alt="The Venus Project Vision graphic" class="rounded-xl shadow-2xl w-full" loading="lazy" />
-          <img src="https://www.thevenusproject.com/wp-content/uploads/2023/11/Website-graphics-Values-B-720x380.png" alt="The Venus Project Values graphic" class="rounded-xl shadow-2xl w-full" loading="lazy" />
-          <img src="https://www.thevenusproject.com/wp-content/uploads/2023/11/Website-graphics-Knowledge-B-720x380.png" alt="The Venus Project Knowledge graphic" class="rounded-xl shadow-2xl w-full" loading="lazy" />
-        </div>
-      </section>
-      <!-- Principles Section -->
-      <section class="glassy-bg rounded-3xl shadow-xl mb-12 animate-fade-in-up" aria-label="Core Principles">
-        <h2 class="mb-8 text-center text-3xl font-bold text-gradient">Core Principles</h2>
-        <div class="grid gap-8 md:grid-cols-3">
-          <div class="rounded-xl bg-white/60 frosted-glass-card p-6 animate-pop-in" tabindex="0" aria-label="Scientific Method">
-            <div class="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-gradient-to-r from-tvp-purple via-tvp-blue to-tvp-teal">
-              <svg class="h-6 w-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
-              </svg>
-            </div>
-            <h3 class="mb-3 text-xl font-semibold text-tvp-blue">Scientific Method</h3>
-            <p class="text-gray-700">Application of the scientific method to social concerns and resource management.</p>
-          </div>
-          <div class="rounded-xl bg-white/60 frosted-glass-card p-6 animate-pop-in" tabindex="0" aria-label="Resource-Based Economy">
-            <div class="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-gradient-to-r from-tvp-purple via-tvp-blue to-tvp-teal">
-              <svg class="h-6 w-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-              </svg>
-            </div>
-            <h3 class="mb-3 text-xl font-semibold text-tvp-blue">Resource-Based Economy</h3>
-            <p class="text-gray-700">Intelligent management of Earth's resources for the benefit of all humanity.</p>
-          </div>
-          <div class="rounded-xl bg-white/60 frosted-glass-card p-6 animate-pop-in" tabindex="0" aria-label="Technology for Good">
-            <div class="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-gradient-to-r from-tvp-purple via-tvp-blue to-tvp-teal">
-              <svg class="h-6 w-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
-              </svg>
-            </div>
-            <h3 class="mb-3 text-xl font-semibold text-tvp-blue">Technology for Good</h3>
-            <p class="text-gray-700">Using technology to enhance human potential and create sustainable solutions.</p>
-          </div>
-        </div>
-      </section>
-      <!-- Jacque Fresco Section -->
-      <section class="glassy-bg rounded-3xl shadow-xl mb-12 grid items-center gap-12 md:grid-cols-2 animate-fade-in-up" aria-label="Jacque Fresco">
-        <div class="relative">
-          <img src="/tvp/jf.webp" alt="Jacque Fresco portrait" class="rounded-xl shadow-2xl w-full" loading="lazy" />
-        </div>
-        <div>
-          <h2 class="mb-6 text-3xl font-bold text-gradient">Jacque Fresco (1916-2017)</h2>
-          <p class="mb-4 text-gray-800">Jacque Fresco was a self-taught structural designer, architectural designer, philosopher of science, concept artist, educator, and futurist.</p>
-          <p class="mb-4 text-gray-800">He spent most of his life conceiving of and devising inventions and innovations in various fields including architecture, automotive design, and social engineering.</p>
-          <p class="text-gray-800">His work culminated in The Venus Project, which he founded with his partner Roxanne Meadows to promote his vision of a sustainable future.</p>
-        </div>
-      </section>
-      
-      <!-- Advisors Section -->
-      <section class="glassy-bg rounded-3xl shadow-xl mb-12 animate-fade-in-up" aria-label="Our Advisors">
-        <h2 class="mb-8 text-center text-3xl font-bold text-gradient">Our Advisors</h2>
-        <TVPAdvisors />
-      </section>
-      <!-- Dracoscopia & TVP Chain Vision Section -->
-      <section class="glassy-bg rounded-3xl shadow-xl mb-12 p-8 animate-fade-in-up border-2 border-tvp-blue/30" aria-label="Dracoscopia & TVP Chain Vision">
-        <h2 class="mb-6 text-3xl font-bold text-gradient">Dracoscopia & TVP Chain: The Next Step</h2>
-        <p class="mb-4 text-gray-800">The Venus Project is pioneering a new era of collaboration and transparency by integrating the <span class="font-bold text-tvp-blue">Dracoscopia</span> creative network and the <span class="font-bold text-tvp-blue">TVP Chain</span> custom blockchain. This infrastructure will power proposals, resource management, and global participation, ensuring every project is secure, transparent, and community-driven.</p>
-        <ul class="list-disc ml-8 text-gray-800 mb-4">
-          <li>All proposals and projects are validated and tracked on the TVP Chain</li>
-          <li>Dracoscopia enables creative, scientific, and technical collaboration across borders</li>
-          <li>TVP-owned data centers and machines ensure sustainable, ethical computation</li>
-          <li>Open participation and transparent governance for all contributors</li>
+  <SeoHead title="About | The Venus Project"
+    description="Learn about The Venus Project: a 501(c)(3) non-profit dedicated to designing human habitats that enhance well-being and sustainability. Discover our history, vision, and team."
+    keywords="The Venus Project, about, history, vision, sustainability, founders, advisors"
+    image="@/assets/images/city-slides/1.jpg" url="https://www.thevenusproject.com/about" type="article" :schema="{
+      '@context': 'https://schema.org',
+      '@type': 'AboutPage',
+      'name': 'About',
+      'url': 'https://www.thevenusproject.com/about',
+      'description': 'Learn about The Venus Project: a 501(c)(3) non-profit dedicated to designing human habitats that enhance well-being and sustainability. Discover our history, vision, and team.'
+    }" />
+  <main
+    class="venus-project-content flex flex-col items-center w-full min-h-screen bg-gradient-to-b from-white via-blue-50/30 to-tvp-blue/10 px-0 pb-8 text-gray-900 md:px-0">
+    <!-- Hero Section -->
+    <section
+      class="glassy-bg animate-fade-in-up max-w-7xl mx-auto mb-12 rounded-2xl shadow-2xl px-4 py-12 md:py-16 text-center">
+      <h1 class="text-4xl md:text-5xl font-extrabold text-gradient mb-6">About The Venus Project</h1>
+      <p class="mx-auto max-w-7xl text-lg mb-6">
+        The Venus Project is a 501(c)(3) non-profit organization dedicated to designing human habitats that enhance
+        well-being and sustainability. Founded by <a href="https://en.wikipedia.org/wiki/Jacque_Fresco" target="_blank"
+          class="text-tvp-blue underline">Jacque Fresco</a> and <a href="https://en.wikipedia.org/wiki/Roxanne_Meadows"
+          target="_blank" class="text-tvp-blue underline">Roxanne Meadows</a>, TVP envisions a world where science and
+        technology are harnessed for the benefit of all, within a global Resource-Based Economy.
+      </p>
+      <img src="@/assets/images/city-slides/11.jpg" alt="The Venus Project Circular City"
+        class="mx-auto rounded-xl shadow-lg mb-8 max-w-xl w-full" />
+      <div class="flex flex-col md:flex-row gap-6 justify-center mb-6">
+        <a href="https://www.thevenusproject.com/" target="_blank"
+          class="btn-unified bg-gradient-to-r from-tvp-blue to-tvp-teal text-white">Official Website</a>
+        <a href="https://www.thevenusproject.com/about/jacque-fresco/" target="_blank"
+          class="btn-unified bg-gradient-to-r from-tvp-purple to-tvp-blue text-white">About Jacque Fresco</a>
+        <a href="https://www.thevenusproject.com/about/roxanne-meadows/" target="_blank"
+          class="btn-unified bg-gradient-to-r from-tvp-teal to-tvp-purple text-white">About Roxanne Meadows</a>
+      </div>
+      <p class="mx-auto max-w-7xl text-lg text-gray-700">
+        TVP’s mission is to realize a new, sustainable world civilization through the intelligent management of Earth’s
+        resources, innovative city design, and global collaboration. <a href="https://www.thevenusproject.com/mission/"
+          target="_blank" class="text-tvp-blue underline">Learn more about our mission</a>.
+      </p>
+    </section>
+
+    <!-- History Section -->
+    <section class="frosted-glass-card max-w-7xl mx-auto mb-12 rounded-2xl shadow-xl p-8 animate-fade-in-up"
+      aria-label="History">
+      <h2 class="text-3xl font-bold mb-4 text-tvp-blue">Our History</h2>
+      <p class="mb-4 text-lg text-gray-800">
+        The Venus Project was founded in the 1970s in Venus, Florida, as a research center for sustainable city design
+        and social innovation. Over the decades, TVP has inspired millions worldwide through documentaries, books, and
+        public lectures. Its legacy continues through the <a href="https://www.thevenusproject.com/history/"
+          target="_blank" class="text-tvp-blue underline">official history</a> and the ongoing work of its global
+        network.
+      </p>
+      <ul class="list-disc ml-8 text-lg text-gray-700 mb-4">
+        <li><a href="https://www.thevenusproject.com/about/history/" target="_blank"
+            class="underline text-tvp-blue">Timeline & Milestones</a></li>
+        <li><a href="https://www.thevenusproject.com/about/legacy/" target="_blank"
+            class="underline text-tvp-blue">Legacy & Impact</a></li>
+        <li><a href="https://www.thevenusproject.com/about/faq/" target="_blank"
+            class="underline text-tvp-blue">Frequently Asked Questions</a></li>
+      </ul>
+    </section>
+
+    <!-- Vision Section -->
+    <section
+      class="glassy-bg w-full max-w-7xl mx-auto mb-12 rounded-2xl shadow-xl p-8 animate-fade-in-up"
+      aria-label="Our Vision">
+      <div class="w-full h-full flex items-center justify-center relative z-10 flex-col gap-4 mx-auto text-center">
+        <h2 class="text-3xl font-bold mb-4 text-tvp-blue relative z-10">Our Vision</h2>
+        <p class="mb-4 text-lg text-gray-800 relative z-10">
+          TVP envisions a world where the needs of all people are met through the intelligent application of science and
+          technology, without the limitations of politics, war, or scarcity. Our vision is a global Resource-Based
+          Economy, where resources are managed for the benefit of all, and cities are designed for harmony with nature.
+        </p>
+        <ul class="list-disc ml-8 text-lg text-gray-700 mb-4 relative z-10">
+          <li>Resource-Based Economy</li>
+          <li>Ecological city design</li>
+          <li>Global collaboration</li>
+          <li>Technological autonomy</li>
+          <li>Human well-being as the highest priority</li>
         </ul>
-        <p class="text-tvp-blue font-semibold">This vision is at the heart of every new proposal and partnership. <router-link to="/OutpostProposal" class="underline hover:text-tvp-teal">Submit your proposal</router-link> and help build the future of The Venus Project!</p>
-      </section>
-      <!-- Dracoscopia & TVP Chain Vision Proposal Callout -->
-      <section class="glassy-bg border-l-4 border-tvp-blue/60 bg-tvp-blue/5 rounded-2xl shadow-lg mb-12 p-6 animate-fade-in-up max-w-4xl mx-auto" aria-label="Dracoscopia & TVP Chain Vision for Proposals">
-        <h2 class="mb-2 text-2xl font-bold text-tvp-blue flex items-center gap-2">
-          <svg class="inline-block w-7 h-7 text-tvp-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m4 0h-1v-4h-1m-4 0h-1v-4h-1"/></svg>
-          Proposal Vision: Dracoscopia & TVP Chain
-        </h2>
-        <p class="text-gray-800">All proposals and new initiatives are designed to be part of the <span class='font-bold text-tvp-blue'>Dracoscopia</span> creative network and validated on the <span class='font-bold text-tvp-blue'>TVP Chain</span> blockchain. This ensures that every idea, from sustainable cities to planetary habitats, is transparent, collaborative, and future-ready—empowering humanity to build a legacy of ethical, decentralized progress.</p>
-        <div class="mt-6 text-center">
-          <router-link to="/OutpostProposal" class="inline-block rounded-lg bg-gradient-to-r from-tvp-blue via-tvp-teal to-tvp-purple px-6 py-3 text-white font-bold shadow hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-tvp-blue" aria-label="Submit your proposal">Submit Your Proposal</router-link>
-        </div>
-      </section>
-      <!-- Learn More Section -->
-      <section class="mb-12 text-center">
-        <BaseButton color="primary" class="w-full rounded-lg">Learn More</BaseButton>
-      </section>
-    </div>
-  </div>
+        <a href="https://www.thevenusproject.com/vision/" target="_blank"
+          class="btn-unified bg-gradient-to-r from-tvp-blue to-tvp-teal text-white">Explore the Vision</a>
+      </div>
+      <img src="@/assets/images/city-slides/9.jpg" alt="The Venus Project Circular City"
+        class="absolute inset-0 z-0 object-cover w-full max-h-[700px] h-full rounded-xl opacity-5" />
+    </section>
+
+    <!-- Team & Advisors Section -->
+    <section class="frosted-glass-card max-w-7xl mx-auto mb-12 rounded-2xl shadow-xl p-8 animate-fade-in-up"
+      aria-label="Team & Advisors">
+      <h2 class="text-3xl font-bold mb-4 text-tvp-blue">Our Team & Advisors</h2>
+      <p class="mb-4 text-lg text-gray-800">The Venus Project is supported by a diverse team of experts, advisors, and
+        volunteers from around the world. Meet some of our key contributors:</p>
+      <ul class="list-disc ml-8 text-lg text-gray-700 mb-4">
+        <li><a href="https://www.thevenusproject.com/about/team/" target="_blank" class="underline text-tvp-blue">Meet
+            the Team</a></li>
+        <li><a href="https://www.thevenusproject.com/about/advisors/" target="_blank"
+            class="underline text-tvp-blue">Advisors</a></li>
+        <li><a href="https://www.thevenusproject.com/about/partners/" target="_blank"
+            class="underline text-tvp-blue">Partners & Network</a></li>
+      </ul>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="glassy-bg max-w-7xl mx-auto mb-16 rounded-2xl shadow-lg p-8 animate-fade-in-up text-center">
+      <h2 class="text-2xl font-bold mb-4 text-tvp-blue">Get Involved</h2>
+      <p class="mb-6 text-lg text-gray-800">Join our global community and help build a sustainable, equitable future.
+        Volunteer, contribute, or learn more about our ongoing projects and initiatives.</p>
+      <a href="https://www.thevenusproject.com/get-involved/" target="_blank"
+        class="btn-unified bg-gradient-to-r from-tvp-blue to-tvp-teal text-white">Get Involved</a>
+    </section>
+  </main>
 </template>
 
 <script setup>
-import TVPAdvisors from '@/components/TVPAdvisors.vue';
-import BaseButton from '@/components/BaseButton.vue';
+// No additional logic needed for static content
 </script>
+
+<style scoped>
+.venus-project-content {
+  font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+}
+.btn-unified {
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: bold;
+  box-shadow: 0 2px 8px 0 rgba(0,0,0,0.12);
+  transition: all 0.3s;
+  text-align: center;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  outline: none;
+}
+.btn-unified:focus {
+  box-shadow: 0 0 0 3px #38bdf8, 0 2px 8px 0 rgba(0,0,0,0.12);
+}
+.text-gradient {
+  background: linear-gradient(90deg, #42386c, #153695, #143395);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.glassy-bg {
+  background: rgba(255,255,255,0.10);
+  backdrop-filter: blur(8px);
+}
+.frosted-glass-card {
+  background: rgba(255,255,255,0.20);
+  backdrop-filter: blur(16px);
+}
+.text-tvp-blue {
+  color: #153695;
+}
+</style>
 
 

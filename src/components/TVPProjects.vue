@@ -3,7 +3,7 @@
     <div 
       v-for="project in displayedProjects" 
       :key="project.id"
-      class="bg-white/80 backdrop-blur-lg rounded-xl overflow-hidden hover:bg-white/90 transition-all duration-300 group shadow-xl focus:outline-none focus:ring-2 focus:ring-[#143395]"
+      class="!bg-white backdrop-blur-lg rounded-xl overflow-hidden hover:bg-white/90 transition-all duration-300 group shadow-xl focus:outline-none focus:ring-2 focus:ring-[#143395]"
       tabindex="0"
       :aria-label="project.title + ' project card'"
       ref="cardRef"
@@ -15,7 +15,7 @@
           class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
           loading="lazy"
         >
-        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-white/60 to-transparent"></div>
         <div class="absolute top-4 right-4">
           <span :class="[
             'px-2 py-1 rounded-full text-xs font-medium',

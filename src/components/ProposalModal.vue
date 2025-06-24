@@ -23,6 +23,12 @@
             <div class="flex flex-wrap gap-2 mt-4">
               <span v-for="tag in proposal.tags" :key="tag" class="card-tag">{{ tag }}</span>
             </div>
+            <div class="mt-6 flex flex-col gap-2">
+              <h4 class="text-lg font-semibold text-gradient mb-1">Explore Related</h4>
+              <BaseButton color="accent" :as="'a'" href="/tokenomics" class="w-fit" aria-label="Explore Tokenomics">Tokenomics & System</BaseButton>
+              <BaseButton color="accent" :as="'a'" href="/TVPProjects" class="w-fit" aria-label="Explore Projects">TVP Projects</BaseButton>
+              <BaseButton color="accent" :as="'a'" href="/community" class="w-fit" aria-label="Explore Community">Community & Governance</BaseButton>
+            </div>
           </div>
         </div>
       </div>

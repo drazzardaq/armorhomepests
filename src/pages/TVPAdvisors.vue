@@ -1,20 +1,4 @@
 <template>
-  <!-- Dracoscopia & TVP Chain Vision Proposal Callout -->
-  <section class="glassy-bg border-l-4 border-tvp-blue/60 bg-tvp-blue/5 rounded-2xl shadow-lg mb-12 p-6 animate-fade-in-up max-w-4xl mx-auto" aria-label="Dracoscopia & TVP Chain Vision for Proposals">
-    <h2 class="mb-2 text-2xl font-bold text-tvp-blue flex items-center gap-2">
-      <svg class="inline-block w-7 h-7 text-tvp-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m4 0h-1v-4h-1m-4 0h-1v-4h-1"/></svg>
-      Proposal Vision: Dracoscopia & TVP Chain
-    </h2>
-    <p class="text-gray-800">All proposals and new initiatives are designed to be part of the <span class='font-bold text-tvp-blue'>Dracoscopia</span> creative network and validated on the <span class='font-bold text-tvp-blue'>TVP Chain</span> blockchain. This ensures that every idea, from sustainable cities to planetary habitats, is transparent, collaborative, and future-ready—empowering humanity to build a legacy of ethical, decentralized progress.</p>
-    <div class="mt-6 text-center">
-      <router-link to="/OutpostProposal" class="inline-block rounded-lg bg-gradient-to-r from-tvp-blue via-tvp-teal to-tvp-purple px-6 py-3 text-white font-bold shadow hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-tvp-blue" aria-label="Submit your proposal">Submit Your Proposal</router-link>
-    </div>
-  </section>
-  <!-- Dracoscopia & TVP Chain Advisory Callout -->
-  <section class="glassy-bg rounded-2xl shadow-lg mb-12 p-6 border-l-4 border-tvp-blue/60 bg-tvp-blue/5 animate-fade-in-up" aria-label="Advisory Focus: Dracoscopia & TVP Chain">
-    
-    <!-- <p class="text-gray-800">Our advisors are actively guiding the integration of the <span class="font-bold text-tvp-blue">Dracoscopia</span> creative network and the <span class="font-bold text-tvp-blue">TVP Chain</span> blockchain. Their expertise ensures that every project, partnership, and proposal leverages this secure, transparent, and collaborative infrastructure for a sustainable future.</p> -->
-  </section>
   <!-- Advisors Section -->
   <section class="glassy-bg rounded-3xl shadow-xl p-8 animate-fade-in-up" aria-label="Our Advisors">
     <h1 class="text-3xl md:text-4xl font-extrabold text-gradient mb-8 text-center">Our Advisors</h1>
@@ -82,57 +66,74 @@ import { ref } from 'vue'
 const advisors = ref([
   {
     id: 1,
-    name: 'Roxanne Meadows',
-    title: 'Co-founder & Director',
-    bio: 'Architectural designer and co-founder of The Venus Project, continuing Jacque Fresco\'s vision.',
-    image: '/images/roxanne-meadows.jpg',
-    linkedin: 'https://linkedin.com/in/roxanne-meadows',
-    website: 'https://thevenusproject.com'
+    name: 'Simon P. Michaux',
+    title: 'Principal Advisor of Energy and Minerals',
+    bio: 'Associate Professor of geometallurgy at the Geological Survey of Finland (GTK). Expert in mining engineering, circular economy, and industrial recycling. Simon contributes technical detail to TVP’s applied projects, advancing the operationalization of transition methods to a new paradigm of energy and materials.',
+    image: 'https://www.simonmichaux.com/wp-content/uploads/2022/09/Simon-Michaux-2022.jpg',
+    website: 'https://www.simonmichaux.com/'
   },
   {
     id: 2,
-    name: 'Dr. Elena Rodriguez',
-    title: 'Systems Engineer',
-    bio: 'Expert in sustainable systems design and renewable energy integration.',
-    image: '/images/elena-rodriguez.jpg',
-    linkedin: 'https://linkedin.com/in/elena-rodriguez',
-    twitter: 'https://twitter.com/elena_systems'
+    name: 'Abby Twyman',
+    title: 'Humanistic Behavioral Scientist',
+    bio: 'M.Ed., BCBA, LBA. Board certified behavior analyst focused on applying the science of behavior to improve lives and organizational outcomes. Envisions a future where all citizens reach their fullest potential through science and technology.',
+    image: 'https://www.resourcebasedeconomy.org/wp-content/uploads/sites/2/2018/01/abby_twyman.jpg'
   },
   {
     id: 3,
-    name: 'Prof. Michael Chen',
-    title: 'Urban Planning Advisor',
-    bio: 'Leading researcher in sustainable urban development and smart city technologies.',
-    image: '/images/michael-chen.jpg',
-    linkedin: 'https://linkedin.com/in/michael-chen-urban',
-    website: 'https://sustainablecities.org'
+    name: 'Paolo Maculotti',
+    title: 'International Contracts & Legal Counsel',
+    bio: 'Legal Counsel and International Contracts/Claims Consultant with 12+ years of expertise in contracts, negotiations, and risk management for Fortune 500 clients. Admitted to the bar in France and Spain. Fluent in English, Spanish, French, and Italian.',
+    image: 'https://www.resourcebasedeconomy.org/wp-content/uploads/sites/2/2017/12/paolo_maculotti.png'
   },
   {
     id: 4,
-    name: 'Dr. Sarah Johnson',
-    title: 'Environmental Scientist',
-    bio: 'Climate change researcher focused on ecosystem restoration and biodiversity.',
-    image: '/images/sarah-johnson.jpg',
-    linkedin: 'https://linkedin.com/in/sarah-johnson-env',
-    twitter: 'https://twitter.com/sarahclimate'
+    name: 'Henry D. Schlinger, Jr., Ph.D.',
+    title: 'Professor of Psychology',
+    bio: 'Professor at California State University, Los Angeles. Ph.D. in psychology (applied behavior analysis). Author of three books and 75+ scholarly articles. Keynote speaker at Jacque Fresco Centennial Celebration.',
+    image: 'https://www.resourcebasedeconomy.org/wp-content/uploads/sites/2/2018/09/henry_schlinger.jpeg'
   },
   {
     id: 5,
-    name: 'David Kim',
-    title: 'Technology Advisor',
-    bio: 'AI and automation specialist working on human-centered technology solutions.',
-    image: '/images/david-kim.jpg',
-    linkedin: 'https://linkedin.com/in/david-kim-tech',
-    website: 'https://humantech.ai'
+    name: 'Dr. Elliott Maynard',
+    title: 'Global Ecologist & Futurist',
+    bio: 'Ph.D. in Consciousness Research. Founder of Arcos Cielos Foundation. Background in global ecology, coral reef ecology, oceanography, and tropical rainforest biology. Author, educator, and accomplished artist.',
+    image: 'https://www.resourcebasedeconomy.org/wp-content/uploads/sites/2/2018/10/elliott_maynard.jpg'
   },
   {
     id: 6,
-    name: 'Dr. Maria Santos',
-    title: 'Social Systems Analyst',
-    bio: 'Sociologist studying the transition to resource-based economic models.',
-    image: '/images/maria-santos.jpg',
-    linkedin: 'https://linkedin.com/in/maria-santos-social',
-    twitter: 'https://twitter.com/mariasocial'
+    name: 'Samu Mäntyniemi',
+    title: 'Statistician & Decision Analyst',
+    bio: 'Ph.D. in Science, University of Helsinki. Senior scientist at the Natural Resources Institute Finland. Specialist in population dynamics, risk analysis, and sustainable resource management.',
+    image: 'https://www.resourcebasedeconomy.org/wp-content/uploads/sites/2/2018/12/Samu-M%C3%A4ntyniemi.jpg'
+  },
+  {
+    id: 7,
+    name: 'Andrey Zelenovsky',
+    title: 'Robotic Process Automation & AI Practitioner',
+    bio: 'Industry expert in Robotic Process Automation and AI. Holds degrees in Information and Systems Engineering, Analytical Finance, and a Master’s in Data Science. Works at UiPath, developing automation solutions for S&P 500 companies.',
+    image: 'https://www.resourcebasedeconomy.org/wp-content/uploads/sites/2/2019/03/Andrey-Zelenovsky.jpg'
+  },
+  {
+    id: 8,
+    name: 'Joseph P. Alexopoulos',
+    title: 'Principal, Aequitas Wealth Management',
+    bio: 'CFP®, CFE, MBA. Nearly 26 years of experience in wealth management. Former Vice President at Citigroup Private Bank and advisor at Fidelity Investments. Active in METal International.',
+    image: 'https://www.resourcebasedeconomy.org/wp-content/uploads/sites/2/2019/04/Joseph-Alexopoulos.jpg'
+  },
+  {
+    id: 9,
+    name: 'Alan C. Fenwick',
+    title: 'Consultant & Counselor',
+    bio: 'Nearly five decades of business experience in program/management, strategic planning, sales/marketing, and new venture analysis. Focused on aerospace, government, and start-up activities. Board Chairman for a non-profit business.',
+    image: 'https://www.resourcebasedeconomy.org/wp-content/uploads/sites/2/2019/06/Alan-Fenwick.jpg'
+  },
+  {
+    id: 10,
+    name: 'E. Scott Geller',
+    title: 'Professor & Director, Center for Applied Behavior Systems',
+    bio: 'Alumni Distinguished Professor at Virginia Tech for 50 years. Senior Partner of Safety Performance Solutions. Author of 300+ research articles, 40 books, and 70 book chapters on psychological science and human welfare.',
+    image: 'https://www.resourcebasedeconomy.org/wp-content/uploads/sites/2/2019/07/Scott_Geller.jpg'
   }
 ])
 </script>

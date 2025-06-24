@@ -17,7 +17,7 @@ export const allProposals = [
     realizationCost: '$35,000',
     contact: 'Contact to join the core team or sponsor development.',
     contactLink: 'mailto:dracorisz@outlook.com',
-    img: '/prop/01.png',
+    img: '/images/prop/01.png',
     tags: ['Tech', 'Sustainability', 'Community'],
   },
   {
@@ -28,7 +28,7 @@ export const allProposals = [
     realizationCost: '$28,000',
     contact: 'Contact to propose a realm or become a launch partner.',
     contactLink: 'mailto:dracorisz@outlook.com',
-    img: '/prop/02.png',
+    img: '/images/prop/02.png',
     tags: ['Tech', 'Community', 'Education'],
   },
   {
@@ -39,7 +39,7 @@ export const allProposals = [
     realizationCost: '$22,000',
     contact: 'Contact to join the privacy working group or pilot the platform.',
     contactLink: 'mailto:dracorisz@outlook.com',
-    img: '/prop/03.png',
+    img: '/images/prop/03.png',
     tags: ['Tech', 'Blockchain'],
   },
   {
@@ -50,7 +50,7 @@ export const allProposals = [
     realizationCost: '$18,000',
     contact: 'Contact to contribute agents or sponsor development.',
     contactLink: 'mailto:dracorisz@outlook.com',
-    img: '/prop/04.png',
+    img: '/images/prop/04.png',
     tags: ['Tech', 'Education'],
   },
   {
@@ -61,13 +61,13 @@ export const allProposals = [
     realizationCost: '$20,000',
     contact: 'Contact to join the pilot or become a partner.',
     contactLink: 'mailto:dracorisz@outlook.com',
-    img: '/prop/05.png',
+    img: '/images/prop/05.png',
     tags: ['Blockchain', 'Sustainability'],
   },
   {
     title: 'DeepSeek Coder V2 LLM Cluster',
     desc: 'A scalable, collaborative cluster for advanced AI code generation and research.',
-    img: '/prop/06.png',
+    img: '/images/prop/06.png',
     tags: ['Tech', 'Education'],
   },
   // Creative new proposals:
@@ -79,7 +79,7 @@ export const allProposals = [
     realizationCost: '$15,000',
     contact: 'Contact to join the network or sponsor a pilot site.',
     contactLink: 'mailto:dracorisz@outlook.com',
-    img: '/prop/07.png',
+    img: '/images/prop/07.png',
     tags: ['Sustainability', 'Tech', 'Community'],
   },
   {
@@ -90,7 +90,7 @@ export const allProposals = [
     realizationCost: '$18,000',
     contact: 'Contact to propose a course or become a mentor.',
     contactLink: 'mailto:dracorisz@outlook.com',
-    img: '/prop/08.png',
+    img: '/images/prop/08.png',
     tags: ['Education', 'Tech', 'Community'],
   },
   {
@@ -101,7 +101,7 @@ export const allProposals = [
     realizationCost: '$12,000',
     contact: 'Contact to join a pilot or partner as a utility.',
     contactLink: 'mailto:dracorisz@outlook.com',
-    img: '/prop/09.png',
+    img: '/images/prop/09.png',
     tags: ['Sustainability', 'Tech', 'Community'],
   },
   {
@@ -112,62 +112,62 @@ export const allProposals = [
     realizationCost: '$16,000',
     contact: 'Contact to join the health working group or pilot the platform.',
     contactLink: 'mailto:dracorisz@outlook.com',
-    img: '/prop/10.png',
+    img: '/images/prop/10.png',
     tags: ['Tech', 'Community'],
   },
   {
     title: 'GreenLedger',
     desc: 'A transparent blockchain for tracking, verifying, and rewarding sustainable actions worldwide.',
-    img: '/prop/11.png',
+    img: '/images/prop/11.png',
     tags: ['Blockchain', 'Sustainability'],
   },
   {
     title: 'SkillBridge',
     desc: 'A global skills exchange and mentorship platform for upskilling and community resilience.',
-    img: '/prop/12.png',
+    img: '/images/prop/12.png',
     tags: ['Education', 'Community'],
   },
   // New proposals inspired by Project Astra, Mariner, and OpenRouter
   {
     title: 'Astra',
     desc: 'Conversational AI for planetary-scale knowledge, inspired by DeepMind Astra.',
-    img: '/prop/13.png',
+    img: '/images/prop/13.png',
     tags: ['AI', 'Tech', 'Accessibility'],
   },
   {
     title: 'Mariner',
     desc: 'Autonomous, open-source navigation and mapping for sustainable cities.',
-    img: '/prop/14.png',
+    img: '/images/prop/14.png',
     tags: ['Automation', 'AI', 'Tech'],
   },
   {
     title: 'OpenRouter',
     desc: 'Open-source, decentralized AI routing and orchestration for global collaboration.',
-    img: '/prop/15.png',
+    img: '/images/prop/15.png',
     tags: ['Open Source', 'AI', 'Tech'],
   },
   {
     title: 'Astra Universal AI Assistant',
     desc: 'A context-aware, multimodal AI assistant for all devices. Features cross-device memory, accessibility for blind/low-vision, and proactive help.',
-    img: '/prop/16.png',
+    img: '/images/prop/16.png',
     tags: ['AI', 'Tech', 'Accessibility'],
   },
   {
     title: 'Mariner Agentic Automation',
     desc: 'Multi-step automation for daily tasks: job search, smart scheduling, shopping, and more. Integrates with web and productivity tools.',
-    img: '/prop/17.png',
+    img: '/images/prop/17.png',
     tags: ['Automation', 'AI', 'Tech'],
   },
   {
     title: 'OpenRouter LLM Hub',
     desc: 'Unified API for 60+ LLM providers, open-source agent orchestration, privacy controls, and a marketplace for AI apps.',
-    img: '/prop/18.png',
+    img: '/images/prop/18.png',
     tags: ['Open Source', 'AI', 'Tech'],
   },
   {
     title: 'ASI: Artificial Superintelligence for TVP',
     desc: 'A collaborative project to develop an Integrated Artificial Superintelligence (ASI) system for The Venus Project. Models and optimizes resource-based economies, automates city management, and ensures ethical, transparent governance.',
-    img: '/prop/19.png',
+    img: '/images/prop/19.png',
     tags: ['AI', 'Tech', 'Sustainability', 'Proposal'],
     longDesc: `Artificial Superintelligence (ASI) refers to a level of artificial intelligence that surpasses human intelligence in all aspects—creativity, problem-solving, emotional intelligence, and more. ASI is not just an evolution of current AI, but a leap to a form of intelligence that can independently innovate, strategize, and execute complex tasks beyond human capability.\n\nWe propose a funded, collaborative project to develop an Integrated ASI system for The Venus Project. This system would:\n- Model and optimize resource-based economies at global and local scales\n- Enable transparent, ethical, and data-driven governance\n- Automate city management, logistics, and sustainability systems\n- Advance scientific research and innovation for humanity’s benefit\n- Ensure alignment with human values, ethics, and planetary stewardship\n\nWe invite researchers, technologists, and funders to join this initiative and help shape the future of sustainable, intelligent civilization.\n\nWhy ASI for The Venus Project?\n- Accelerate the transition to a resource-based economy\n- Eliminate inefficiencies, corruption, and bias in decision-making\n- Empower communities with transparent, participatory tools\n- Lead the world in ethical, human-centered AI development\n\nLearn more: https://www.techtarget.com/searchenterpriseai/definition/artificial-superintelligence-ASI`,
     realizationPlan: '1. Assemble interdisciplinary team. 2. Develop ASI architecture and ethical framework. 3. Build MVP and test in simulation. 4. Deploy in pilot city.',
@@ -176,7 +176,7 @@ export const allProposals = [
   {
     title: 'Relocation Proposal',
     desc: 'A plan for relocating and establishing new TVP centers and communities worldwide.',
-    img: '/prop/20.png',
+    img: '/images/prop/20.png',
     tags: ['Sustainability', 'Community', 'Proposal'],
     realizationPlan: 'Step 1: Identify candidate locations. Step 2: Community engagement and needs assessment. Step 3: Secure funding and partnerships. Step 4: Relocation and setup.',
     realizationCost: 'Contact to enquire',
@@ -184,7 +184,7 @@ export const allProposals = [
   {
     title: 'Resource Center',
     desc: 'A hub for TVP knowledge, research, and open-source tools for global sustainability.',
-    img: '/prop/21.png',
+    img: '/images/prop/21.png',
     tags: ['Education', 'Tech', 'Sustainability'],
     realizationPlan: '1. Curate and digitize resources. 2. Build open-source platform. 3. Launch and promote globally.',
     realizationCost: '$10,000',
@@ -192,7 +192,7 @@ export const allProposals = [
   {
     title: 'Tokenomics',
     desc: 'Exploring token-based economies and incentives for sustainable action in TVP projects.',
-    img: '/prop/22.png',
+    img: '/images/prop/22.png',
     tags: ['Blockchain', 'Sustainability', 'Proposal'],
     realizationPlan: '1. Research token models. 2. Develop smart contracts. 3. Launch pilot with incentives. 4. Analyze and iterate.',
     realizationCost: '$7,500',
@@ -200,7 +200,7 @@ export const allProposals = [
   {
     title: 'Planets',
     desc: 'A showcase of TVP-inspired planetary city designs and sustainable habitats.',
-    img: '/prop/23.png',
+    img: '/images/prop/23.png',
     tags: ['Sustainability', 'Tech', 'Community'],
     realizationPlan: 'Phase 1: Conceptual design and 3D modeling. Phase 2: Community feedback and expert review. Phase 3: Open-source release and global collaboration. Phase 4: Pilot implementation in select locations.',
     realizationCost: '$25,000',
@@ -208,7 +208,7 @@ export const allProposals = [
   {
     title: 'Activist',
     desc: 'Highlighting TVP activists and their impact on global awareness and change.',
-    img: '/prop/24.png',
+    img: '/images/prop/24.png',
     tags: ['Community', 'Education'],
     realizationPlan: '1. Identify and interview key activists. 2. Produce and publish video/documentary content. 3. Launch global awareness campaign.',
     realizationCost: '$5,000',
@@ -216,7 +216,7 @@ export const allProposals = [
   {
     title: 'Outpost Proposal',
     desc: 'Submit your vision for a self-sufficient, circular city. Help TVP design a transparent, data-driven resource-based economy.',
-    img: '/prop/25.png',
+    img: '/images/prop/25.png',
     tags: ['Sustainability', 'Tech', 'Community', 'Proposal'],
     realizationPlan: '1. Collect proposals. 2. Evaluate feasibility. 3. Develop pilot project. 4. Document and share results.',
     realizationCost: 'Contact to enquire',
@@ -224,7 +224,7 @@ export const allProposals = [
   {
     title: 'Circular City Demo',
     desc: 'A live demonstration site for a fully functional circular city, integrating TVP’s resource-based economy, automation, and sustainable design.',
-    img: '/prop/26.png',
+    img: '/images/prop/26.png',
     tags: ['Sustainability', 'Tech', 'Demo'],
     realizationPlan: '1. Secure land and permits. 2. Assemble design and engineering teams. 3. Construct modular infrastructure. 4. Deploy automation and resource management systems. 5. Open for public tours and research.',
     realizationCost: '$50,000',
@@ -234,7 +234,7 @@ export const allProposals = [
   {
     title: 'TVP Knowledge Hub',
     desc: 'A global, open-access digital library and learning platform for TVP research, documentaries, and educational resources.',
-    img: '/prop/27.png',
+    img: '/images/prop/27.png',
     tags: ['Education', 'Tech', 'Open Source'],
     realizationPlan: '1. Curate and digitize TVP archives. 2. Develop a multilingual, accessible web platform. 3. Integrate with TMDb and YouTube for documentaries. 4. Launch and promote globally.',
     realizationCost: '$12,000',
@@ -244,7 +244,7 @@ export const allProposals = [
   {
     title: 'Global Resource Survey',
     desc: 'A collaborative, open-data project to map and monitor global resources for sustainable planning.',
-    img: '/prop/28.png',
+    img: '/images/prop/28.png',
     tags: ['Sustainability', 'Community', 'Open Data'],
     realizationPlan: '1. Develop survey methodology and digital tools. 2. Partner with universities and NGOs. 3. Launch global data collection campaign. 4. Publish open-access results.',
     realizationCost: '$8,000',
@@ -254,7 +254,7 @@ export const allProposals = [
   {
     title: 'TVP Open Hardware Lab',
     desc: 'A community-driven lab for prototyping sustainable, open-source hardware for energy, water, and food systems.',
-    img: '/prop/29.png',
+    img: '/images/prop/29.png',
     tags: ['Tech', 'Sustainability', 'Open Source'],
     realizationPlan: '1. Set up lab space and equipment. 2. Recruit engineers and makers. 3. Prototype and test devices. 4. Document and share designs online.',
     realizationCost: '$15,000',
@@ -264,7 +264,7 @@ export const allProposals = [
   {
     title: 'TVP Youth Ambassadors',
     desc: 'A global youth program to train and empower the next generation of TVP advocates and leaders.',
-    img: '/prop/30.png',
+    img: '/images/prop/30.png',
     tags: ['Community', 'Education', 'Youth'],
     realizationPlan: '1. Develop curriculum and training materials. 2. Recruit youth leaders worldwide. 3. Host online and in-person workshops. 4. Launch youth-led projects and campaigns.',
     realizationCost: '$6,000',

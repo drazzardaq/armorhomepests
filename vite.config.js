@@ -24,7 +24,7 @@ export default defineConfig({
       manifest: {
         name: 'TVPOutpost',
         short_name: 'TVPOutpost',
-        description: 'TVPOutpost - The Venus Project Team',
+        description: 'The Venus Project - Outpost',
         theme_color: '#1a1a1a',
         background_color: '#1a1a1a',
         display: 'standalone',

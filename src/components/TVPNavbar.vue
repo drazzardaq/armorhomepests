@@ -7,7 +7,7 @@
             <img src="/the-venus-project-logo.png" alt="The Venus Project Icon" class="h-8 md:h-12 w-auto transition-transform invert" />
           </router-link>
           <!-- Desktop Menu -->
-          <!-- <div class="hidden items-center lg:flex"> -->
+
             <div class="!flex ml-auto gap-8 text-lg font-medium items-center justify-center">
               <div v-for="item in navItems" :key="item.label" class="block nav-item">
                 <component :is="item.external ? 'a' : 'router-link'" v-bind="item.external ? { href: item.to, target: '_blank', rel: 'noopener', 'aria-label': item.ariaLabel || item.label } : { to: item.to, 'aria-label': item.ariaLabel || item.label, 'aria-current': isActive(item) ? 'page' : undefined }" :class="['nav-link flex items-center gap-2 rounded-md px-2 py-1 transition-all duration-200', isActive(item) ? 'active-link' : item.class || 'hover:text-tvp-teal']">
@@ -16,14 +16,9 @@
                   <svg v-if="item.external" class="ml-1 inline h-4 w-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6m5-3h5v5m-10 4L21 3" /></svg>
                 </component>
               </div>
-            <!-- </div> -->
+
           </div>
-          <div class="ml-auto items-center justify-center gap-5 lg:flex">
-            <a href="https://facebook.com/TheVenusProject" target="_blank" aria-label="Facebook" class="hover:text-tvp-blue focus:outline-none focus:ring-2 focus:ring-tvp-blue transition"><font-awesome-icon :icon="['fab', 'facebook-f']" size="xl" /></a>
-            <a href="https://www.youtube.com/user/thevenusprojectmedia" target="_blank" aria-label="YouTube" class="hover:text-red-500 focus:outline-none focus:ring-2 focus:ring-red-400 transition"><font-awesome-icon :icon="['fab', 'youtube']" size="xl" /></a>
-            <a href="https://www.instagram.com/thevenusproject/" target="_blank" aria-label="Instagram" class="hover:text-pink-500 focus:outline-none focus:ring-2 focus:ring-pink-400 transition"><font-awesome-icon :icon="['fab', 'instagram']" size="xl" /></a>
-            <a href="https://twitter.com/TheVenusProject" target="_blank" aria-label="Twitter/X" class="hover:text-tvp-teal focus:outline-none focus:ring-2 focus:ring-tvp-teal transition"><font-awesome-icon :icon="['fab', 'x-twitter']" size="xl" /></a>
-          </div>
+
           <button @click="mobileMenuOpen = !mobileMenuOpen" class="menu-button rounded-md p-2 hover:bg-tvp-blue/10 lg:hidden" :aria-expanded="mobileMenuOpen" aria-controls="mobile-menu" aria-label="Open main menu">
             <i v-if="!mobileMenuOpen" class="fas fa-bars h-6 w-6"></i>
             <i v-else class="fas fa-times h-6 w-6"></i>

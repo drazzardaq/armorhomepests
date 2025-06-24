@@ -4,8 +4,8 @@
     <div class="category-bar sticky top-0 z-20 mb-8 flex gap-3 overflow-x-auto rounded-xl bg-white/70 px-2 py-2 shadow" role="tablist" aria-label="Proposal Categories">
       <button v-for="cat in filters" :key="cat" :class="['category-pill', { active: selectedFilter === cat }]" @click="selectedFilter = cat" :aria-selected="selectedFilter === cat" role="tab" tabindex="0">{{ cat }}</button>
     </div>
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
-      <div v-for="(proposal, idx) in filteredProposals" :key="proposal.title" class=" proposal-card rounded-2xl shadow-xl !p-0 overflow-hidden relative group flex flex-col transition-transform duration-300 hover:scale-[1.025] hover:shadow-2xl focus-within:scale-[1.025] focus-within:shadow-2xl animate-pop-in" :tabindex="0" :aria-expanded="expandedIdx === idx" @keydown.enter="toggleExpand(idx)" @keydown.space.prevent="toggleExpand(idx)" @click.self="toggleExpand(idx)" role="button">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+      <div v-for="(proposal, idx) in visibleProposals" :key="proposal.title" class=" proposal-card rounded-2xl shadow-xl !p-0 overflow-hidden relative group flex flex-col transition-transform duration-300 hover:scale-[1.025] hover:shadow-2xl focus-within:scale-[1.025] focus-within:shadow-2xl animate-pop-in" :tabindex="0" :aria-expanded="expandedIdx === idx" @keydown.enter="toggleExpand(idx)" @keydown.space.prevent="toggleExpand(idx)" @click.self="toggleExpand(idx)" role="button">
         <div class="proposal-gradient-overlay"></div>
         <div class="proposal-dark-gradient"></div>
         <img :src="proposal.img" :alt="proposal.title" class="w-full h-48 object-cover rounded-t-2xl relative z-10 transition-transform duration-300 group-hover:scale-105 group-focus:scale-105" />
@@ -43,6 +43,9 @@
         />
       </div>
     </div>
+    <div v-if="canLoadMore" class="flex justify-center mt-8">
+      <button class="btn-glass-cta px-8 py-3 text-lg font-bold" @click="loadMore" aria-label="Load more proposals">Load More</button>
+    </div>
   </section>
 </template>
 
@@ -55,12 +58,23 @@ const props = defineProps({
 });
 const selectedFilter = ref('All');
 const expandedIdx = ref(null);
+const proposalsPerPage = ref(6);
+const currentPage = ref(1);
 const filteredProposals = computed(() => {
   if (selectedFilter.value === 'All') return props.proposals;
   return props.proposals.filter(p => p.tags.includes(selectedFilter.value));
 });
+const visibleProposals = computed(() => {
+  return filteredProposals.value.slice(0, proposalsPerPage.value * currentPage.value);
+});
+const canLoadMore = computed(() => {
+  return visibleProposals.value.length < filteredProposals.value.length;
+});
 function toggleExpand(idx) {
   expandedIdx.value = expandedIdx.value === idx ? null : idx;
+}
+function loadMore() {
+  currentPage.value++;
 }
 // GSAP animation for cards
 onMounted(async () => {

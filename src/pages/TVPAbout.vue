@@ -72,7 +72,7 @@
         <TVPAdvisors />
       </section>
       <!-- Dracoscopia & TVP Chain Vision Section -->
-      <section class="glassy-bg rounded-3xl shadow-xl mb-12 p-8 animate-fade-in-up border-2 border-tvp-blue/30" aria-label="Dracoscopia & TVP Chain Vision">
+      <!-- <section class="glassy-bg rounded-3xl shadow-xl mb-12 p-8 animate-fade-in-up border-2 border-tvp-blue/30" aria-label="Dracoscopia & TVP Chain Vision">
         <h2 class="mb-6 text-3xl font-bold text-gradient">Dracoscopia & TVP Chain: The Next Step</h2>
         <p class="mb-4 text-gray-800">The Venus Project is pioneering a new era of collaboration and transparency by integrating the <span class="font-bold text-tvp-blue">Dracoscopia</span> creative network and the <span class="font-bold text-tvp-blue">TVP Chain</span> custom blockchain. This infrastructure will power proposals, resource management, and global participation, ensuring every project is secure, transparent, and community-driven.</p>
         <ul class="list-disc ml-8 text-gray-800 mb-4">
@@ -82,9 +82,9 @@
           <li>Open participation and transparent governance for all contributors</li>
         </ul>
         <p class="text-tvp-blue font-semibold">This vision is at the heart of every new proposal and partnership. <router-link to="/OutpostProposal" class="underline hover:text-tvp-teal">Submit your proposal</router-link> and help build the future of The Venus Project!</p>
-      </section>
+      </section> -->
       <!-- Dracoscopia & TVP Chain Vision Proposal Callout -->
-      <section class="glassy-bg border-l-4 border-tvp-blue/60 bg-tvp-blue/5 rounded-2xl shadow-lg mb-12 p-6 animate-fade-in-up max-w-4xl mx-auto" aria-label="Dracoscopia & TVP Chain Vision for Proposals">
+      <!-- <section class="glassy-bg border-l-4 border-tvp-blue/60 bg-tvp-blue/5 rounded-2xl shadow-lg mb-12 p-6 animate-fade-in-up max-w-4xl mx-auto" aria-label="Dracoscopia & TVP Chain Vision for Proposals">
         <h2 class="mb-2 text-2xl font-bold text-tvp-blue flex items-center gap-2">
           <svg class="inline-block w-7 h-7 text-tvp-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m4 0h-1v-4h-1m-4 0h-1v-4h-1"/></svg>
           Proposal Vision: Dracoscopia & TVP Chain
@@ -93,7 +93,7 @@
         <div class="mt-6 text-center">
           <router-link to="/OutpostProposal" class="inline-block rounded-lg bg-gradient-to-r from-tvp-blue via-tvp-teal to-tvp-purple px-6 py-3 text-white font-bold shadow hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-tvp-blue" aria-label="Submit your proposal">Submit Your Proposal</router-link>
         </div>
-      </section>
+      </section> -->
       <!-- Learn More Section -->
       <section class="mb-12 text-center">
         <BaseButton color="primary" class="w-full rounded-lg">Learn More</BaseButton>
