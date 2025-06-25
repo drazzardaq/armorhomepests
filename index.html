@@ -64,7 +64,7 @@
     <link rel="icon" type="image/png" sizes="96x96" href="favicon/favicon-96x96.png" />
     <link rel="icon" type="image/png" sizes="192x192" href="favicon/android-chrome-192x192.png">
     <link rel="icon" type="image/png" sizes="512x512" href="favicon/android-chrome-512x512.png">
-    <link rel="manifest" href="favicon/site.webmanifest">
+    <!-- <link rel="manifest" href="favicon/site.webmanifest"> -->
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -94,16 +94,16 @@
       "headline": "The Venus Project Team",
       "description": " The Venus Project Team",
       "image": "https://dracoscopia.com/images/ai/cats.webp",
-      "url": "https://dracoscopia.com"
     }
-    </script>
+  </script>
+  <!-- "url": "https://dracoscopia.com" -->
 </head>
 <body class="font-primary antialiased relative tracking-wide selection:text-black selection:bg-accent scroll-smooth overflow-x-hidden h-screen">
     <div id="app"></div>
     <script type="module" src="/src/main.js"></script>
     
     <!-- Service Worker Registration -->
-    <!-- <script>
+    <script>
       if ('serviceWorker' in navigator) {
         window.addEventListener('load', () => {
           navigator.serviceWorker.register('/sw.js')
@@ -115,6 +115,6 @@
             });
         });
       }
-    </script> -->
+    </script>
 </body>
 </html> 

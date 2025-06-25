@@ -58,11 +58,11 @@ export const routes = [
         name: "TVPProjects",
         component: TVPProjects,
       },
-      {
-        path: "timeline",
-        name: "TVPTimeline",
-        component: TVPTimeline,
-      },
+      // {
+      //   path: "timeline",
+      //   name: "TVPTimeline",
+      //   component: TVPTimeline,
+      // },
       {
         path: "asi-proposal",
         name: "TVPAsiProject",
@@ -78,11 +78,11 @@ export const routes = [
         name: "TVPHistory",
         component: TVPHistory,
       },
-      {
-        path: "relocation-proposal",
-        name: "TVPRelocationProposal",
-        component: TVPRelocationProposal,
-      },
+      // {
+      //   path: "relocation-proposal",
+      //   name: "TVPRelocationProposal",
+      //   component: TVPRelocationProposal,
+      // },
       {
         path: "advisors",
         name: "TVPAdvisors",
@@ -93,21 +93,16 @@ export const routes = [
         name: "TVPFeaturingActivist",
         component: TVPFeaturingActivist,
       },
-      {
-        path: "contact",
-        name: "Contact",
-        component: Contact,
-      },
-      {
-        path: "partnerships",
-        name: "Partnerships",
-        component: Partnerships,
-      },
-      {
-        path: 'resume',
-        name: 'Resume',
-        component: Resume
-      },
+      // {
+      //   path: "contact",
+      //   name: "Contact",
+      //   component: Contact,
+      // },
+      // {
+      //   path: 'resume',
+      //   name: 'Resume',
+      //   component: Resume
+      // },
       {
         path: "planets",
         name: "PTVPPlanets",
@@ -128,11 +123,11 @@ export const routes = [
         name: "Solutions",
         component: Solutions,
       },
-      {
-        path: "faq",
-        name: "FAQ",
-        component: FAQ,
-      },
+      // {
+      //   path: "faq",
+      //   name: "FAQ",
+      //   component: FAQ,
+      // },
       {
         path: "media",
         name: "Media",
@@ -143,31 +138,12 @@ export const routes = [
         name: "Tokenomics",
         component: Tokenomics,
       },
+      {
+        path: '/city',
+        name: 'City',
+        component: () => import('@/pages/City.vue'),
+      },
     ],
-  },
-  {
-    path: '/partnership',
-    redirect: '/partnerships',
-  },
-  {
-    path: '/relocation-proposal',
-    redirect: '/partnerships',
-  },
-  {
-    path: '/proposals',
-    redirect: '/partnerships',
-  },
-  {
-    path: '/OutpostProposal',
-    redirect: '/partnerships',
-  },
-  {
-    path: '/TVPRelocationProposal',
-    redirect: '/partnerships',
-  },
-  {
-    path: '/Partnership.vue',
-    redirect: '/partnerships',
   },
   {
     path: '/:pathMatch(.*)*',

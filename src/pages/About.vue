@@ -10,7 +10,7 @@
       'description': 'Learn about The Venus Project: a 501(c)(3) non-profit dedicated to designing human habitats that enhance well-being and sustainability. Discover our history, vision, and team.'
     }" />
   <main
-    class="venus-project-content flex flex-col items-center w-full min-h-screen bg-gradient-to-b from-white via-blue-50/30 to-tvp-blue/10 px-0 pb-8 text-gray-900 md:px-0">
+    class="venus-project-content flex flex-col items-center w-full min-h-screen bg-gradient-to-b from-white to-white px-0 pb-8 text-gray-900 md:px-0">
     <!-- Hero Section -->
     <section
       class="glassy-bg animate-fade-in-up max-w-7xl mx-auto mb-12 rounded-2xl shadow-2xl px-4 py-12 md:py-16 text-center">
@@ -71,7 +71,7 @@
           technology, without the limitations of politics, war, or scarcity. Our vision is a global Resource-Based
           Economy, where resources are managed for the benefit of all, and cities are designed for harmony with nature.
         </p>
-        <ul class="list-disc ml-8 text-lg text-gray-700 mb-4 relative z-10">
+        <ul class="list-none ml-8 text-lg text-gray-700 mb-4 relative z-10">
           <li>Resource-Based Economy</li>
           <li>Ecological city design</li>
           <li>Global collaboration</li>

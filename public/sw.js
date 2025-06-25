@@ -1,4 +1,4 @@
-const CACHE_NAME = 'dracoscopia-cache-v2';
+const CACHE_NAME = 'tvpoutpost-cache-v2';
 const urlsToCache = [
   '/',
   '/index.html',
@@ -84,8 +84,8 @@ self.addEventListener('fetch', (event) => {
 self.addEventListener('push', (event) => {
   const options = {
     body: event.data.text(),
-    icon: '/images/dracaris.png',
-    badge: '/images/dragonorb.png',
+    icon: '/icon.png',
+    badge: '/icon.png',
     vibrate: [100, 50, 100],
     data: {
       dateOfArrival: Date.now(),
@@ -94,6 +94,6 @@ self.addEventListener('push', (event) => {
   };
 
   event.waitUntil(
-    self.registration.showNotification('Dracoscopia', options)
+    self.registration.showNotification('tvpoutpost-cache-v2', options)
   );
 }); 

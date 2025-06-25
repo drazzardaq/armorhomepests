@@ -51,10 +51,6 @@
         <p class="mt-2 text-sm text-tvp-green font-semibold">How We Realize This: We support reforestation, regenerative agriculture, and eco-restoration projects that heal the planet.</p>
       </div>
     </div>
-    <div class="mt-8 flex flex-col items-center gap-4">
-      <router-link to="/mission" class="btn-glass-cta px-8 py-4 text-lg font-bold" aria-label="Our Mission">Our Mission</router-link>
-      <router-link to="/faq" class="btn-glass-cta px-8 py-4 text-lg font-bold" aria-label="FAQ">FAQ</router-link>
-    </div>
   </section>
 </template>
 <script setup>

@@ -1,24 +1,21 @@
 <template>
-  <nav class="navbar fixed top-0 z-50 w-full bg-white/80 backdrop-blur-md shadow-lg border-b border-white/30">
+  <nav class="navbar fixed top-0 z-50 w-full glass-effect bg-white/80 backdrop-blur-md shadow-lg border-b border-white/30 font-ui">
     <div class="mx-auto max-w-7xl w-full py-0">
       <div class="flex flex-col items-center justify-center w-full">
-        <div class="mx-auto flex w-full max-w-9xl items-center gap-3">
+        <div class="mx-auto flex w-full max-w-9xl items-center gap-3 py-3">
           <router-link to="/" aria-label="The Venus Project Home">
-            <img src="/the-venus-project-logo.png" alt="The Venus Project Icon" class="h-8 md:h-12 w-auto transition-transform invert" />
+            <img src="@/assets/images/Outpost-logo.png" alt="The Venus Project Icon" class="h-10 md:h-14 w-auto transition-transform" />
           </router-link>
           <!-- Desktop Menu -->
-
-            <div class="!flex ml-auto gap-8 text-lg font-medium items-center justify-center">
-              <div v-for="item in navItems" :key="item.label" class="block nav-item">
-                <component :is="item.external ? 'a' : 'router-link'" v-bind="item.external ? { href: item.to, target: '_blank', rel: 'noopener', 'aria-label': item.ariaLabel || item.label } : { to: item.to, 'aria-label': item.ariaLabel || item.label, 'aria-current': isActive(item) ? 'page' : undefined }" :class="['nav-link flex items-center gap-2 rounded-md px-2 py-1 transition-all duration-200', isActive(item) ? 'active-link' : item.class || 'hover:text-tvp-teal']">
-                  <i v-if="item.icon" :class="item.icon"></i>
-                  {{ item.label }}
-                  <svg v-if="item.external" class="ml-1 inline h-4 w-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6m5-3h5v5m-10 4L21 3" /></svg>
-                </component>
-              </div>
-
+          <div class="!flex ml-auto gap-8 text-lg font-medium items-center justify-center">
+            <div v-for="item in navItems" :key="item.label" class="block nav-item">
+              <component :is="item.external ? 'a' : 'router-link'" v-bind="item.external ? { href: item.to, target: '_blank', rel: 'noopener', 'aria-label': item.ariaLabel || item.label } : { to: item.to, 'aria-label': item.ariaLabel || item.label, 'aria-current': isActive(item) ? 'page' : undefined }" :class="['nav-link flex items-center gap-2 rounded-md px-2 py-1 transition-all duration-200', isActive(item) ? 'active-link' : item.class || 'hover:text-tvp-teal']">
+                <i v-if="item.icon" :class="item.icon"></i>
+                {{ item.label }}
+                <svg v-if="item.external" class="mb-1 inline h-5 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6m5-3h5v5m-10 4L21 3" /></svg>
+              </component>
+            </div>
           </div>
-
           <button @click="mobileMenuOpen = !mobileMenuOpen" class="menu-button rounded-md p-2 hover:bg-tvp-blue/10 lg:hidden" :aria-expanded="mobileMenuOpen" aria-controls="mobile-menu" aria-label="Open main menu">
             <i v-if="!mobileMenuOpen" class="fas fa-bars h-6 w-6"></i>
             <i v-else class="fas fa-times h-6 w-6"></i>
@@ -52,10 +49,10 @@ const route = useRoute();
 const mobileMenuOpen = ref(false);
 
 const navItems = [
-  { label: "About", to: "/about", icon: "fas fa-info-circle" },
-  { label: "Projects", to: "/projects", icon: "fas fa-cubes" },
-  { label: "Partnerships", to: "/partnerships", icon: "fas fa-handshake" },
-  { label: "Contact", to: "/contact", class: "contact-btn", icon: "fas fa-envelope" },
+  { label: "About", to: "/about", icon: "info-circle" },
+  { label: "Projects", to: "/projects", icon: "fa-cubes" },
+  { label: "City", to: "/city", icon: "city" },
+  { label: "Donate", to: "https://www.thevenusproject.com/donate-page/", external: true, class: "contact-btn", icon: "fas fa-envelope" },
 ];
 
 function isActive(item) {

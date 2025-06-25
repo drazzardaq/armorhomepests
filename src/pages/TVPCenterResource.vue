@@ -15,7 +15,7 @@
     }"
   />
   <div class="venus-project-content min-h-screen bg-gradient-to-br from-white via-[#f7faff] to-[#eaf6ff] text-black">
-    <section class="glassy-bg py-12 px-4 md:px-16 max-w-5xl mx-auto rounded-3xl shadow-2xl animate-fade-in-up">
+    <section class="glassy-bg py-12 px-4 md:px-16 max-w-7xl mx-auto rounded-3xl shadow-2xl animate-fade-in-up">
       <h1 :class="headingClass + ' text-center drop-shadow mb-6'">Center for Resource Management</h1>
       <p class="max-w-3xl mx-auto text-lg mb-8 text-center">
         The Center for Resource Management is a core component of The Venus Project’s vision, designed to monitor, manage, and equitably distribute the world’s resources using advanced technology and a systems approach. This center is essential for a sustainable, global Resource-Based Economy.
@@ -31,21 +31,21 @@
         :space-between="0"
         :navigation="true"
         :pagination="{ clickable: true }"
-        class="tvp-slider-full mb-12"
+        class="tvp-slider-full  mb-12"
         aria-label="Center for Resource Management Gallery"
       >
         <swiper-slide v-for="(img, i) in sliderImages" :key="i">
           <div class="relative w-full h-[400px] md:h-[520px] flex items-center justify-center overflow-hidden rounded-2xl shadow-2xl bg-gradient-to-br from-blue-900/40 to-gray-900/40">
             <img :src="img.src" :alt="img.alt" class="absolute inset-0 w-full h-full object-cover scale-105 opacity-90 z-0" />
             <div class="absolute inset-0 bg-gradient-to-br from-blue-900/40 to-gray-900/40 opacity-60 z-10" aria-hidden="true"></div>
-            <div class="relative z-20 text-center w-full">
+            <!-- <div class="relative z-20 text-center w-full">
               <span class="inline-block px-6 py-3 bg-white/10 backdrop-blur rounded-xl text-2xl font-bold text-blue-200 shadow-xl drop-shadow-lg">{{ img.caption }}</span>
-            </div>
+            </div> -->
           </div>
         </swiper-slide>
       </swiper-container>
       <!-- Main Content -->
-      <div class="prose prose-lg max-w-4xl mx-auto text-gray-900 bg-white/80 rounded-xl p-8 shadow-xl">
+      <div class="prose prose-lg max-w-7xl mx-auto text-gray-900 !bg-white/80 rounded-xl p-8 shadow-xl">
         <h2 id="purpose">Purpose and Function</h2>
         <p>
           The Center for Resource Management is designed to monitor, manage, and equitably distribute the world’s resources using advanced technology and a systems approach. It is the core of a global Resource-Based Economy, ensuring that the needs of all people are met while maintaining ecological balance.
@@ -108,7 +108,7 @@ const sliderImages = [
 <style scoped>
 .tvp-slider-full {
   width: 100%;
-  max-width: 900px;
+  /* max-width: 900px; */
   margin: 0 auto;
 }
 </style>

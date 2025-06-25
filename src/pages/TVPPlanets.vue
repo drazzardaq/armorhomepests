@@ -1,21 +1,20 @@
 <template>
-  <!-- Dracoscopia & TVP Chain Vision Callout -->
-  <section class="glassy-bg border-l-4 border-tvp-blue/60 bg-tvp-blue/5 rounded-2xl shadow-lg mb-12 p-6 animate-fade-in-up max-w-4xl mx-auto" aria-label="Dracoscopia & TVP Chain Vision for Proposals">
-    <h2 class="mb-2 text-2xl font-bold text-tvp-blue flex items-center gap-2">
-      <svg class="inline-block w-7 h-7 text-tvp-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m4 0h-1v-4h-1m-4 0h-1v-4h-1"/></svg>
-      Proposal Vision: Dracoscopia & TVP Chain
+  <!-- The Venus Project Blockchain Vision Callout -->
+  <section class="glassy-bg border-l-4 border-accent/60 bg-accent/5 rounded-2xl shadow-lg  mt-16 mb-5 p-6 animate-fade-in-up max-w-4xl mx-auto font-body" aria-label="The Venus Project Blockchain Vision for Proposals">
+    <h2 class="mb-2 text-2xl font-heading font-bold text-accent flex items-center gap-2">
+      <svg class="inline-block w-7 h-7 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m4 0h-1v-4h-1m-4 0h-1v-4h-1"/></svg>
+      Proposal Vision: The Venus Project Blockchain
     </h2>
-    <p class="text-gray-800">All proposals for planetary habitats and concepts are designed to be part of the <span class='font-bold text-tvp-blue'>Dracoscopia</span> creative network and validated on the <span class='font-bold text-tvp-blue'>TVP Chain</span> blockchain. This ensures that every idea, from Earth to Mars and beyond, is transparent, collaborative, and future-ready—empowering humanity to thrive among the stars with ethical, decentralized infrastructure.</p>
+    <p class="text-muted font-body">All proposals for planetary habitats and concepts are designed to be part of the creative network of activist and volunteers.</p>
     <div class="mt-6 text-center">
-      <router-link to="/OutpostProposal" class="inline-block rounded-lg bg-gradient-to-r from-tvp-blue via-tvp-teal to-tvp-purple px-6 py-3 text-white font-bold shadow hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-tvp-blue" aria-label="Submit your planetary proposal">Submit Your Planetary Proposal</router-link>
+      <router-link to="/OutpostProposal" class="inline-block rounded-xl bg-gradient-to-r from-navy via-accent to-tvp-purple px-6 py-3 text-white font-ui font-bold shadow hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-accent" aria-label="Submit your planetary proposal">Submit Your Planetary Proposal</router-link>
     </div>
   </section>
-
-  <div class="min-h-screen bg-gradient-to-br from-white via-[#f7faff] to-[#eaf6ff] text-black flex flex-col items-center justify-center">
+  <div class="min-h-screen bg-primary text-background flex flex-col items-center justify-center font-body">
     <div class="max-w-7xl w-full mx-auto p-8 bg-white/80 rounded-3xl shadow-2xl backdrop-blur-2xl">
-      <h1 class="text-4xl font-bold mb-8 text-center bg-gradient-to-r from-[#42386c] via-[#153695] to-[#143395] bg-clip-text text-transparent">Planets of the Solar System</h1>
-      <p class="mb-10 text-lg text-center text-gray-700">Explore planetary concepts, sustainable habitats, and future visions for humanity among the stars.</p>
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <h1 class="text-4xl font-heading font-bold mb-8 text-center bg-gradient-to-r from-tvp-purple via-tvp-blue to-tvp-teal bg-clip-text text-transparent">Planets of the Solar System</h1>
+      <p class="mb-10 text-lg text-center text-muted font-body">Explore planetary concepts, sustainable habitats, and future visions for humanity among the stars.</p>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
         <PlanetCard
           v-for="planet in planets"
           :key="planet.name"
@@ -27,20 +26,19 @@
         />
       </div>
       <div class="mt-12 text-center">
-        <router-link to="/" class="inline-block rounded-lg bg-gradient-to-r from-[#42386c] via-[#153695] to-[#143395] px-6 py-3 text-white font-bold shadow hover:opacity-90">Back to Home</router-link>
+        <router-link to="/" class="inline-block rounded-xl bg-gradient-to-r from-tvp-purple via-tvp-blue to-tvp-teal px-6 py-3 text-white font-ui font-bold shadow hover:opacity-90">Back to Home</router-link>
       </div>
     </div>
   </div>
 </template>
 
 <script setup>
-import { headingClass, subheadingClass } from '@/layouts/layoutClasses';
 import PlanetCard from '@/components/PlanetCard.vue'
 const planets = [
   {
     name: 'Mercury',
     description: 'The smallest and innermost planet in the Solar System, Mercury is a rocky world with extreme temperatures.',
-    image: '/images/planets/mercury.jpg',
+    image: '/planets/mercury.webp',
     gradientColors: ['from-gray-800', 'to-gray-600'],
     facts: [
       'Closest planet to the Sun',
@@ -51,7 +49,7 @@ const planets = [
   {
     name: 'Venus',
     description: 'Often called Earth\'s sister planet, Venus has a thick atmosphere and extreme greenhouse effect.',
-    image: '/images/planets/venus.jpg',
+    image: '/planets/venus.webp',
     gradientColors: ['from-yellow-700', 'to-orange-600'],
     facts: [
       'Hottest planet in our solar system',
@@ -61,8 +59,8 @@ const planets = [
   },
   {
     name: 'Earth',
-    description: 'Our home planet, Earth is the only known world to support life, with liquid water and a breathable atmosphere.',
-    image: '/images/planets/earth.jpg',
+    description: 'Earth is the only known world to support life, with liquid water and a breathable atmosphere.',
+    image: '/planets/Earth.jpg',
     gradientColors: ['from-blue-600', 'to-green-500'],
     facts: [
       'Only known planet with life',
@@ -73,7 +71,7 @@ const planets = [
   {
     name: 'Mars',
     description: 'The Red Planet has long captured human imagination and is a target for future human exploration.',
-    image: '/images/planets/mars.jpg',
+    image: '/planets/mars.png',
     gradientColors: ['from-red-800', 'to-red-600'],
     facts: [
       'Has the largest volcano in the solar system',
@@ -84,10 +82,10 @@ const planets = [
   {
     name: 'Jupiter',
     description: 'The largest planet in our solar system, Jupiter is a gas giant with a complex system of moons.',
-    image: '/images/planets/jupiter.jpg',
+    image: '/planets/jupiter.png',
     gradientColors: ['from-orange-500', 'to-yellow-400'],
     facts: [
-      'More than twice as massive as all other planets combined',
+      'The most massive planet in our solar system',
       'Great Red Spot is a giant storm',
       'Has at least 79 moons'
     ]
@@ -95,7 +93,7 @@ const planets = [
   {
     name: 'Saturn',
     description: 'Famous for its beautiful ring system, Saturn is a gas giant with fascinating moons.',
-    image: '/images/planets/saturn.jpg',
+    image: '/planets/Saturn.jpg',
     gradientColors: ['from-yellow-600', 'to-yellow-300'],
     facts: [
       'Most extensive ring system of any planet',
@@ -106,7 +104,7 @@ const planets = [
   {
     name: 'Uranus',
     description: 'An ice giant that rotates on its side, Uranus has a unique appearance and composition.',
-    image: '/images/planets/uranus.jpg',
+    image: '/planets/uranus.png',
     gradientColors: ['from-cyan-500', 'to-blue-400'],
     facts: [
       'Rotates on its side',
@@ -117,7 +115,7 @@ const planets = [
   {
     name: 'Neptune',
     description: 'The windiest planet, Neptune is the most distant planet in our solar system.',
-    image: '/images/planets/neptune.jpg',
+    image: '/planets/neptune.jpg',
     gradientColors: ['from-blue-700', 'to-blue-500'],
     facts: [
       'Strongest winds in the solar system',
@@ -128,21 +126,3 @@ const planets = [
 ]
 </script>
 
-<style scoped>
-</style>
-
-<SeoHead
-  title="TVP Planets | Sustainable Habitats & Vision"
-  description="Discover planetary concepts and sustainable habitats, all designed with the Dracoscopia network and TVP Chain for a transparent, collaborative future."
-  keywords="The Venus Project, planets, habitats, Dracoscopia, TVP Chain, sustainability, blockchain, space, infrastructure"
-  image="/the-venus-project-circular-city.jpg"
-  url="https://www.thevenusproject.com/planets"
-  type="website"
-  :schema="{
-    '@context': 'https://schema.org',
-    '@type': 'WebPage',
-    'name': 'TVP Planets',
-    'url': 'https://www.thevenusproject.com/planets',
-    'description': 'Discover planetary concepts and sustainable habitats, all designed with the Dracoscopia network and TVP Chain for a transparent, collaborative future.'
-  }"
-/>

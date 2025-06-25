@@ -1,7 +1,7 @@
 {
-  "name": "thevenusproject-outpost",
+  "name": "tvp-outpost",
   "private": true,
-  "version": "1.1.4",
+  "version": "1.1.5",
   "type": "module",
   "scripts": {
     "dev": "vite --port 3000",
@@ -16,6 +16,7 @@
     "@headlessui/vue": "^1.7.0",
     "@heroicons/vue": "^2.0.0",
     "@vueuse/core": "^10.7.0",
+    "@vueuse/motion": "^3.0.3",
     "ethers": "^6.13.5",
     "gsap": "^3.12.2",
     "prettier": "^3.5.3",

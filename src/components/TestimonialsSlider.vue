@@ -1,5 +1,5 @@
 <template>
-  <div class="relative w-full overflow-hidden">
+  <div class="relative w-full overflow-hidden rounded-2xl glass-effect shadow-lg">
     <!-- Testimonials Container -->
     <div 
       class="flex transition-transform duration-500 ease-in-out"
@@ -10,19 +10,18 @@
         :key="index"
         class="w-full flex-shrink-0 px-4"
       >
-        <div class="bg-white rounded-xl shadow-lg p-6 md:p-8 hover-lift">
+        <div class="bg-white/10 glass-effect rounded-2xl shadow-lg p-6 md:p-8 hover-lift backdrop-blur-md border border-white/10">
           <div class="flex items-center gap-4 mb-6">
             <img 
               :src="randomUserAvatars[index]" 
               :alt="testimonial.name"
-              class="w-16 h-16 rounded-full object-cover"
+              class="w-16 h-16 rounded-full object-cover border-2 border-crypto-primary/40 shadow-soft"
             >
             <div>
-              <h4 class="text-xl font-bold text-gray-900">{{ testimonial.name }}</h4>
-              <p class="text-gray-600">{{ testimonial.location }}</p>
+              <h4 class="text-xl font-heading text-white drop-shadow-lg">{{ testimonial.name }}</h4>
+              <p class="text-crypto-primary font-ui">{{ testimonial.location }}</p>
             </div>
           </div>
-          
           <div class="flex gap-1 mb-4">
             <i 
               v-for="star in 5" 
@@ -30,33 +29,29 @@
               class="fas fa-star text-yellow-400"
             ></i>
           </div>
-          
-          <p class="text-gray-700 text-lg mb-4">{{ testimonial.text }}</p>
-          
-          <div class="flex items-center gap-2 text-primary-blue">
+          <p class="text-white/90 text-lg mb-4 font-ui">{{ testimonial.text }}</p>
+          <div class="flex items-center gap-2 text-crypto-primary">
             <i class="fas fa-quote-left"></i>
-            <span class="text-sm font-medium">Verified Customer</span>
+            <span class="text-sm font-ui">Verified Customer</span>
           </div>
         </div>
       </div>
     </div>
-
     <!-- Navigation Arrows -->
     <button 
       @click="prev"
-      class="absolute left-4 top-1/2 -translate-y-1/2 bg-white hover:bg-gray-50 text-primary-blue p-3 rounded-full shadow-lg transition-all duration-200"
+      class="absolute left-4 top-1/2 -translate-y-1/2 glass-effect border border-white/20 text-white p-3 rounded-full shadow-lg hover:bg-crypto-primary/60 transition-all duration-200"
       :class="{ 'opacity-50 cursor-not-allowed': currentIndex === 0 }"
     >
       <i class="fas fa-chevron-left"></i>
     </button>
     <button 
       @click="next"
-      class="absolute right-4 top-1/2 -translate-y-1/2 bg-white hover:bg-gray-50 text-primary-blue p-3 rounded-full shadow-lg transition-all duration-200"
+      class="absolute right-4 top-1/2 -translate-y-1/2 glass-effect border border-white/20 text-white p-3 rounded-full shadow-lg hover:bg-crypto-primary/60 transition-all duration-200"
       :class="{ 'opacity-50 cursor-not-allowed': currentIndex === testimonials.length - 1 }"
     >
       <i class="fas fa-chevron-right"></i>
     </button>
-
     <!-- Dots Navigation -->
     <div class="flex justify-center gap-2 mt-8">
       <button 
@@ -64,7 +59,7 @@
         :key="index"
         @click="goToSlide(index)"
         class="w-2 h-2 rounded-full transition-all duration-200"
-        :class="currentIndex === index ? 'bg-primary-blue scale-125' : 'bg-gray-300 hover:bg-gray-400'"
+        :class="currentIndex === index ? 'bg-crypto-primary scale-125 shadow-soft' : 'bg-white/30 hover:bg-crypto-primary/60'"
       ></button>
     </div>
   </div>

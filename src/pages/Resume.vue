@@ -1,11 +1,7 @@
 <template>
-  <section class="venus-project-content min-h-screen w-full max-w-none animate-fade-in px-0 py-8 text-gray-900 md:px-0">
-    <div class="frosted-glass-card flex flex-col gap-8 p-8">
-      <header>
-        <h1 class="headingClass">Personal Commitment</h1>
-        <p class="subheadingClass">A lifelong dedication to a better future</p>
-      </header>
-      <div class="prose prose-invert max-w-none text-lg">
+  <section class="venus-project-content min-h-screen w-full max-w-7xl mx-auto animate-fade-in py-16 text-gray-900 md:px-0">
+    <div class="frosted-glass-card !bg-white/95 flex flex-col gap-8 pb-10 pt-20 px-8">
+      <div class="prose prose-invert max-w-7xl mx-auto text-lg">
         <div class="mb-8 text-center">
           <h2 class="text-gradient mb-4 text-3xl font-bold">Ready to Relocate & Collaborate</h2>
           <h3 class="mb-2 text-xl font-semibold text-green-600">Open to New Opportunities & Partnerships</h3>
@@ -116,8 +112,7 @@
               <li class="rounded-lg bg-gradient-to-r from-tvp-blue/10 to-tvp-teal/10 p-4 font-semibold text-blue-900 shadow">Autonomous Agent Development</li>
             </ul>
           </div>
-          <!-- Open Source Projects Section -->
-          <Proposals :proposals="allProposals" :filters="proposalFilters" />
+
         </div>
       </div>
     </div>
@@ -126,30 +121,8 @@
 
 <script setup>
 import { ref } from "vue";
-import Proposals from '@/components/Proposals.vue';
-import { allProposals, proposalFilters } from '@/assets/proposals.js';
 const showResume = ref(false);
 const showAppSection = ref(false); // For foldable application section
-const myImage = ref("/tvp/prfile.webp"); // Set your image URL here
+const myImage = ref("@/assets/images/tvp/prfile.webp"); // Set your image URL here
 const showPastAI = ref(false);
 </script>
-
-<style scoped>
-/* Remove all local glass/frosted/project-card styles. Use only global classes from tvp-global.css. */
-.venus-project-content {
-  min-height: 80vh;
-  max-width: 100vw;
-  margin: 0 auto;
-  padding:0 !important;
-  overflow-x: hidden;
-}
-/* Animation fixes */
-.fade-enter-active,
-.fade-leave-active {
-  transition: opacity 0.3s;
-}
-.fade-enter-from,
-.fade-leave-to {
-  opacity: 0;
-}
-</style>
