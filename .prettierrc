@@ -1,5 +1,0 @@
-{
-    "plugins": ["prettier-plugin-tailwindcss"],
-    "printWidth": 5000,
-    "indentSize": 2
-}
