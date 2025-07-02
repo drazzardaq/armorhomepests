@@ -240,4 +240,17 @@ nav * {
   opacity: 0;
   transform: translateX(10px);
 }
+
+@media print {
+  nav {
+    display: none; /* Hide navbar during print */
+  }
+  body {
+    margin-top: 0 !important; /* Remove top margin for print */
+  }
+  .h-16 {
+    height: 0 !important; /* Remove spacer height for print */
+  }
+  
+}
 </style>

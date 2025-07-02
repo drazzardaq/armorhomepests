@@ -37,7 +37,7 @@
             <font-awesome-icon fixed-width :icon="['fab', 'github']" class="text-base text-indigo-500" />
             GitHub
           </a>
-          <a href="/resumes/resume.pdf" target="_blank" class="flex items-center gap-2 rounded-lg border border-gray-200 bg-gray-50 px-3 py-2 font-inter font-medium text-gray-800 shadow-sm transition hover:border-indigo-400 hover:bg-indigo-50 hover:text-indigo-700">
+          <a href="https://cruxm.com/resume.pdf" target="_blank" class="flex items-center gap-2 rounded-lg border border-gray-200 bg-gray-50 px-3 py-2 font-inter font-medium text-gray-800 shadow-sm transition hover:border-indigo-400 hover:bg-indigo-50 hover:text-indigo-700">
             <font-awesome-icon fixed-width :icon="['fas', 'download']" class="text-base text-indigo-500" />
             Resume PDF
           </a>
@@ -85,7 +85,7 @@
             <h4 class="flex items-center text-base font-semibold !normal-case"><img src="@/assets/images/drcsicons/draco.png" alt="Realmsz Milai" class="mr-3 h-12 w-12" />Realmsz</h4>
             <p class="mb-2 text-base opacity-80">Cooperation with Realmsz, delivering advanced web experiences and integrations.</p>
             <p class="ml-auto mt-3 flex w-[105px] items-center self-end text-xs">
-              <a href="https://alma.com" target="_blank" class="flex flex-row-reverse items-center text-blue-200 hover:underline"><font-awesome-icon fixed-width :icon="['fas', 'external-link']" class="ml-1" />Visit Site</a>
+              <a href="https://websitedesignsnyc.com/realmsz" target="_blank" class="flex flex-row-reverse items-center text-blue-200 hover:underline"><font-awesome-icon fixed-width :icon="['fas', 'external-link']" class="ml-1" />Visit Site</a>
             </p>
           </div>
           <div class="mb-4 flex items-center justify-center border-b border-indigo-600/30 pb-4 last:border-b-0">
@@ -252,7 +252,7 @@
               <b>
                 <a href="https://websitedesignsnyc.com/" target="_blank" class="hover-link !font-inter !font-bold !normal-case text-blue-600 underline">WebsiteDesignsNYC</a>
               </b>
-              and <b>Realmsz</b> (<a href="https://alma.com" target="_blank" class="hover-link !font-inter !font-bold !normal-case text-blue-600 underline">alma.com</a>) projects, delivering innovative web experiences and seamless integrations.
+              and <b>Realmsz</b> (<a href="https://websitedesignsnyc.com/realmsz" target="_blank" class="hover-link !font-inter !font-bold !normal-case text-blue-600 underline">websitedesignsnyc.com/realmsz</a>) projects, delivering innovative web experiences and seamless integrations.
             </div>
           </div>
         </details>

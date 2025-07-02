@@ -11,7 +11,7 @@
     <!-- Compact Header -->
     <header id="quick-links-dropdown" class="relative z-10 flex items-center justify-between border-b border-white/10 p-5 backdrop-blur-sm">
       <div class="flex items-center gap-3">
-        <img src="@/assets/images/czodiac5_4.png" alt="DUIMX Logo" class="h-12 w-12 rounded-lg border border-purple-400/30 bg-white/20 bg-gradient-to-br from-purple-500/20 to-pink-500/20" />
+        <img src="@/assets/images/icon2.png" alt="DUIMX Logo" class="h-12 w-12 rounded-full transition-transform group-hover:scale-[1.15] invert" />
         <div>
           <h1 class="bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400 bg-clip-text text-lg font-bold text-transparent">Playground</h1>
           <p v-if="selectedElement" class="text-xs text-slate-400">{{ elements.find((el) => el.value === selectedElement)?.label || "Unknown Component" }}</p>
@@ -25,7 +25,7 @@
             <span class="hidden text-xs sm:inline">Quick Links</span>
             <span class="text-xs transition-transform duration-200 group-hover:rotate-180">▼</span>
           </button>
-          <div class="absolute right-0 top-full mt-2 w-64 rounded-lg border border-purple-500/30 bg-slate-800/95 backdrop-blur-xl shadow-2xl z-[1100] opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto transition-all">
+          <div class="absolute right-0 top-full -mt-1 pt-2 w-72 rounded-lg border border-purple-500/30 bg-slate-800/95 backdrop-blur-xl shadow-2xl z-[1100] opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto transition-all">
             <div class="p-2 z-[99999] relative">
               <h3 class="mb-2 px-2 text-xs font-semibold text-purple-300">External Resources</h3>
               <a href="https://dracoscopia.com" target="_blank" class="flex items-center gap-3 rounded-lg p-3 text-sm transition-all hover:bg-purple-500/20">
@@ -47,6 +47,20 @@
                 <div>
                   <div class="font-medium text-slate-200">Sponsor</div>
                   <div class="text-xs text-slate-400">Support Development</div>
+                </div>
+              </a>
+              <a href="https://websitedesignsnyc.com/realmsz" target="_blank" class="flex items-center gap-3 rounded-lg p-3 text-sm transition-all hover:bg-purple-500/20">
+                <span class="text-lg">🧠</span>
+                <div>
+                  <div class="font-medium text-slate-200">Realmsz</div>
+                  <div class="text-xs text-slate-400">Realmsz by DWWW</div>
+                </div>
+              </a>
+              <a href="https://tvp-outpost.dfbdttx2t1x3o.amplifyapp.com/" target="_blank" class="flex items-center gap-3 rounded-lg p-3 text-sm transition-all hover:bg-purple-500/20">
+                <span class="text-lg">🚀</span>
+                <div>
+                  <div class="font-medium text-slate-200">The Venus</div>
+                  <div class="text-xs text-slate-400">Outpost Project</div>
                 </div>
               </a>
               <div class="my-2 border-t border-purple-500/20"></div>
@@ -72,20 +86,7 @@
                   <div class="text-xs text-slate-400">Venus Project Initiative</div>
                 </div>
               </router-link>
-              <a href="https://alma.com" target="_blank" class="flex items-center gap-3 rounded-lg p-3 text-sm transition-all hover:bg-purple-500/20">
-                <span class="text-lg">🧠</span>
-                <div>
-                  <div class="font-medium text-slate-200">Realmsz</div>
-                  <div class="text-xs text-slate-400">alma.com</div>
-                </div>
-              </a>
-              <a href="https://tvp-outpost.dfbdttx2t1x3o.amplifyapp.com/" target="_blank" class="flex items-center gap-3 rounded-lg p-3 text-sm transition-all hover:bg-purple-500/20">
-                <span class="text-lg">🚀</span>
-                <div>
-                  <div class="font-medium text-slate-200">TVP Outpost</div>
-                  <div class="text-xs text-slate-400">tvp-outpost.dfbdttx2t1x3o.amplifyapp.com</div>
-                </div>
-              </a>
+              
             </div>
           </div>
         </div>
@@ -97,7 +98,7 @@
             <span class="hidden text-xs sm:inline">Actions</span>
             <span class="text-xs transition-transform duration-200 group-hover:rotate-180">▼</span>
           </button>
-          <div class="absolute right-0 top-full mt-2 w-64 rounded-lg border border-purple-500/30 bg-slate-800/95 backdrop-blur-xl shadow-2xl z-[1100] opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto transition-all">
+          <div class="absolute right-0 top-full -mt-1 pt-2 w-72 rounded-lg border border-purple-500/30 bg-slate-800/95 backdrop-blur-xl shadow-2xl z-[1100] opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto transition-all">
             <div class="p-2 z-[99999] relative">
               <h3 class="mb-2 px-2 text-xs font-semibold text-purple-300">Quick Actions</h3>
               <div class="grid grid-cols-2 gap-2">
