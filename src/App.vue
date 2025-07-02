@@ -1,5 +1,6 @@
 <template>
   <div class="min-h-screen bg-white text-black">
+    <GlobalNavbar />
     <router-view />
     <PWAInstallPrompt />
   </div>
@@ -7,6 +8,7 @@
 
 <script setup>
 import PWAInstallPrompt from "@/components/PWAInstallPrompt.vue";
+import GlobalNavbar from "@/components/GlobalNavbar.vue";
 </script>
 
 <style>

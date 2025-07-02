@@ -22,7 +22,7 @@
 </template>
 
 <script setup>
-import { defineProps, defineEmits, onMounted, watch, nextTick } from 'vue';
+import { defineEmits, onMounted, watch, nextTick } from 'vue';
 const props = defineProps({
   isOpen: { type: Boolean, required: true },
   title: { type: String, default: '' },

@@ -1,7 +1,8 @@
 <template>
   <div class="asi-project-section glassy-bg min-h-screen py-16 px-4 animate-fade-in-up">
     <div class="max-w-4xl mx-auto">
-      <h1 class="text-4xl font-bold mb-6 text-gradient">Artificial Superintelligence (ASI) & The Venus Project</h1>
+      <h1 class="text-4xl font-bold text-gradient">The Venus Project</h1>
+      <h1 class="text-4xl font-bold mb-6 text-gradient">Artificial Superintelligence (ASI)</h1>
       <p class="mb-4 text-lg">Artificial Superintelligence (ASI) refers to a level of artificial intelligence that surpasses human intelligence in all aspects—creativity, problem-solving, emotional intelligence, and more. ASI is not just an evolution of current AI, but a leap to a form of intelligence that can independently innovate, strategize, and execute complex tasks beyond human capability.</p>
       <p class="mb-4 text-lg">According to <a href="https://www.techtarget.com/searchenterpriseai/definition/artificial-superintelligence-ASI" class="text-tvp-blue underline" target="_blank">TechTarget</a>, ASI will be able to outperform the best human brains in every field, including scientific creativity, general wisdom, and social skills. This technology is expected to revolutionize every aspect of society, from science and medicine to governance and ethics.</p>
       <div class="my-8 p-6 rounded-xl bg-gradient-to-br from-tvp-purple/10 via-tvp-blue/10 to-tvp-teal/10 border border-tvp-blue/20">

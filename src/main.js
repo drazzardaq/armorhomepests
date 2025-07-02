@@ -29,8 +29,7 @@ import 'swiper/css/pagination'
 register()
 
 // Import routes
-import { routes } from './router/routes'
-import TVPFooter from '@/components/TVPFooter.vue';
+import { routes } from './routes'
 
 const router = createRouter({
   history: createWebHistory(),
@@ -54,7 +53,6 @@ const router = createRouter({
 })
 
 const app = createApp(App)
-app.component('TVPFooter', TVPFooter)
 
 // Configure Vue to recognize Swiper custom elements
 app.config.compilerOptions.isCustomElement = (tag) => {
@@ -68,14 +66,14 @@ app.use(router)
 app.mount('#app')
 
 // Register service worker for PWA
-// if ('serviceWorker' in navigator) {
-//   window.addEventListener('load', () => {
-//     navigator.serviceWorker.register('/sw.js')
-//       .then(registration => {
-//         console.log('ServiceWorker registration successful with scope: ', registration.scope)
-//       })
-//       .catch(error => {
-//         console.log('ServiceWorker registration failed: ', error)
-//       })
-//   })
-// }
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('/sw.js')
+      .then(registration => {
+        console.log('ServiceWorker registration successful with scope: ', registration.scope)
+      })
+      .catch(error => {
+        console.log('ServiceWorker registration failed: ', error)
+      })
+  })
+}

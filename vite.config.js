@@ -8,7 +8,7 @@ export default defineConfig({
     vue({
       template: {
         compilerOptions: {
-          isCustomElement: tag => tag.startsWith('-')
+          isCustomElement: tag => tag.startsWith('swiper-')
         }
       }
     }),
@@ -22,9 +22,9 @@ export default defineConfig({
         'fonts/*'
       ],
       manifest: {
-        name: 'TVPOutpost',
-        short_name: 'TVPOutpost',
-        description: 'The Venus Project - Outpost',
+        name: 'The RESUME Project',
+        short_name: 'RESUME',
+        description: 'RESUME',
         theme_color: '#1a1a1a',
         background_color: '#1a1a1a',
         display: 'standalone',
@@ -33,72 +33,51 @@ export default defineConfig({
         start_url: '/',
         icons: [
           {
-            src: '/images/dracaris.png',
+            src: '/icon.png',
             sizes: '192x192',
             type: 'image/png',
             purpose: 'any maskable'
           },
           {
-            src: '/images/dragonorb.png',
+            src: '/icon.png',
             sizes: '512x512',
             type: 'image/png',
             purpose: 'any maskable'
           }
         ],
-        shortcuts: [
-          {
-            name: 'Marketplace',
-            short_name: 'Marketplace',
-            description: 'Browse and trade NFTs',
-            url: '/marketplace',
-            icons: [{ src: '/images/dracaris.png', sizes: '192x192' }]
-          },
-          {
-            name: 'The Venus Project Outposts',
-            short_name: 'Outposts',
-            description: 'Venus Outposts',
-            url: '/thevenusproject',
-            icons: [{ src: '/tvp/the-venus-project-circular-city.jpg', sizes: '192x192' }]
-          },
-          {
-            name: 'Staking',
-            short_name: 'Staking',
-            description: 'Stake your $DRACO tokens',
-            url: '/staking',
-            icons: [{ src: '/images/dragonorb.png', sizes: '192x192' }]
-          }
-        ]
+       
       },
-      workbox: {
-        cleanupOutdatedCaches: true,
-        sourcemap: true,
-        runtimeCaching: [
-          {
-            urlPattern: /^https:\/\/dracoscopia\.com\/.*/i,
-            handler: 'CacheFirst',
-            options: {
-              cacheName: 'tvp-dracoscopia-images',
-              expiration: {
-                maxEntries: 60,
-                maxAgeSeconds: 30 * 24 * 60 * 60 // 30 days
-              },
-              cacheableResponse: {
-                statuses: [0, 200]
-              }
-            }
-          },
-        ]
-      },
-      devOptions: {
-        enabled: true,
-        type: 'module',
-        navigateFallback: 'index.html'
-      }
+      // workbox: {
+      //   cleanupOutdatedCaches: true,
+      //   sourcemap: true,
+        // runtimeCaching: [
+        //   {
+        //     urlPattern: /^https:\/\/dracoscopia\.com\/.*/i,
+        //     handler: 'CacheFirst',
+        //     options: {
+        //       cacheName: 'tvp-dracoscopia-images',
+        //       expiration: {
+        //         maxEntries: 60,
+        //         maxAgeSeconds: 30 * 24 * 60 * 60 // 30 days
+        //       },
+        //       cacheableResponse: {
+        //         statuses: [0, 200]
+        //       }
+        //     }
+        //   },
+        // ]
+      // },
+      // devOptions: {
+      //   enabled: true,
+      //   type: 'module',
+      //   navigateFallback: 'index.html'
+      // }
     })
   ],
   resolve: {
     alias: {
-      '@': path.resolve(__dirname, './src')
+      '@': path.resolve(__dirname, './src'),
+      'vue': 'vue/dist/vue.esm-bundler.js'
     }
   },
   build: {

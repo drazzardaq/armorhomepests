@@ -1,11 +1,18 @@
 <template>
   <div class="central-icon glassy-interact">
-    <img src="/icon.png" alt="The Venus Project Icon" class="central-icon-img" />
+    <img v-if="color === 'dark'" src="/icon-white.png" alt="The Venus Project Icon" class="central-icon-img !invert" />
+    <img v-else-if="color === 'default'" src="/icon.png" alt="The Venus Project Icon" class="central-icon-img" />
+    <img v-else-if="color === 'white'" src="/icon-white.png" alt="The Venus Project Icon" class="central-icon-img" />
   </div>
 </template>
 
 <script setup>
-// No props needed for now, but could add src/alt for reuse
+defineProps({
+  color: {
+    type: String,
+    default: 'default', // default, primary, secondary, accent
+  },
+});
 </script>
 
 <style scoped>
